@@ -1,0 +1,10 @@
+WhileExp(
+ OpExp(GtOp,
+  IntExp(10),
+  IntExp(5)),
+ SeqExp[
+  OpExp(PlusOp,
+   VarExp(
+    SimpleVar(i)),
+   IntExp(1)),
+  SeqExp[]])

@@ -1,0 +1,26 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L221:
+li t515,0
+li t516,0
+li t517,100
+ble t516,t517,L219
+L218:
+li $v0,0
+j L217
+L219:
+addi t518,t515,1
+move t515,t518
+la t519,L1
+bge t516,t517,L218
+L220:
+addi t520,t516,1
+move t516,t520
+j L219
+L217:
+

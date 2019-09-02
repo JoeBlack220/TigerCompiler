@@ -1,0 +1,4 @@
+LetExp([
+ VarDec(x,true,NONE,
+  SeqExp[])],
+ SeqExp[])

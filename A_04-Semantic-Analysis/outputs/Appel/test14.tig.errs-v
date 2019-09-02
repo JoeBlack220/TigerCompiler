@@ -1,0 +1,6 @@
+12.9: Unexpected type: The left and the right expression must be the same type.
+Expected: record1{
+              name: STRING
+              id: INT}
+Found:    array[INT] of INT
+

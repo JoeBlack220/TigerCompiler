@@ -1,0 +1,7 @@
+LetExp([
+ VarDec(d,false,NONE,
+  IntExp(0))],
+ VarExp(
+  SubscriptVar(
+   SimpleVar(d),
+   IntExp(3))))

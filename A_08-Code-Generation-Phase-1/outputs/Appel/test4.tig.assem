@@ -1,0 +1,38 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L378
+L383:
+beqz t592,L380
+L381:
+move t595,t592
+lw t596,-4($fp)
+li t598,1
+sub t597,t592,t598
+move $a0,t596
+move $a1,t597
+jal L378
+move t594,$v0
+mul t599,t595,t594
+move t593,t599
+L382:
+move $v0,t593
+j L379
+L380:
+li t593,1
+j L382
+L379:
+
+LABEL $Main$$
+L384:
+li t600,10
+move $a0,$fp
+move $a1,t600
+jal L378
+move $v0,$v0
+j L377
+L377:
+

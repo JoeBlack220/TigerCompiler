@@ -1,0 +1,126 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L319
+Nobody"
+
+LABEL L322
+Somebody"
+
+LABEL $Main$$
+[
+LABEL L323,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP t125)),
+ TEMP t103),
+MOVE(
+ TEMP t136,
+ TEMP t121),
+MOVE(
+ TEMP t135,
+ TEMP t120),
+MOVE(
+ TEMP t134,
+ TEMP t119),
+MOVE(
+ TEMP t133,
+ TEMP t118),
+MOVE(
+ TEMP t132,
+ TEMP t117),
+MOVE(
+ TEMP t131,
+ TEMP t116),
+MOVE(
+ TEMP t130,
+ TEMP t115),
+MOVE(
+ TEMP t129,
+ TEMP t114),
+MOVE(
+ TEMP t128,
+ TEMP t127),
+MOVE(
+ TEMP t619,
+ CALL(
+  NAME $Malloc$$,
+   CONST 8)),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t619,
+   CONST 0)),
+ NAME L319),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t619,
+   CONST 4)),
+ CONST 1000),
+MOVE(
+ TEMP t620,
+ TEMP t619),
+MOVE(
+ TEMP t621,
+ TEMP t620),
+CJUMP(EQ,
+ TEMP t621,
+ NAME L0,
+ L320,L321),
+LABEL L321,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t621,
+   CONST 0)),
+ NAME L322),
+MOVE(
+ TEMP t123,
+ TEMP t620),
+MOVE(
+ TEMP t121,
+ TEMP t136),
+MOVE(
+ TEMP t120,
+ TEMP t135),
+MOVE(
+ TEMP t119,
+ TEMP t134),
+MOVE(
+ TEMP t118,
+ TEMP t133),
+MOVE(
+ TEMP t117,
+ TEMP t132),
+MOVE(
+ TEMP t116,
+ TEMP t131),
+MOVE(
+ TEMP t115,
+ TEMP t130),
+MOVE(
+ TEMP t114,
+ TEMP t129),
+MOVE(
+ TEMP t127,
+ TEMP t128),
+JUMP(
+ NAME L318),
+LABEL L320,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME L318),
+LABEL L318 
+]
+
+

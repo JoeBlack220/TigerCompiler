@@ -1,0 +1,40 @@
+### Starting build.
+# Target: driver.ml.depends, tags: { extension:ml, file:driver.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules driver.ml > driver.ml.depends # cached
+# Target: errormsg.ml.depends, tags: { extension:ml, file:errormsg.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules errormsg.ml > errormsg.ml.depends # cached
+# Target: errormsg.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:errormsg.cmo, file:errormsg.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o errormsg.cmo errormsg.ml # cached
+# Target: parser.mly, tags: { extension:mly, file:parser.mly, infer, ocaml, ocamlyacc, parser, quiet }
+ocamlyacc parser.mly # cached
+# Target: parser.mli.depends, tags: { extension:mli, file:parser.mli, ocaml, ocamldep, quiet }
+ocamldep.opt -modules parser.mli > parser.mli.depends # cached
+# Target: absyn.ml.depends, tags: { extension:ml, file:absyn.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules absyn.ml > absyn.ml.depends # cached
+# Target: symbol.ml.depends, tags: { extension:ml, file:symbol.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules symbol.ml > symbol.ml.depends # cached
+# Target: symbol.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:symbol.cmo, file:symbol.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o symbol.cmo symbol.ml # cached
+# Target: absyn.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:absyn.cmo, file:absyn.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o absyn.cmo absyn.ml # cached
+# Target: parser.cmi, tags: { byte, compile, extension:mli, file:parser.mli, interf, ocaml, quiet }
+ocamlc.opt -c -o parser.cmi parser.mli # cached
+# Target: printabsyn.ml.depends, tags: { extension:ml, file:printabsyn.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules printabsyn.ml > printabsyn.ml.depends # cached
+# Target: printabsyn.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:printabsyn.cmo, file:printabsyn.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o printabsyn.cmo printabsyn.ml # cached
+# Target: scanner.mll, tags: { extension:mll, file:scanner.mll, lexer, ocaml, ocamllex, quiet }
+ocamllex.opt -q scanner.mll # cached
+# Target: scanner.ml.depends, tags: { extension:ml, file:scanner.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules scanner.ml > scanner.ml.depends # cached
+# Target: scanner.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:scanner.cmo, file:scanner.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o scanner.cmo scanner.ml # cached
+# Target: driver.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:driver.cmo, file:driver.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o driver.cmo driver.ml # cached
+# Target: parser.ml.depends, tags: { extension:ml, file:parser.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules parser.ml > parser.ml.depends # cached
+# Target: parser.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:parser.cmo, file:parser.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o parser.cmo parser.ml # cached
+# Target: driver.byte, tags: { byte, dont_link_with, extension:byte, file:driver.byte, link, ocaml, program, quiet }
+ocamlc.opt errormsg.cmo symbol.cmo absyn.cmo parser.cmo printabsyn.cmo scanner.cmo driver.cmo -o driver.byte # cached
+# Compilation successful.

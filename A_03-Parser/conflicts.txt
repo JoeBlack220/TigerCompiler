@@ -1,0 +1,43 @@
+State 25 contains 1 shift/reduce conflict.
+State 26 contains 1 shift/reduce conflict.
+State 38 contains 1 shift/reduce conflict.
+State 108 contains 1 shift/reduce conflict.
+State 110 contains 13 shift/reduce conflicts.
+State 146 contains 12 shift/reduce conflicts.
+
+
+25: shift/reduce conflict (shift 22, reduce 84) on FUNCTION
+26: shift/reduce conflict (shift 24, reduce 86) on TYPE
+38: shift/reduce conflict (shift 78, reduce 56) on RPAREN
+
+108: shift/reduce conflict (shift 128, reduce 56) on END
+110: shift/reduce conflict (shift 130, reduce 25) on ELSE
+110: shift/reduce conflict (shift 41, reduce 25) on PLUS
+110: shift/reduce conflict (shift 42, reduce 25) on MINUS
+110: shift/reduce conflict (shift 43, reduce 25) on TIMES
+110: shift/reduce conflict (shift 44, reduce 25) on DIVIDE
+110: shift/reduce conflict (shift 45, reduce 25) on EQ
+110: shift/reduce conflict (shift 46, reduce 25) on NEQ
+110: shift/reduce conflict (shift 47, reduce 25) on LT
+110: shift/reduce conflict (shift 48, reduce 25) on LE
+110: shift/reduce conflict (shift 49, reduce 25) on GT
+110: shift/reduce conflict (shift 50, reduce 25) on GE
+110: shift/reduce conflict (shift 51, reduce 25) on AND
+110: shift/reduce conflict (shift 52, reduce 25) on OR
+
+146: shift/reduce conflict (shift 41, reduce 6) on PLUS
+146: shift/reduce conflict (shift 42, reduce 6) on MINUS
+146: shift/reduce conflict (shift 43, reduce 6) on TIMES
+146: shift/reduce conflict (shift 44, reduce 6) on DIVIDE
+146: shift/reduce conflict (shift 45, reduce 6) on EQ
+146: shift/reduce conflict (shift 46, reduce 6) on NEQ
+146: shift/reduce conflict (shift 47, reduce 6) on LT
+146: shift/reduce conflict (shift 48, reduce 6) on LE
+146: shift/reduce conflict (shift 49, reduce 6) on GT
+146: shift/reduce conflict (shift 50, reduce 6) on GE
+146: shift/reduce conflict (shift 51, reduce 6) on AND
+146: shift/reduce conflict (shift 52, reduce 6) on OR
+
+confilicts in state 110 and 146 are safe because we have associativity announced at the beginning
+
+confilct 25 26 38 are safe we will only choose one action to do according to the precedence

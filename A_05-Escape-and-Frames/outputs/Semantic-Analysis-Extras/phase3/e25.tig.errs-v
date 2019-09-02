@@ -1,0 +1,4 @@
+1.1: Unexpected type: The hi field of For expression need to be int.
+Expected: INT
+Found:    STRING
+

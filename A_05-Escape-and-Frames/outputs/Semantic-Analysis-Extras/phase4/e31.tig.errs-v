@@ -1,0 +1,4 @@
+5.7: Unexpected type: The expersion of SubscriptVar need to be int.
+Expected: INT
+Found:    STRING
+

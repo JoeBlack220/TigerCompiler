@@ -1,0 +1,14 @@
+LetExp([
+ TypeDec[
+  (point,
+   RecordTy[
+    (x,false,int),
+    (y,false,int)])],
+ VarDec(p,false,SOME(point),
+  RecordExp(point,[
+
+   (x,
+    IntExp(3)),
+   (y,
+    IntExp(4))]))],
+ SeqExp[])

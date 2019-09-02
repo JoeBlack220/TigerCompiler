@@ -1,0 +1,351 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL N2
+[
+LABEL N3,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr2,
+ TEMP tr3),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+MOVE(
+ TEMP tr22,
+ TEMP tr23),
+MOVE(
+ TEMP tr24,
+ BINOP(PLUS,
+  BINOP(PLUS,
+   BINOP(PLUS,
+    BINOP(PLUS,
+     BINOP(PLUS,
+      BINOP(PLUS,
+       TEMP tr2,
+       TEMP tr4),
+      MEM(
+       BINOP(PLUS,
+        CONST -4,
+        MEM(
+         BINOP(PLUS,
+          CONST -8,
+          TEMP tr0))))),
+     MEM(
+      BINOP(PLUS,
+       CONST 0,
+       MEM(
+        BINOP(PLUS,
+         CONST -8,
+         TEMP tr0))))),
+    MEM(
+     BINOP(PLUS,
+      CONST -16,
+      MEM(
+       BINOP(PLUS,
+        CONST -8,
+        TEMP tr0))))),
+   MEM(
+    BINOP(PLUS,
+     CONST -20,
+     MEM(
+      BINOP(PLUS,
+       CONST -8,
+       TEMP tr0))))),
+  MEM(
+   BINOP(PLUS,
+    CONST -8,
+    MEM(
+     BINOP(PLUS,
+      CONST -8,
+      MEM(
+       BINOP(PLUS,
+        CONST -8,
+        TEMP tr0)))))))),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+MOVE(
+ TEMP tr23,
+ TEMP tr22),
+JUMP(
+ NAME N4),
+LABEL N4 
+]
+
+
+LABEL N5
+[
+LABEL N6,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0)),
+ TEMP tr3),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr0)),
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+MOVE(
+ TEMP tr22,
+ TEMP tr23),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -16,
+   TEMP tr0)),
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0))),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -20,
+   TEMP tr0)),
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr0))),
+MOVE(
+ TEMP tr24,
+ CALL(
+  NAME N2,
+   TEMP tr0,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP tr0)),
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP tr0)))),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+MOVE(
+ TEMP tr23,
+ TEMP tr22),
+JUMP(
+ NAME N7),
+LABEL N7 
+]
+
+
+LABEL $Main$$
+[
+LABEL N8,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+MOVE(
+ TEMP tr22,
+ TEMP tr23),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP tr0)),
+ CONST 4),
+MOVE(
+ TEMP tr25,
+ CONST 4),
+MOVE(
+ TEMP tr26,
+ CONST 8),
+MOVE(
+ TEMP tr27,
+ CALL(
+  NAME N5,
+   TEMP tr0,
+   TEMP tr25,
+   TEMP tr26)),
+CJUMP(EQ,
+ TEMP tr27,
+ CONST 40,
+ N9,N10),
+LABEL N10,
+MOVE(
+ TEMP tr28,
+ BINOP(DIV,
+  CONST 1,
+  CONST 0)),
+LABEL N11,
+MOVE(
+ TEMP tr24,
+ TEMP tr28),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+MOVE(
+ TEMP tr23,
+ TEMP tr22),
+JUMP(
+ NAME N12),
+LABEL N9,
+MOVE(
+ TEMP tr28,
+ CONST 1),
+JUMP(
+ NAME N11),
+LABEL N12 
+]
+
+

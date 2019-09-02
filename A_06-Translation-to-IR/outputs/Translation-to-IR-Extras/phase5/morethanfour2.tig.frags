@@ -1,0 +1,32 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L126
+SEQ(
+ MOVE(
+  TEMP t123,
+  BINOP(PLUS,
+   TEMP t195,
+   TEMP t197)),
+ LABEL L128)
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  CALL(
+   NAME L126,
+    TEMP t125,
+    CONST 1,
+    CONST 2,
+    CONST 3,
+    CONST 4,
+    CONST 5,
+    CONST 6)),
+ LABEL L125)
+

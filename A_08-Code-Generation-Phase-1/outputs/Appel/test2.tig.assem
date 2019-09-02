@@ -1,0 +1,23 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L270:
+li t536,10
+li t537,0
+bltz t536,L268
+L269:
+move $a0,t536
+move $a1,t537
+jal $InitArray$$
+move t538,$v0
+move $v0,t538
+j L267
+L268:
+jal $SizeError$$
+j L267
+L267:
+

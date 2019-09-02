@@ -1,0 +1,7 @@
+6.4: Unexpected type: The left expression of operate expression need to be int.
+Expected: UNIT
+Found:    INT
+
+4.2: Incorrect type: Unit type not allowed in variable declaration.
+Type is: UNIT
+

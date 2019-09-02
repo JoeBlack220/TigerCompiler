@@ -1,0 +1,15 @@
+LetExp([
+ TypeDec[
+  (tree,
+   RecordTy[
+    (key,false,int),
+    (children,false,treelist)])],
+ VarDec(d,false,SOME(int),
+  IntExp(0)),
+ TypeDec[
+  (treelist,
+   RecordTy[
+    (hd,false,tree),
+    (tl,false,treelist)])]],
+ VarExp(
+  SimpleVar(d)))

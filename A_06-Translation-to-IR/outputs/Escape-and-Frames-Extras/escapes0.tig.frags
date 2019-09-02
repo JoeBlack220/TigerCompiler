@@ -1,0 +1,271 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L17
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    CJUMP(EQ,
+     CONST 0,
+     TEMP t140,
+     L21,L20),
+    SEQ(
+     LABEL L20,
+     SEQ(
+      MOVE(
+       TEMP t141,
+       ESEQ(
+        EXP(
+         MEM(
+          BINOP(PLUS,
+           CONST 0,
+           MEM(
+            BINOP(PLUS,
+             CONST -4,
+             TEMP t125))))),
+        MEM(
+         BINOP(PLUS,
+          CONST -8,
+          MEM(
+           BINOP(PLUS,
+            CONST -4,
+            MEM(
+             BINOP(PLUS,
+              CONST -4,
+              TEMP t125)))))))),
+      SEQ(
+       JUMP(
+        NAME L22),
+       SEQ(
+        LABEL L21,
+        SEQ(
+         MOVE(
+          TEMP t141,
+          MEM(
+           BINOP(PLUS,
+            CONST -12,
+            MEM(
+             BINOP(PLUS,
+              CONST -4,
+              TEMP t125))))),
+         LABEL L22)))))),
+   TEMP t141)),
+ LABEL L19)
+
+LABEL L13
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    MOVE(
+     MEM(
+      BINOP(PLUS,
+       CONST -12,
+       TEMP t125)),
+     CONST 1),
+    SEQ(
+     MOVE(
+      TEMP t148,
+      CONST 10),
+     SEQ(
+      CJUMP(LE,
+       MEM(
+        BINOP(PLUS,
+         CONST -12,
+         TEMP t125)),
+       TEMP t148,
+       L32,L16),
+      SEQ(
+       LABEL L32,
+       SEQ(
+        EXP(
+         ESEQ(
+          SEQ(
+           MOVE(
+            TEMP t142,
+            CONST 3),
+           MOVE(
+            TEMP t145,
+            ESEQ(
+             SEQ(
+              MOVE(
+               TEMP t143,
+               CONST 10),
+              SEQ(
+               MOVE(
+                TEMP t144,
+                CONST 0),
+               SEQ(
+                CJUMP(LT,
+                 TEMP t143,
+                 CONST 0,
+                 L23,L24),
+                SEQ(
+                 LABEL L23,
+                 SEQ(
+                  EXP(
+                   CALL(
+                    NAME $SizeError$$)),
+                  SEQ(
+                   JUMP(
+                    NAME L15),
+                   LABEL L24)))))),
+             CALL(
+              NAME $InitArray$$,
+               TEMP t143,
+               TEMP t144)))),
+          ESEQ(
+           SEQ(
+            CJUMP(EQ,
+             MEM(
+              BINOP(PLUS,
+               CONST 0,
+               TEMP t125)),
+             CONST 0,
+             L29,L30),
+            SEQ(
+             LABEL L29,
+             SEQ(
+              MOVE(
+               TEMP t142,
+               CALL(
+                NAME L17,
+                 TEMP t125,
+                 MEM(
+                  BINOP(PLUS,
+                   CONST 0,
+                   TEMP t125)))),
+              SEQ(
+               JUMP(
+                NAME L31),
+               SEQ(
+                LABEL L30,
+                SEQ(
+                 MOVE(
+                  MEM(
+                   ESEQ(
+                    SEQ(
+                     MOVE(
+                      TEMP t146,
+                      TEMP t145),
+                     SEQ(
+                      MOVE(
+                       TEMP t147,
+                       MEM(
+                        BINOP(PLUS,
+                         CONST -12,
+                         TEMP t125))),
+                      SEQ(
+                       CJUMP(LE,
+                        MEM(
+                         TEMP t146),
+                        TEMP t147,
+                        L25,L26),
+                       SEQ(
+                        LABEL L25,
+                        SEQ(
+                         EXP(
+                          CALL(
+                           NAME $UpperBoundExit$$)),
+                         SEQ(
+                          JUMP(
+                           NAME L15),
+                          SEQ(
+                           LABEL L26,
+                           SEQ(
+                            CJUMP(LT,
+                             TEMP t147,
+                             CONST 0,
+                             L27,L28),
+                            SEQ(
+                             LABEL L27,
+                             SEQ(
+                              EXP(
+                               CALL(
+                                NAME $LowerBoundExit$$)),
+                              SEQ(
+                               JUMP(
+                                NAME L15),
+                               LABEL L28))))))))))),
+                    BINOP(PLUS,
+                     TEMP t146,
+                     BINOP(MUL,
+                      CONST 4,
+                      BINOP(PLUS,
+                       CONST 1,
+                       TEMP t147))))),
+                  BINOP(PLUS,
+                   MEM(
+                    BINOP(PLUS,
+                     CONST -12,
+                     TEMP t125)),
+                   MEM(
+                    BINOP(PLUS,
+                     CONST -12,
+                     MEM(
+                      BINOP(PLUS,
+                       CONST -4,
+                       TEMP t125)))))),
+                 LABEL L31)))))),
+           CONST 0))),
+        SEQ(
+         CJUMP(LT,
+          MEM(
+           BINOP(PLUS,
+            CONST -12,
+            TEMP t125)),
+          TEMP t148,
+          L33,L16),
+         SEQ(
+          LABEL L33,
+          SEQ(
+           MOVE(
+            MEM(
+             BINOP(PLUS,
+              CONST -12,
+              TEMP t125)),
+            BINOP(PLUS,
+             MEM(
+              BINOP(PLUS,
+               CONST -12,
+               TEMP t125)),
+             CONST 1)),
+           SEQ(
+            JUMP(
+             NAME L32),
+            LABEL L16))))))))),
+   CONST 0)),
+ LABEL L15)
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    MOVE(
+     MEM(
+      BINOP(PLUS,
+       CONST -8,
+       TEMP t125)),
+     CONST 4),
+    MOVE(
+     MEM(
+      BINOP(PLUS,
+       CONST -12,
+       TEMP t125)),
+     CONST 3)),
+   CALL(
+    NAME L13,
+     TEMP t125,
+     CONST 10))),
+ LABEL L12)
+

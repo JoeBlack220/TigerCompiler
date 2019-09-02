@@ -1,0 +1,6 @@
+2.1: Unexpected type: The hi field of For expression need to be int.
+Expected: INT
+Found:    STRING
+
+3.4: Assignment to loop control variable "i" not allowed. You can't assign value to the loopvar.
+

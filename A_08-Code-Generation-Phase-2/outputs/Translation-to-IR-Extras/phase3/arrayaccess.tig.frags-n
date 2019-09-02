@@ -1,0 +1,245 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL $Main$$
+[
+LABEL N2,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr2,
+ TEMP tr3),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ CONST 10),
+MOVE(
+ TEMP tr21,
+ CONST 0),
+CJUMP(LT,
+ TEMP tr20,
+ CONST 0,
+ N3,N4),
+LABEL N4,
+MOVE(
+ TEMP tr22,
+ CALL(
+  NAME $InitArray$$,
+   TEMP tr20,
+   TEMP tr21)),
+MOVE(
+ TEMP tr23,
+ CONST 5),
+MOVE(
+ TEMP tr24,
+ CONST 6),
+CJUMP(LT,
+ TEMP tr23,
+ CONST 0,
+ N5,N6),
+LABEL N6,
+MOVE(
+ TEMP tr25,
+ CALL(
+  NAME $InitArray$$,
+   TEMP tr23,
+   TEMP tr24)),
+MOVE(
+ TEMP tr26,
+ CONST 2),
+EXP(
+ TEMP tr22),
+MOVE(
+ TEMP tr27,
+ TEMP tr22),
+MOVE(
+ TEMP tr28,
+ CONST 3),
+CJUMP(LE,
+ MEM(
+  TEMP tr27),
+ TEMP tr28,
+ N7,N8),
+LABEL N8,
+CJUMP(LT,
+ TEMP tr28,
+ CONST 0,
+ N9,N10),
+LABEL N10,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP tr27,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP tr28)))),
+ CONST 5),
+MOVE(
+ TEMP tr29,
+ TEMP tr22),
+MOVE(
+ TEMP tr30,
+ TEMP tr25),
+MOVE(
+ TEMP tr31,
+ CONST 3),
+CJUMP(LE,
+ MEM(
+  TEMP tr30),
+ TEMP tr31,
+ N11,N12),
+LABEL N12,
+CJUMP(LT,
+ TEMP tr31,
+ CONST 0,
+ N13,N14),
+LABEL N14,
+MOVE(
+ TEMP tr32,
+ MEM(
+  BINOP(PLUS,
+   TEMP tr30,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP tr31))))),
+CJUMP(LE,
+ MEM(
+  TEMP tr29),
+ TEMP tr32,
+ N15,N16),
+LABEL N16,
+CJUMP(LT,
+ TEMP tr32,
+ CONST 0,
+ N17,N18),
+LABEL N18,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP tr29,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP tr32)))),
+ CONST 7),
+MOVE(
+ TEMP tr33,
+ CONST 0),
+MOVE(
+ TEMP tr3,
+ TEMP tr2),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+JUMP(
+ NAME N19),
+LABEL N3,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME N19),
+LABEL N5,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME N19),
+LABEL N7,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N9,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N11,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N13,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N15,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N17,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N19 
+]
+
+

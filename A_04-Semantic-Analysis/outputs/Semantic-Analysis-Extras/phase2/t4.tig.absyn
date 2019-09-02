@@ -1,0 +1,18 @@
+IfExp(
+ IfExp(
+  IfExp(
+   OpExp(EqOp,
+    IntExp(1),
+    IntExp(3)),
+   OpExp(NeqOp,
+    IntExp(1),
+    IntExp(3)),
+   IntExp(0)),
+  IntExp(1),
+  OpExp(GtOp,
+   IntExp(2),
+   IntExp(4))),
+ IntExp(1),
+ OpExp(GeOp,
+  IntExp(4),
+  IntExp(2)))

@@ -1,0 +1,94 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    TEMP t275,
+    ESEQ(
+     SEQ(
+      MOVE(
+       TEMP t273,
+       CONST 10),
+      SEQ(
+       MOVE(
+        TEMP t274,
+        CONST 0),
+       SEQ(
+        CJUMP(LT,
+         TEMP t273,
+         CONST 0,
+         L304,L305),
+        SEQ(
+         LABEL L304,
+         SEQ(
+          EXP(
+           CALL(
+            NAME $SizeError$$)),
+          SEQ(
+           JUMP(
+            NAME L303),
+           LABEL L305)))))),
+     CALL(
+      NAME $InitArray$$,
+       TEMP t273,
+       TEMP t274))),
+   MEM(
+    ESEQ(
+     SEQ(
+      MOVE(
+       TEMP t276,
+       TEMP t275),
+      SEQ(
+       MOVE(
+        TEMP t277,
+        CONST 2),
+       SEQ(
+        CJUMP(LE,
+         MEM(
+          TEMP t276),
+         TEMP t277,
+         L306,L307),
+        SEQ(
+         LABEL L306,
+         SEQ(
+          EXP(
+           CALL(
+            NAME $UpperBoundExit$$)),
+          SEQ(
+           JUMP(
+            NAME L303),
+           SEQ(
+            LABEL L307,
+            SEQ(
+             CJUMP(LT,
+              TEMP t277,
+              CONST 0,
+              L308,L309),
+             SEQ(
+              LABEL L308,
+              SEQ(
+               EXP(
+                CALL(
+                 NAME $LowerBoundExit$$)),
+               SEQ(
+                JUMP(
+                 NAME L303),
+                LABEL L309))))))))))),
+     BINOP(PLUS,
+      TEMP t276,
+      BINOP(MUL,
+       CONST 4,
+       BINOP(PLUS,
+        CONST 1,
+        TEMP t277))))))),
+ LABEL L303)
+

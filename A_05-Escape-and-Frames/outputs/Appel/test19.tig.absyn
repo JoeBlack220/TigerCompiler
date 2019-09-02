@@ -1,0 +1,25 @@
+LetExp([
+ FunctionDec[
+  (do_nothing1,[
+   (a,false,int),
+   (b,false,string)],
+   SOME(int),
+   SeqExp[
+    CallExp(do_nothing2,[
+     OpExp(PlusOp,
+      VarExp(
+       SimpleVar(a)),
+      IntExp(1))]),
+    IntExp(0)]),
+  (do_nothing2,[
+   (d,false,int)],
+   SOME(string),
+   SeqExp[
+    CallExp(do_nothing1,[
+     VarExp(
+      SimpleVar(a)),
+     StringExp("str")]),
+    StringExp(" ")])]],
+ CallExp(do_nothing1,[
+  IntExp(0),
+  StringExp("str2")]))

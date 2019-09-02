@@ -1,0 +1,39 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L220
+L224:
+lw t501,0($fp)
+move $a0,t501
+jal L220
+move $v0,$v0
+j L221
+L221:
+
+LABEL L222
+L225:
+lw t502,0($fp)
+move $a0,t502
+jal L220
+move $v0,$v0
+j L223
+L223:
+
+LABEL L218
+L226:
+la t503,L1
+li $v0,0
+j L219
+L219:
+
+LABEL $Main$$
+L227:
+move $a0,$fp
+jal L218
+move $v0,$v0
+j L217
+L217:
+

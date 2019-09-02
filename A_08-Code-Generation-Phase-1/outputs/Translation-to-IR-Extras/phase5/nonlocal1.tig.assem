@@ -1,0 +1,29 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L135
+L137:
+lw t370,-4($fp)
+lw t369,-8(t370)
+mul t368,t369,t367
+move $v0,t368
+j L136
+L136:
+
+LABEL $Main$$
+L138:
+li t371,0
+sw t371,-8($fp)
+lw t373,-8($fp)
+li t374,2
+mul t372,t374,t373
+move $a0,$fp
+move $a1,t372
+jal L135
+move $v0,$v0
+j L134
+L134:
+

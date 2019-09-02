@@ -1,0 +1,20 @@
+LetExp([
+ VarDec(a,true,NONE,
+  IntExp(0)),
+ FunctionDec[
+  (g,[
+   (b,false,int),
+   (c,false,int)],
+   SOME(int),
+   OpExp(TimesOp,
+    OpExp(TimesOp,
+     VarExp(
+      SimpleVar(a)),
+     VarExp(
+      SimpleVar(b))),
+    VarExp(
+     SimpleVar(c))))]],
+ CallExp(g,[
+  IntExp(2),
+  VarExp(
+   SimpleVar(a))]))

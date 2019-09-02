@@ -1,0 +1,22 @@
+LetExp([
+ TypeDec[
+  (rt,
+   RecordTy[
+    (f0,true,int),
+    (f1,true,int),
+    (f2,true,int),
+    (f3,true,int),
+    (f4,true,int),
+    (f5,true,int),
+    (f6,true,int),
+    (f7,true,int),
+    (f8,true,int),
+    (f9,true,int)])],
+ VarDec(rv,true,SOME(rt),
+  NilExp),
+ VarDec(x,true,SOME(int),
+  IntExp(0))],
+ AssignExp(
+  SimpleVar(x),
+  VarExp(
+   SimpleVar(rv))))

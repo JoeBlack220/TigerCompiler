@@ -1,0 +1,29 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L364
+ "
+
+LABEL $Main$$
+[
+LABEL L365,
+MOVE(
+ TEMP t588,
+ CONST 0),
+MOVE(
+ TEMP t589,
+ NAME L364),
+MOVE(
+ TEMP t123,
+ CONST 0),
+JUMP(
+ NAME L363),
+LABEL L363 
+]
+
+

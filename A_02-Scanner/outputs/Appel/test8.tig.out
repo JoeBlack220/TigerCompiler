@@ -1,0 +1,11 @@
+IF   17
+LPAREN   20
+INT(10)   21
+GT   24
+INT(20)   26
+RPAREN   28
+THEN   30
+INT(30)   35
+ELSE   38
+INT(40)   43
+EOF   47

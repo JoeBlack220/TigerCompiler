@@ -1,0 +1,13 @@
+LetExp([
+ VarDec(x,false,NONE,
+  IntExp(0))],
+ ForExp(
+  i,false,
+  IntExp(1),
+  IntExp(10),
+  AssignExp(
+   SimpleVar(x),
+   OpExp(PlusOp,
+    VarExp(
+     SimpleVar(i)),
+    IntExp(1)))))

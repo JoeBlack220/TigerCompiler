@@ -1,0 +1,236 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL N2
+[
+LABEL N3,
+CJUMP(EQ,
+ CONST 0,
+ TEMP tr0,
+ N4,N5),
+LABEL N5,
+EXP(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP tr1))))),
+MOVE(
+ TEMP tr2,
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr1))))))),
+LABEL N6,
+MOVE(
+ TEMP tr3,
+ TEMP tr2),
+JUMP(
+ NAME N7),
+LABEL N4,
+MOVE(
+ TEMP tr2,
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP tr1))))),
+JUMP(
+ NAME N6),
+LABEL N7 
+]
+
+
+LABEL N8
+[
+LABEL N9,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   TEMP tr1)),
+ CONST 1),
+MOVE(
+ TEMP tr4,
+ CONST 10),
+CJUMP(LE,
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   TEMP tr1)),
+ TEMP tr4,
+ N10,N11),
+LABEL N11,
+MOVE(
+ TEMP tr3,
+ CONST 0),
+JUMP(
+ NAME N12),
+LABEL N10,
+MOVE(
+ TEMP tr5,
+ CONST 3),
+MOVE(
+ TEMP tr6,
+ CONST 10),
+MOVE(
+ TEMP tr7,
+ CONST 0),
+CJUMP(LT,
+ TEMP tr6,
+ CONST 0,
+ N13,N14),
+LABEL N14,
+MOVE(
+ TEMP tr8,
+ CALL(
+  NAME $InitArray$$,
+   TEMP tr6,
+   TEMP tr7)),
+CJUMP(EQ,
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr1)),
+ CONST 0,
+ N15,N16),
+LABEL N16,
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr10,
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   TEMP tr1))),
+CJUMP(LE,
+ MEM(
+  TEMP tr9),
+ TEMP tr10,
+ N17,N18),
+LABEL N18,
+CJUMP(LT,
+ TEMP tr10,
+ CONST 0,
+ N19,N20),
+LABEL N20,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP tr9,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP tr10)))),
+ BINOP(PLUS,
+  MEM(
+   BINOP(PLUS,
+    CONST -12,
+    TEMP tr1)),
+  MEM(
+   BINOP(PLUS,
+    CONST -12,
+    MEM(
+     BINOP(PLUS,
+      CONST -4,
+      TEMP tr1)))))),
+LABEL N21,
+CJUMP(GE,
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   TEMP tr1)),
+ TEMP tr4,
+ N11,N22),
+LABEL N22,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   TEMP tr1)),
+ BINOP(PLUS,
+  MEM(
+   BINOP(PLUS,
+    CONST -12,
+    TEMP tr1)),
+  CONST 1)),
+JUMP(
+ NAME N10),
+LABEL N13,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME N12),
+LABEL N15,
+MOVE(
+ TEMP tr5,
+ CALL(
+  NAME N2,
+   TEMP tr1,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP tr1)))),
+JUMP(
+ NAME N21),
+LABEL N17,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME N12),
+LABEL N19,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME N12),
+LABEL N12 
+]
+
+
+LABEL $Main$$
+[
+LABEL N23,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP tr1)),
+ CONST 4),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   TEMP tr1)),
+ CONST 3),
+MOVE(
+ TEMP tr3,
+ CALL(
+  NAME N8,
+   TEMP tr1,
+   CONST 10)),
+JUMP(
+ NAME N24),
+LABEL N24 
+]
+
+

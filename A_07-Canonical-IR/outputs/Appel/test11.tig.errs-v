@@ -1,0 +1,6 @@
+2.1: Unexpected type: Found different type from expected type.
+Expected: INT
+Found:    STRING
+
+3.2: Assignment to loop control variable "i" not allowed. You can't assign value to the loopvar.
+

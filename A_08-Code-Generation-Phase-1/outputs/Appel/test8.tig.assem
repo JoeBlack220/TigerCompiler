@@ -1,0 +1,20 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L514:
+li t734,20
+blt t734,10,L511
+L512:
+li t733,40
+L513:
+move $v0,t733
+j L510
+L511:
+li t733,30
+j L513
+L510:
+

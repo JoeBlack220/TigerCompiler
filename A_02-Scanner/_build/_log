@@ -1,0 +1,26 @@
+### Starting build.
+# Target: driver.ml.depends, tags: { extension:ml, file:driver.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules driver.ml > driver.ml.depends # cached
+# Target: errormsg.ml.depends, tags: { extension:ml, file:errormsg.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules errormsg.ml > errormsg.ml.depends # cached
+# Target: errormsg.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:errormsg.cmo, file:errormsg.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o errormsg.cmo errormsg.ml # cached
+# Target: lex.mll, tags: { extension:mll, file:lex.mll, lexer, ocaml, ocamllex, quiet }
+ocamllex.opt -q lex.mll # cached
+# Target: lex.ml.depends, tags: { extension:ml, file:lex.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules lex.ml > lex.ml.depends # cached
+# Target: tokens_mod.ml.depends, tags: { extension:ml, file:tokens_mod.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules tokens_mod.ml > tokens_mod.ml.depends # cached
+# Target: tokens_sig.ml.depends, tags: { extension:ml, file:tokens_sig.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules tokens_sig.ml > tokens_sig.ml.depends # cached
+# Target: tokens_sig.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tokens_sig.cmo, file:tokens_sig.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o tokens_sig.cmo tokens_sig.ml # cached
+# Target: tokens_mod.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tokens_mod.cmo, file:tokens_mod.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o tokens_mod.cmo tokens_mod.ml # cached
+# Target: lex.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:lex.cmo, file:lex.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o lex.cmo lex.ml # cached
+# Target: driver.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:driver.cmo, file:driver.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o driver.cmo driver.ml # cached
+# Target: driver.byte, tags: { byte, dont_link_with, extension:byte, file:driver.byte, link, ocaml, program, quiet }
+ocamlc.opt errormsg.cmo tokens_sig.cmo tokens_mod.cmo lex.cmo driver.cmo -o driver.byte # cached
+# Compilation successful.

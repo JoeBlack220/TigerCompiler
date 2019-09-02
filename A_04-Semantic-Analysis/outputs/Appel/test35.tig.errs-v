@@ -1,0 +1,6 @@
+5.2: Unexpected type: Found different type from expected type.
+Expected: STRING
+Found:    INT
+
+5.2: Too few arguments for "g" Too few arguments in a function.
+

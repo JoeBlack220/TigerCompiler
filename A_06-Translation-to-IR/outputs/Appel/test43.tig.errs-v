@@ -1,0 +1,7 @@
+6.4: Unexpected type: Found different type from expected type.
+Expected: UNIT
+Found:    INT
+
+4.2: Incorrect type: Unit type not allowed in variable declaration.
+Type is: UNIT
+

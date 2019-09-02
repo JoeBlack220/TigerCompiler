@@ -1,0 +1,40 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+[
+LABEL L481,
+MOVE(
+ TEMP t382,
+ CALL(
+  NAME $Malloc$$,
+   CONST 8)),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t382,
+   CONST 0)),
+ CONST 0),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t382,
+   CONST 4)),
+ NAME L0),
+MOVE(
+ TEMP t383,
+ TEMP t382),
+MOVE(
+ TEMP t123,
+ TEMP t383),
+JUMP(
+ NAME L480),
+LABEL L480 
+]
+
+

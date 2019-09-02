@@ -1,0 +1,4 @@
+7.12: Unexpected type: Inconsistent types occur in var declaration.
+Expected: array[INT] of INT
+Found:    array[INT] of INT
+

@@ -1,0 +1,46 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    TEMP t250,
+    ESEQ(
+     SEQ(
+      MOVE(
+       TEMP t248,
+       CONST 10),
+      SEQ(
+       MOVE(
+        TEMP t249,
+        CONST 0),
+       SEQ(
+        CJUMP(LT,
+         TEMP t248,
+         CONST 0,
+         L258,L259),
+        SEQ(
+         LABEL L258,
+         SEQ(
+          EXP(
+           CALL(
+            NAME $SizeError$$)),
+          SEQ(
+           JUMP(
+            NAME L257),
+           LABEL L259)))))),
+     CALL(
+      NAME $InitArray$$,
+       TEMP t248,
+       TEMP t249))),
+   TEMP t250)),
+ LABEL L257)
+

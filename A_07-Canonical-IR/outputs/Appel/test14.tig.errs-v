@@ -1,0 +1,6 @@
+12.9: Unexpected type: Found different type from expected type.
+Expected: record1{
+              name: STRING
+              id: INT}
+Found:    array[INT] of INT
+

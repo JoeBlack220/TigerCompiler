@@ -1,0 +1,34 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L114
+L116:
+lw t339,-4($fp)
+add t338,t335,t339
+move $v0,t338
+j L115
+L115:
+
+LABEL $Main$$
+L117:
+li t340,1
+li t341,2
+li t342,3
+li t343,4
+li t344,5
+li t345,6
+move $a0,$fp
+move $a1,t340
+move $a2,t341
+move $a3,t342
+sw t343,-12($sp)
+sw t344,-8($sp)
+sw t345,-4($sp)
+jal L114
+move $v0,$v0
+j L113
+L113:
+

@@ -1,0 +1,288 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L398
+aname"
+
+LABEL L399
+somewhere"
+
+LABEL L402
+"
+
+LABEL L405
+Kapoios"
+
+LABEL L406
+Kapou"
+
+LABEL L407
+Allos"
+
+LABEL L424
+kati"
+
+LABEL L435
+sfd"
+
+LABEL L438
+sdf"
+
+LABEL $Main$$
+L451:
+li t602,10
+li t603,0
+bltz t602,L396
+L397:
+move $a0,t602
+move $a1,t603
+jal $InitArray$$
+move t604,$v0
+li t606,5
+li t639,16
+move $a0,t639
+jal $Malloc$$
+move t605,$v0
+la t640,L398
+sw t640,0(t605)
+la t641,L399
+sw t641,4(t605)
+li t642,0
+sw t642,8(t605)
+li t643,0
+sw t643,12(t605)
+move t607,t605
+bltz t606,L400
+L401:
+move $a0,t606
+move $a1,t607
+jal $InitArray$$
+move t608,$v0
+li t609,100
+la t610,L402
+bltz t609,L403
+L404:
+move $a0,t609
+move $a1,t610
+jal $InitArray$$
+move t611,$v0
+li t644,16
+move $a0,t644
+jal $Malloc$$
+move t612,$v0
+la t645,L405
+sw t645,0(t612)
+la t646,L406
+sw t646,4(t612)
+li t647,2432
+sw t647,8(t612)
+li t648,44
+sw t648,12(t612)
+move t613,t612
+li t649,8
+move $a0,t649
+jal $Malloc$$
+move t616,$v0
+la t650,L407
+sw t650,0(t616)
+addi t651,t616,4
+move t638,t651
+li t614,3
+li t615,1900
+bltz t614,L408
+L409:
+move $a0,t614
+move $a1,t615
+jal $InitArray$$
+move t637,$v0
+sw t637,(t638)
+move t617,t616
+move t618,t604
+li t619,0
+lw t652,(t618)
+ble t652,t619,L410
+L411:
+bltz t619,L412
+L413:
+li t653,1
+addi t656,t619,1
+li t657,4
+mul t655,t657,t656
+add t654,t618,t655
+sw t653,(t654)
+move t620,t604
+li t621,9
+lw t658,(t620)
+ble t658,t621,L414
+L415:
+bltz t621,L416
+L417:
+li t659,3
+addi t662,t621,1
+li t663,4
+mul t661,t663,t662
+add t660,t620,t661
+sw t659,(t660)
+move t622,t608
+li t623,3
+lw t664,(t622)
+ble t664,t623,L418
+L419:
+bltz t623,L420
+L421:
+addi t667,t623,1
+li t668,4
+mul t666,t668,t667
+add t665,t622,t666
+lw t624,(t665)
+la t669,L0
+beq t624,t669,L422
+L423:
+la t670,L424
+sw t670,0(t624)
+move t625,t608
+li t626,1
+lw t671,(t625)
+ble t671,t626,L425
+L426:
+bltz t626,L427
+L428:
+addi t674,t626,1
+li t675,4
+mul t673,t675,t674
+add t672,t625,t673
+lw t627,(t672)
+la t676,L0
+beq t627,t676,L429
+L430:
+li t677,23
+sw t677,12(t627)
+move t628,t611
+li t629,34
+lw t678,(t628)
+ble t678,t629,L431
+L432:
+bltz t629,L433
+L434:
+la t679,L435
+addi t682,t629,1
+li t683,4
+mul t681,t683,t682
+add t680,t628,t681
+sw t679,(t680)
+move t630,t613
+la t684,L0
+beq t630,t684,L436
+L437:
+la t685,L438
+sw t685,0(t630)
+move t631,t617
+la t686,L0
+beq t631,t686,L439
+L440:
+lw t632,4(t631)
+li t633,0
+lw t687,(t632)
+ble t687,t633,L441
+L442:
+bltz t633,L443
+L444:
+li t688,2323
+addi t691,t633,1
+li t692,4
+mul t690,t692,t691
+add t689,t632,t690
+sw t688,(t689)
+move t634,t617
+la t693,L0
+beq t634,t693,L445
+L446:
+lw t635,4(t634)
+li t636,2
+lw t694,(t635)
+ble t694,t636,L447
+L448:
+bltz t636,L449
+L450:
+li t695,2323
+addi t698,t636,1
+li t699,4
+mul t697,t699,t698
+add t696,t635,t697
+sw t695,(t696)
+li $v0,0
+j L395
+L396:
+jal $SizeError$$
+j L395
+L400:
+jal $SizeError$$
+j L395
+L403:
+jal $SizeError$$
+j L395
+L408:
+jal $SizeError$$
+j L395
+L410:
+jal $UpperBoundExit$$
+j L395
+L412:
+jal $LowerBoundExit$$
+j L395
+L414:
+jal $UpperBoundExit$$
+j L395
+L416:
+jal $LowerBoundExit$$
+j L395
+L418:
+jal $UpperBoundExit$$
+j L395
+L420:
+jal $LowerBoundExit$$
+j L395
+L422:
+jal $NullExit$$
+j L395
+L425:
+jal $UpperBoundExit$$
+j L395
+L427:
+jal $LowerBoundExit$$
+j L395
+L429:
+jal $NullExit$$
+j L395
+L431:
+jal $UpperBoundExit$$
+j L395
+L433:
+jal $LowerBoundExit$$
+j L395
+L436:
+jal $NullExit$$
+j L395
+L439:
+jal $NullExit$$
+j L395
+L441:
+jal $UpperBoundExit$$
+j L395
+L443:
+jal $LowerBoundExit$$
+j L395
+L445:
+jal $NullExit$$
+j L395
+L447:
+jal $UpperBoundExit$$
+j L395
+L449:
+jal $LowerBoundExit$$
+j L395
+L395:
+

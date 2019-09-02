@@ -1,0 +1,55 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL N2
+Hello"
+
+LABEL N3
+World"
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP tr0,
+  ESEQ(
+   SEQ(
+    SEQ(
+     CJUMP(LT,
+      CONST 1,
+      CONST 2,
+      N4,N5),
+     SEQ(
+      LABEL N4,
+      SEQ(
+       CJUMP(LT,
+        CONST 3,
+        CONST 5,
+        N6,N7),
+       SEQ(
+        LABEL N5,
+        JUMP(
+         NAME N7))))),
+    SEQ(
+     LABEL N6,
+     SEQ(
+      MOVE(
+       TEMP tr1,
+       NAME N2),
+      SEQ(
+       JUMP(
+        NAME N8),
+       SEQ(
+        LABEL N7,
+        SEQ(
+         MOVE(
+          TEMP tr1,
+          NAME N3),
+         LABEL N8)))))),
+   TEMP tr1)),
+ LABEL N9)
+

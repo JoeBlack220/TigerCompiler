@@ -1,0 +1,13 @@
+FOR   77
+ID(i)   81
+ASSIGN   82
+INT(10)   84
+TO   87
+STRING( )   90
+DO   94
+ID(i)   99
+ASSIGN   101
+ID(i)   104
+MINUS   106
+INT(1)   108
+EOF   110

@@ -1,0 +1,29 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L40
+Hello"
+
+LABEL L41
+World"
+
+LABEL $Main$$
+L45:
+j L38
+L39:
+L43:
+la t151,L41
+L44:
+move $v0,t151
+j L37
+L38:
+li t152,5
+ble t152,3,L43
+L42:
+la t151,L40
+j L44
+L37:
+

@@ -1,0 +1,5 @@
+LetExp([
+ VarDec(a,true,NONE,
+  RecordExp(rectype,[
+]))],
+ IntExp(0))

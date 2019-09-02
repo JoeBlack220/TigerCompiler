@@ -1,0 +1,10 @@
+LetExp([
+ VarDec(x,false,NONE,
+  IntExp(3)),
+ VarDec(y,false,SOME(int),
+  IntExp(5))],
+ OpExp(PlusOp,
+  VarExp(
+   SimpleVar(x)),
+  VarExp(
+   SimpleVar(y))))

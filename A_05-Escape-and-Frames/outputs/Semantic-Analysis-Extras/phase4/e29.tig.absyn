@@ -1,0 +1,7 @@
+LetExp([
+ TypeDec[
+  (list,
+   ArrayTy(int))]],
+ ArrayExp(list,
+  IntExp(100),
+  StringExp("Hello")))

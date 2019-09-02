@@ -1,0 +1,12 @@
+LET   66
+VAR   72
+ID(a)   76
+ASSIGN   78
+LPAREN   81
+RPAREN   82
+IN   84
+ID(a)   88
+PLUS   90
+INT(3)   92
+END   94
+EOF   98

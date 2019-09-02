@@ -1,0 +1,7 @@
+LetExp([
+ VarDec(d,false,NONE,
+  IntExp(0))],
+ VarExp(
+  FieldVar(
+   SimpleVar(d),
+   f)))

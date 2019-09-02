@@ -1,0 +1,47 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L484
+L488:
+lw t718,-8($fp)
+addi t719,t715,1
+move $a0,t718
+move $a1,t719
+jal L486
+move $v0,$v0
+j L485
+L485:
+
+LABEL L489
+str"
+
+LABEL L486
+L490:
+lw t720,-4($fp)
+la t721,L489
+move $a0,t720
+move $a1,t717
+move $a2,t721
+jal L484
+move $v0,$v0
+j L487
+L487:
+
+LABEL L491
+str2"
+
+LABEL $Main$$
+L492:
+li t722,0
+la t723,L491
+move $a0,$fp
+move $a1,t722
+move $a2,t723
+jal L484
+move $v0,$v0
+j L483
+L483:
+

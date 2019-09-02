@@ -1,0 +1,11 @@
+WHILE   37
+LPAREN   42
+INT(10)   43
+GT   46
+INT(5)   48
+RPAREN   49
+DO   51
+INT(5)   54
+PLUS   55
+INT(6)   56
+EOF   58

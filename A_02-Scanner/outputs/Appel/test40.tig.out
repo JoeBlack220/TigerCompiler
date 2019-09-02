@@ -1,0 +1,17 @@
+LET   38
+FUNCTION   43
+ID(g)   52
+LPAREN   53
+ID(a)   54
+COLON   55
+ID(int)   56
+RPAREN   59
+EQ   61
+ID(a)   63
+IN   65
+ID(g)   70
+LPAREN   71
+INT(2)   72
+RPAREN   73
+END   75
+EOF   80

@@ -1,0 +1,44 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL N2
+[
+LABEL N3,
+MOVE(
+ TEMP tr0,
+ TEMP tr1),
+JUMP(
+ NAME N4),
+LABEL N4 
+]
+
+
+LABEL N5
+[
+LABEL N6,
+MOVE(
+ TEMP tr0,
+ TEMP tr2),
+JUMP(
+ NAME N7),
+LABEL N7 
+]
+
+
+LABEL $Main$$
+[
+LABEL N8,
+MOVE(
+ TEMP tr0,
+ CONST 0),
+JUMP(
+ NAME N9),
+LABEL N9 
+]
+
+

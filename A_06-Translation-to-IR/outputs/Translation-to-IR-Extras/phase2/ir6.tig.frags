@@ -1,0 +1,19 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    TEMP t141,
+    CONST 6),
+   TEMP t141)),
+ LABEL L17)
+

@@ -1,0 +1,476 @@
+.data
+$LowerBoundErr$$:
+.asciiz "Runtime error: array index less than zero\n"
+
+.data
+$ChrErr$$:
+.asciiz "Runtime error: Illegal ASCII code for chr\n"
+
+.data
+$SubStrErr$$:
+.asciiz "Runtime error: Access to illegal location in substring\n"
+
+$UpperBoundErr$$:
+.asciiz "Runtime error: array index greater than array size\n"
+
+.data
+$NullErr$$:
+.asciiz "Runtime error: attempt to access fields of a null record\n"
+
+.data
+$SizeErr$$:
+.asciiz "Runtime error: only positive size array objects can be created\n"
+
+.data
+$NewLine$$:
+.asciiz "\n"
+
+.data
+$Dummy$$:
+.asciiz "Dummy string\n"
+
+.text
+.globl main
+main:
+jal $Main$$
+li $v0, 10
+syscall
+
+.text
+$NullExit$$:
+la $a0, $NullErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$LowerBoundExit$$:
+la $a0, $LowerBoundErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$UpperBoundExit$$:
+la $a0, $UpperBoundErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$SizeError$$:
+la $a0, $SizeErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$Malloc$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+li $v0,9
+syscall
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$StringLength$$:
+move $t4,$zero
+move $t2,$a0
+NEXTSL:
+lbu $t3,($t2)
+beq $t3,$zero,ENDLENGTH
+addi $t2,$t2,1
+addi $t4,$t4,1
+j NEXTSL
+ENDLENGTH:
+move $v0,$t4
+jr $ra
+
+# 0 - equal
+# 1 - left is greater
+# 2 - right is greater
+
+.text
+$StringComp$$:
+sw $fp,-12($sp)
+la $fp,-4($sp)
+la $sp,-16($fp)
+sw $ra,-12($fp)
+sw $a0,-4($fp)
+sw $a1,($fp)
+jal $StringLength$$
+sw $v0,-16($fp)
+lw $a0,($fp)
+jal $StringLength$$
+lw $t7,-16($fp)
+lw $t8,-4($fp)
+lw $t9,($fp)
+blt $t7,$v0,COMPLOOP
+move $t7,$v0
+COMPLOOP:
+beq $t7,$zero,EX1
+lbu $t5,($t8)
+lbu $t6,($t9)
+bne $t5,$t6,EX2
+sub $t7,$t7,1
+addi $t8,$t8,1
+addi $t9,$t9,1
+j COMPLOOP
+EX1:
+lbu $t5,($t8)
+bne $t5,$zero,LGT
+lbu $t6,($t9)
+beq $t6,$zero,EQ
+li $v0,2
+j EX
+EQ:
+li $v0,0
+j EX
+EX2:
+blt $t5,$t6,LLT
+LGT:
+li $v0,1
+j EX
+LLT:
+li $v0,2
+EX:
+la $sp,4($fp)
+lw $ra,-12($fp)
+lw $fp,-8($fp)
+jr $ra
+
+.text
+$StringEqual$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+jal $StringComp$$
+beq $v0,$zero,EQ1
+li $v0,0
+j EQEX
+EQ1:
+li $v0,1
+EQEX:
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$StringLT$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+jal $StringComp$$
+li $t3,2
+beq $v0,$t3,LT1
+li $v0,0
+j LTEX
+LT1:
+li $v0,1
+LTEX:
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$StringLEQ$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+jal $StringComp$$
+li $t3,2
+beq $v0,$t3,LEQ1
+beq $v0,$zero,LEQ1
+li $v0,0
+j LEQEX
+LEQ1:
+li $v0,1
+LEQEX:
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$InitArray$$:
+sw $fp,-12($sp)
+la $fp,-4($sp)
+la $sp,-12($fp)
+sw $a1,($fp)
+sw $a0,-4($fp)
+sw $ra,-12($fp)
+add $a0,$a0,1
+mul $a0,$a0,4
+li $v0,9
+syscall
+lw $t0,-4($fp)
+sw $t0,($v0)
+move $t1,$v0
+lw $t2,($fp)
+$CALoop$$:
+beqz $t0, $CAEnd$$
+add $t1,$t1,4
+sw $t2,($t1)
+sub $t0,$t0,1
+j $CALoop$$
+$CAEnd$$:
+la $sp,4($fp)
+lw $ra,-12($fp)
+lw $fp,-8($fp)
+jr $ra
+
+.text
+$Print$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+move $a0,$a1
+li $v0,4
+syscall
+lw $ra,-4($fp)
+la $sp,4($fp)
+lw $fp,($fp)
+jr $ra
+
+# doesn't seem possible to do anything more with SPIM
+.text 
+$Flush$$:
+jr $ra
+
+.text
+$GetChar$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-8($fp)
+sw $ra,-4($fp)
+li $a0,2
+li $v0,9
+syscall
+sw $v0,-8($fp)
+move $a0,$v0
+li $a1,2
+li $v0,8
+syscall
+lw $v0,-8($fp)
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$Ord$$:
+lbu $v0,($a1)
+bne $v0,$zero,NL
+li $v0,-1
+NL:
+jr $ra
+
+.text
+$Chr$$:
+blt $a1,$zero,ERR
+bgt $a1,255,ERR
+sw $fp,-8($sp)
+la $fp,-4($sp)
+la $sp,-8($fp)
+sw $ra,-8($fp)
+sw $a1,($fp)
+li $a0,4
+li $v0,9
+syscall
+lw $t0,($fp)
+sb $t0,($v0)
+sb $zero,1($v0)
+la $sp,4($fp)
+lw $ra,-8($fp)
+lw $fp,-4($fp)
+jr $ra
+ERR:
+la $a0,$ChrErr$$
+li $v0,4
+syscall
+li $v0,10
+syscall
+
+.text
+$Exit$$:
+li $v0,10
+syscall
+
+.text
+$Not$$:
+beq $a1,$zero,EQZERO
+li $v0,0
+jr $ra
+EQZERO:
+li $v0,1
+jr $ra
+
+.text
+$SubString$$:
+sw $fp,-16($sp)
+la $fp,-4($sp)
+la $sp,-16($fp)
+sw $ra,-16($fp)
+sw $a1,-8($fp)
+sw $a2,-4($fp)
+sw $a3,($fp)
+blt $a2,$zero,SubErr
+move $a0,$a1
+jal $StringLength$$
+lw $t1,-4($fp)
+lw $t2,($fp)
+add $t0,$t1,$t2
+blt $v0,$t0,SubErr
+addi $a0,$t2,1
+li $v0,9
+syscall
+move $t0,$v0
+lw $t1,-8($fp)
+lw $t2,-4($fp)
+lw $t3,($fp)
+add $t1,$t1,$t2
+SSLoop:
+ble $t3,$zero,FinSub
+lbu $t2,($t1)
+sb $t2,($t0)
+addi $t0,$t0,1
+addi $t1,$t1,1
+sub $t3,$t3,1
+j SSLoop
+FinSub:
+sb $zero,($t0)
+lw $ra,-16($fp)
+la $sp,4($fp)
+lw $fp,-12($fp)
+jr $ra
+SubErr:
+la $a0,$SubStrErr$$
+li $v0,4
+syscall
+li $v0,10
+syscall
+
+.text
+$Concat$$:
+sw $fp,-12($sp)
+la $fp,-4($sp)
+la $sp,-20($fp)
+sw $ra,-12($fp)
+sw $a2,($fp)
+sw $a1,-4($fp)
+move $a0,$a1
+jal $StringLength$$
+sw $v0,-16($fp)
+lw $a0,($fp)
+jal $StringLength$$
+sw $v0,-20($fp)
+lw $t0,-16($fp)
+add $a0,$t0,$v0
+addi $a0,$a0,1
+li $v0,9
+syscall
+move $t0,$v0
+lw $t1,-16($fp)
+lw $t2,-4($fp)
+lw $t3,-20($fp)
+lw $t4,($fp)
+CopyOne:
+ble $t1,$zero,CopyTwo
+lbu $t5,($t2)
+sb $t5,($t0)
+addi $t2,$t2,1
+addi $t0,$t0,1
+sub $t1,$t1,1
+j CopyOne
+CopyTwo:
+ble $t3,$zero,FinCat
+lbu $t5,($t4)
+sb $t5,($t0)
+addi $t4,$t4,1
+addi $t0,$t0,1
+sub $t3,$t3,1
+j CopyTwo
+FinCat:
+sb $zero,($t0)
+lw $ra,-12($fp)
+la $sp,4($fp)
+lw $fp,-8($fp)
+jr $ra
+
+
+.text
+$Size$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+move $a0,$a1
+jal $StringLength$$
+lw $ra,-4($fp)
+la $sp,4($fp)
+lw $fp($fp)
+jr $ra
+
+.data
+.align 2
+L1:
+.asciiz " "
+
+.data
+.align 2
+L0:
+.asciiz " "
+
+.text
+L142:
+sw $fp,-16($sp)
+la $fp,-4($sp)
+la $sp,-12($fp)
+L144:
+sw $a0,-8($fp)
+lw $t0,-8($fp)
+lw $t0,-8($t0)
+mul $t0,$t0,$a1
+mul $v0,$t0,$a2
+j L143
+L143:
+la $sp,4($fp)
+lw $fp,-16($sp)
+jr $ra
+
+.text
+$Main$$:
+sw $fp,-8($sp)
+la $fp,-4($sp)
+la $sp,-12($fp)
+L145:
+sw $a0,0($fp)
+sw $ra,-12($fp)
+li $t0,0
+sw $t0,-8($fp)
+li $a1,2
+lw $a2,-8($fp)
+move $a0,$fp
+jal L142
+lw $ra,-12($fp)
+j L141
+L141:
+la $sp,4($fp)
+lw $fp,-8($sp)
+jr $ra
+

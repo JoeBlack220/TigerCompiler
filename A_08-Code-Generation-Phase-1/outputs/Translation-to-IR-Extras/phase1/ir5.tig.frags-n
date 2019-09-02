@@ -1,0 +1,47 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL N2
+Hello"
+
+LABEL N3
+World"
+
+LABEL $Main$$
+[
+LABEL N4,
+CJUMP(LT,
+ CONST 1,
+ CONST 2,
+ N5,N6),
+LABEL N6,
+LABEL N7,
+MOVE(
+ TEMP tr0,
+ NAME N3),
+LABEL N8,
+MOVE(
+ TEMP tr1,
+ TEMP tr0),
+JUMP(
+ NAME N9),
+LABEL N5,
+CJUMP(GE,
+ CONST 3,
+ CONST 5,
+ N7,N10),
+LABEL N10,
+MOVE(
+ TEMP tr0,
+ NAME N2),
+JUMP(
+ NAME N8),
+LABEL N9 
+]
+
+

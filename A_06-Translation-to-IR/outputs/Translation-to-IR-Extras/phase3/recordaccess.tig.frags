@@ -1,0 +1,133 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    TEMP t152,
+    NAME L0),
+   ESEQ(
+    SEQ(
+     CJUMP(NE,
+      MEM(
+       ESEQ(
+        SEQ(
+         MOVE(
+          TEMP t153,
+          TEMP t152),
+         SEQ(
+          CJUMP(EQ,
+           TEMP t153,
+           NAME L0,
+           L31,L32),
+          SEQ(
+           LABEL L31,
+           SEQ(
+            EXP(
+             CALL(
+              NAME $NullExit$$)),
+            SEQ(
+             JUMP(
+              NAME L30),
+             LABEL L32))))),
+        BINOP(PLUS,
+         TEMP t153,
+         CONST 4))),
+      NAME L0,
+      L39,L40),
+     SEQ(
+      LABEL L39,
+      SEQ(
+       MOVE(
+        TEMP t157,
+        MEM(
+         ESEQ(
+          SEQ(
+           MOVE(
+            TEMP t155,
+            MEM(
+             ESEQ(
+              SEQ(
+               MOVE(
+                TEMP t154,
+                TEMP t152),
+               SEQ(
+                CJUMP(EQ,
+                 TEMP t154,
+                 NAME L0,
+                 L33,L34),
+                SEQ(
+                 LABEL L33,
+                 SEQ(
+                  EXP(
+                   CALL(
+                    NAME $NullExit$$)),
+                  SEQ(
+                   JUMP(
+                    NAME L30),
+                   LABEL L34))))),
+              BINOP(PLUS,
+               TEMP t154,
+               CONST 4)))),
+           SEQ(
+            CJUMP(EQ,
+             TEMP t155,
+             NAME L0,
+             L35,L36),
+            SEQ(
+             LABEL L35,
+             SEQ(
+              EXP(
+               CALL(
+                NAME $NullExit$$)),
+              SEQ(
+               JUMP(
+                NAME L30),
+               LABEL L36))))),
+          BINOP(PLUS,
+           TEMP t155,
+           CONST 0)))),
+       SEQ(
+        JUMP(
+         NAME L41),
+        SEQ(
+         LABEL L40,
+         SEQ(
+          MOVE(
+           TEMP t157,
+           MEM(
+            ESEQ(
+             SEQ(
+              MOVE(
+               TEMP t156,
+               TEMP t152),
+              SEQ(
+               CJUMP(EQ,
+                TEMP t156,
+                NAME L0,
+                L37,L38),
+               SEQ(
+                LABEL L37,
+                SEQ(
+                 EXP(
+                  CALL(
+                   NAME $NullExit$$)),
+                 SEQ(
+                  JUMP(
+                   NAME L30),
+                  LABEL L38))))),
+             BINOP(PLUS,
+              TEMP t156,
+              CONST 0)))),
+          LABEL L41)))))),
+    TEMP t157))),
+ LABEL L30)
+

@@ -1,0 +1,11 @@
+ForExp(
+ i,true,
+ IntExp(1),
+ IntExp(10),
+ IfExp(
+  OpExp(GtOp,
+   VarExp(
+    SimpleVar(i)),
+   IntExp(5)),
+  BreakExp,
+  SeqExp[]))

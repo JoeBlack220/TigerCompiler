@@ -1,0 +1,24 @@
+LetExp([
+ VarDec(i,true,SOME(int),
+  IntExp(0))],
+ SeqExp[
+  AssignExp(
+   SimpleVar(i),
+   IntExp(0)),
+  WhileExp(
+   OpExp(LtOp,
+    VarExp(
+     SimpleVar(i)),
+    IntExp(10)),
+   IfExp(
+    OpExp(GtOp,
+     VarExp(
+      SimpleVar(i)),
+     IntExp(5)),
+    BreakExp,
+    AssignExp(
+     SimpleVar(i),
+     OpExp(PlusOp,
+      VarExp(
+       SimpleVar(i)),
+      IntExp(1)))))])

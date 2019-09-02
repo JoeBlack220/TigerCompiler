@@ -1,0 +1,12 @@
+LetExp([
+ TypeDec[
+  (list,
+   ArrayTy(int))],
+ VarDec(list,false,NONE,
+  ArrayExp(list,
+   IntExp(100),
+   IntExp(0)))],
+ VarExp(
+  SubscriptVar(
+   SimpleVar(list),
+   IntExp(0))))

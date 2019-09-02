@@ -1,0 +1,17 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L364
+ "
+
+LABEL $Main$$
+L365:
+li t588,0
+la t589,L364
+li $v0,0
+j L363
+L363:
+

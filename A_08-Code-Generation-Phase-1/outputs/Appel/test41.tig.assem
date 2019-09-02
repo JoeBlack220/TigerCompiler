@@ -1,0 +1,12 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L393:
+li $v0,0
+j L392
+L392:
+

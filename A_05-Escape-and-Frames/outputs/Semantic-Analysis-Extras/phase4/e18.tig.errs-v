@@ -1,0 +1,14 @@
+7.5: Unexpected type: The types of var and expression in an assignexpression need to be the same.
+Expected: INT
+Found:    record1{
+              f0: INT
+              f1: INT
+              f2: INT
+              f3: INT
+              f4: INT
+              f5: INT
+              f6: INT
+              f7: INT
+              f8: INT
+              f9: INT}
+

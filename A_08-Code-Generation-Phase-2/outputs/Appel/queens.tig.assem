@@ -1,0 +1,872 @@
+.data
+$LowerBoundErr$$:
+.asciiz "Runtime error: array index less than zero\n"
+
+.data
+$ChrErr$$:
+.asciiz "Runtime error: Illegal ASCII code for chr\n"
+
+.data
+$SubStrErr$$:
+.asciiz "Runtime error: Access to illegal location in substring\n"
+
+$UpperBoundErr$$:
+.asciiz "Runtime error: array index greater than array size\n"
+
+.data
+$NullErr$$:
+.asciiz "Runtime error: attempt to access fields of a null record\n"
+
+.data
+$SizeErr$$:
+.asciiz "Runtime error: only positive size array objects can be created\n"
+
+.data
+$NewLine$$:
+.asciiz "\n"
+
+.data
+$Dummy$$:
+.asciiz "Dummy string\n"
+
+.text
+.globl main
+main:
+jal $Main$$
+li $v0, 10
+syscall
+
+.text
+$NullExit$$:
+la $a0, $NullErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$LowerBoundExit$$:
+la $a0, $LowerBoundErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$UpperBoundExit$$:
+la $a0, $UpperBoundErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$SizeError$$:
+la $a0, $SizeErr$$
+li $v0, 4
+syscall
+li $v0, 10
+syscall
+
+.text
+$Malloc$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+li $v0,9
+syscall
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$StringLength$$:
+move $t4,$zero
+move $t2,$a0
+NEXTSL:
+lbu $t3,($t2)
+beq $t3,$zero,ENDLENGTH
+addi $t2,$t2,1
+addi $t4,$t4,1
+j NEXTSL
+ENDLENGTH:
+move $v0,$t4
+jr $ra
+
+# 0 - equal
+# 1 - left is greater
+# 2 - right is greater
+
+.text
+$StringComp$$:
+sw $fp,-12($sp)
+la $fp,-4($sp)
+la $sp,-16($fp)
+sw $ra,-12($fp)
+sw $a0,-4($fp)
+sw $a1,($fp)
+jal $StringLength$$
+sw $v0,-16($fp)
+lw $a0,($fp)
+jal $StringLength$$
+lw $t7,-16($fp)
+lw $t8,-4($fp)
+lw $t9,($fp)
+blt $t7,$v0,COMPLOOP
+move $t7,$v0
+COMPLOOP:
+beq $t7,$zero,EX1
+lbu $t5,($t8)
+lbu $t6,($t9)
+bne $t5,$t6,EX2
+sub $t7,$t7,1
+addi $t8,$t8,1
+addi $t9,$t9,1
+j COMPLOOP
+EX1:
+lbu $t5,($t8)
+bne $t5,$zero,LGT
+lbu $t6,($t9)
+beq $t6,$zero,EQ
+li $v0,2
+j EX
+EQ:
+li $v0,0
+j EX
+EX2:
+blt $t5,$t6,LLT
+LGT:
+li $v0,1
+j EX
+LLT:
+li $v0,2
+EX:
+la $sp,4($fp)
+lw $ra,-12($fp)
+lw $fp,-8($fp)
+jr $ra
+
+.text
+$StringEqual$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+jal $StringComp$$
+beq $v0,$zero,EQ1
+li $v0,0
+j EQEX
+EQ1:
+li $v0,1
+EQEX:
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$StringLT$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+jal $StringComp$$
+li $t3,2
+beq $v0,$t3,LT1
+li $v0,0
+j LTEX
+LT1:
+li $v0,1
+LTEX:
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$StringLEQ$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+jal $StringComp$$
+li $t3,2
+beq $v0,$t3,LEQ1
+beq $v0,$zero,LEQ1
+li $v0,0
+j LEQEX
+LEQ1:
+li $v0,1
+LEQEX:
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$InitArray$$:
+sw $fp,-12($sp)
+la $fp,-4($sp)
+la $sp,-12($fp)
+sw $a1,($fp)
+sw $a0,-4($fp)
+sw $ra,-12($fp)
+add $a0,$a0,1
+mul $a0,$a0,4
+li $v0,9
+syscall
+lw $t0,-4($fp)
+sw $t0,($v0)
+move $t1,$v0
+lw $t2,($fp)
+$CALoop$$:
+beqz $t0, $CAEnd$$
+add $t1,$t1,4
+sw $t2,($t1)
+sub $t0,$t0,1
+j $CALoop$$
+$CAEnd$$:
+la $sp,4($fp)
+lw $ra,-12($fp)
+lw $fp,-8($fp)
+jr $ra
+
+.text
+$Print$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+move $a0,$a1
+li $v0,4
+syscall
+lw $ra,-4($fp)
+la $sp,4($fp)
+lw $fp,($fp)
+jr $ra
+
+# doesn't seem possible to do anything more with SPIM
+.text 
+$Flush$$:
+jr $ra
+
+.text
+$GetChar$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-8($fp)
+sw $ra,-4($fp)
+li $a0,2
+li $v0,9
+syscall
+sw $v0,-8($fp)
+move $a0,$v0
+li $a1,2
+li $v0,8
+syscall
+lw $v0,-8($fp)
+la $sp,4($fp)
+lw $ra,-4($fp)
+lw $fp,($fp)
+jr $ra
+
+.text
+$Ord$$:
+lbu $v0,($a1)
+bne $v0,$zero,NL
+li $v0,-1
+NL:
+jr $ra
+
+.text
+$Chr$$:
+blt $a1,$zero,ERR
+bgt $a1,255,ERR
+sw $fp,-8($sp)
+la $fp,-4($sp)
+la $sp,-8($fp)
+sw $ra,-8($fp)
+sw $a1,($fp)
+li $a0,4
+li $v0,9
+syscall
+lw $t0,($fp)
+sb $t0,($v0)
+sb $zero,1($v0)
+la $sp,4($fp)
+lw $ra,-8($fp)
+lw $fp,-4($fp)
+jr $ra
+ERR:
+la $a0,$ChrErr$$
+li $v0,4
+syscall
+li $v0,10
+syscall
+
+.text
+$Exit$$:
+li $v0,10
+syscall
+
+.text
+$Not$$:
+beq $a1,$zero,EQZERO
+li $v0,0
+jr $ra
+EQZERO:
+li $v0,1
+jr $ra
+
+.text
+$SubString$$:
+sw $fp,-16($sp)
+la $fp,-4($sp)
+la $sp,-16($fp)
+sw $ra,-16($fp)
+sw $a1,-8($fp)
+sw $a2,-4($fp)
+sw $a3,($fp)
+blt $a2,$zero,SubErr
+move $a0,$a1
+jal $StringLength$$
+lw $t1,-4($fp)
+lw $t2,($fp)
+add $t0,$t1,$t2
+blt $v0,$t0,SubErr
+addi $a0,$t2,1
+li $v0,9
+syscall
+move $t0,$v0
+lw $t1,-8($fp)
+lw $t2,-4($fp)
+lw $t3,($fp)
+add $t1,$t1,$t2
+SSLoop:
+ble $t3,$zero,FinSub
+lbu $t2,($t1)
+sb $t2,($t0)
+addi $t0,$t0,1
+addi $t1,$t1,1
+sub $t3,$t3,1
+j SSLoop
+FinSub:
+sb $zero,($t0)
+lw $ra,-16($fp)
+la $sp,4($fp)
+lw $fp,-12($fp)
+jr $ra
+SubErr:
+la $a0,$SubStrErr$$
+li $v0,4
+syscall
+li $v0,10
+syscall
+
+.text
+$Concat$$:
+sw $fp,-12($sp)
+la $fp,-4($sp)
+la $sp,-20($fp)
+sw $ra,-12($fp)
+sw $a2,($fp)
+sw $a1,-4($fp)
+move $a0,$a1
+jal $StringLength$$
+sw $v0,-16($fp)
+lw $a0,($fp)
+jal $StringLength$$
+sw $v0,-20($fp)
+lw $t0,-16($fp)
+add $a0,$t0,$v0
+addi $a0,$a0,1
+li $v0,9
+syscall
+move $t0,$v0
+lw $t1,-16($fp)
+lw $t2,-4($fp)
+lw $t3,-20($fp)
+lw $t4,($fp)
+CopyOne:
+ble $t1,$zero,CopyTwo
+lbu $t5,($t2)
+sb $t5,($t0)
+addi $t2,$t2,1
+addi $t0,$t0,1
+sub $t1,$t1,1
+j CopyOne
+CopyTwo:
+ble $t3,$zero,FinCat
+lbu $t5,($t4)
+sb $t5,($t0)
+addi $t4,$t4,1
+addi $t0,$t0,1
+sub $t3,$t3,1
+j CopyTwo
+FinCat:
+sb $zero,($t0)
+lw $ra,-12($fp)
+la $sp,4($fp)
+lw $fp,-8($fp)
+jr $ra
+
+
+.text
+$Size$$:
+sw $fp,-4($sp)
+la $fp,-4($sp)
+la $sp,-4($fp)
+sw $ra,-4($fp)
+move $a0,$a1
+jal $StringLength$$
+lw $ra,-4($fp)
+la $sp,4($fp)
+lw $fp($fp)
+jr $ra
+
+.data
+.align 2
+L1:
+.asciiz " "
+
+.data
+.align 2
+L0:
+.asciiz " "
+
+.data
+.align 2
+L132:
+.asciiz " O"
+
+.data
+.align 2
+L133:
+.asciiz " ."
+
+.data
+.align 2
+L139:
+.asciiz "
+"
+
+.data
+.align 2
+L142:
+.asciiz "
+"
+
+.text
+L122:
+sw $fp,-8($sp)
+la $fp,-4($sp)
+la $sp,-24($fp)
+L143:
+sw $a0,0($fp)
+sw $s0,-20($fp)
+sw $s1,-16($fp)
+sw $s2,-12($fp)
+sw $s3,-8($fp)
+sw $ra,-24($fp)
+li $s0,0
+li $s2,1
+lw $s1,0($fp)
+lw $s1,-8($s1)
+sub $s1,$s1,$s2
+ble $s0,$s1,L140
+L126:
+lw $s0,0($fp)
+lw $a0,0($s0)
+la $a1,L142
+jal $Print$$
+lw $s0,-20($fp)
+lw $s1,-16($fp)
+lw $s2,-12($fp)
+lw $s3,-8($fp)
+lw $ra,-24($fp)
+j L123
+L140:
+li $s3,0
+li $t0,1
+lw $s2,0($fp)
+lw $s2,-8($s2)
+sub $s2,$s2,$t0
+ble $s3,$s2,L137
+L127:
+lw $s2,0($fp)
+lw $a0,0($s2)
+la $a1,L139
+jal $Print$$
+bge $s0,$s1,L126
+L141:
+addi $s0,$s0,1
+j L140
+L137:
+lw $t0,0($fp)
+lw $a0,0($t0)
+lw $t0,0($fp)
+lw $t2,-16($t0)
+lw $t0,($t2)
+ble $t0,$s0,L128
+L129:
+bltz $s0,L130
+L131:
+addi $t1,$s0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t2,$t0
+lw $t0,($t0)
+beq $t0,$s3,L134
+L135:
+la $a1,L133
+L136:
+jal $Print$$
+bge $s3,$s2,L127
+L138:
+addi $s3,$s3,1
+j L137
+L128:
+jal $UpperBoundExit$$
+j L123
+L130:
+jal $LowerBoundExit$$
+j L123
+L134:
+la $a1,L132
+j L136
+L123:
+la $sp,4($fp)
+lw $fp,-8($sp)
+jr $ra
+
+.text
+L124:
+sw $fp,-12($sp)
+la $fp,-4($sp)
+la $sp,-20($fp)
+L196:
+sw $a0,-4($fp)
+sw $a1,0($fp)
+sw $s0,-16($fp)
+sw $s1,-12($fp)
+sw $ra,-20($fp)
+lw $s0,-4($fp)
+lw $s1,-8($s0)
+lw $s0,0($fp)
+beq $s0,$s1,L193
+L194:
+li $s0,0
+li $t0,1
+lw $s1,-4($fp)
+lw $s1,-8($s1)
+sub $s1,$s1,$t0
+ble $s0,$s1,L191
+L144:
+L195:
+li $v0,0
+lw $s0,-16($fp)
+lw $s1,-12($fp)
+lw $ra,-20($fp)
+j L125
+L193:
+lw $a0,-4($fp)
+jal L122
+j L195
+L191:
+lw $t0,-4($fp)
+lw $t2,-12($t0)
+lw $t0,($t2)
+ble $t0,$s0,L145
+L146:
+bltz $s0,L147
+L148:
+addi $t1,$s0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t2,$t0
+lw $t0,($t0)
+beqz $t0,L153
+L154:
+L160:
+L190:
+bge $s0,$s1,L144
+L192:
+addi $s0,$s0,1
+j L191
+L145:
+jal $UpperBoundExit$$
+j L125
+L147:
+jal $LowerBoundExit$$
+j L125
+L153:
+lw $t0,-4($fp)
+lw $t2,-20($t0)
+lw $t0,0($fp)
+add $t0,$s0,$t0
+lw $t1,($t2)
+ble $t1,$t0,L149
+L150:
+bltz $t0,L151
+L152:
+addi $t1,$t0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t2,$t0
+lw $t0,($t0)
+bnez $t0,L160
+L159:
+lw $t0,-4($fp)
+lw $t2,-24($t0)
+addi $t1,$s0,7
+lw $t0,0($fp)
+sub $t0,$t1,$t0
+lw $t1,($t2)
+ble $t1,$t0,L155
+L156:
+bltz $t0,L157
+L158:
+addi $t1,$t0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t2,$t0
+lw $t0,($t0)
+bnez $t0,L190
+L189:
+lw $t0,-4($fp)
+lw $t3,-12($t0)
+lw $t0,($t3)
+ble $t0,$s0,L161
+L162:
+bltz $s0,L163
+L164:
+li $t2,1
+addi $t1,$s0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t3,$t0
+sw $t2,($t0)
+lw $t0,-4($fp)
+lw $t3,-20($t0)
+lw $t0,0($fp)
+add $t0,$s0,$t0
+lw $t1,($t3)
+ble $t1,$t0,L165
+L166:
+bltz $t0,L167
+L168:
+li $t2,1
+addi $t1,$t0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t3,$t0
+sw $t2,($t0)
+lw $t0,-4($fp)
+lw $t3,-24($t0)
+addi $t1,$s0,7
+lw $t0,0($fp)
+sub $t0,$t1,$t0
+lw $t1,($t3)
+ble $t1,$t0,L169
+L170:
+bltz $t0,L171
+L172:
+li $t2,1
+addi $t1,$t0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t3,$t0
+sw $t2,($t0)
+lw $t0,-4($fp)
+lw $t2,-16($t0)
+lw $t1,0($fp)
+lw $t0,($t2)
+ble $t0,$t1,L173
+L174:
+bltz $t1,L175
+L176:
+addi $t1,$t1,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t2,$t0
+sw $s0,($t0)
+lw $a0,-4($fp)
+lw $t0,0($fp)
+addi $a1,$t0,1
+jal L124
+lw $t0,-4($fp)
+lw $t3,-12($t0)
+lw $t0,($t3)
+ble $t0,$s0,L177
+L178:
+bltz $s0,L179
+L180:
+li $t2,0
+addi $t1,$s0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t3,$t0
+sw $t2,($t0)
+lw $t0,-4($fp)
+lw $t3,-20($t0)
+lw $t0,0($fp)
+add $t0,$s0,$t0
+lw $t1,($t3)
+ble $t1,$t0,L181
+L182:
+bltz $t0,L183
+L184:
+li $t2,0
+addi $t1,$t0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t3,$t0
+sw $t2,($t0)
+lw $t0,-4($fp)
+lw $t3,-24($t0)
+addi $t1,$s0,7
+lw $t0,0($fp)
+sub $t0,$t1,$t0
+lw $t1,($t3)
+ble $t1,$t0,L185
+L186:
+bltz $t0,L187
+L188:
+li $t2,0
+addi $t1,$t0,1
+li $t0,4
+mul $t0,$t0,$t1
+add $t0,$t3,$t0
+sw $t2,($t0)
+j L190
+L149:
+jal $UpperBoundExit$$
+j L125
+L151:
+jal $LowerBoundExit$$
+j L125
+L155:
+jal $UpperBoundExit$$
+j L125
+L157:
+jal $LowerBoundExit$$
+j L125
+L161:
+jal $UpperBoundExit$$
+j L125
+L163:
+jal $LowerBoundExit$$
+j L125
+L165:
+jal $UpperBoundExit$$
+j L125
+L167:
+jal $LowerBoundExit$$
+j L125
+L169:
+jal $UpperBoundExit$$
+j L125
+L171:
+jal $LowerBoundExit$$
+j L125
+L173:
+jal $UpperBoundExit$$
+j L125
+L175:
+jal $LowerBoundExit$$
+j L125
+L177:
+jal $UpperBoundExit$$
+j L125
+L179:
+jal $LowerBoundExit$$
+j L125
+L181:
+jal $UpperBoundExit$$
+j L125
+L183:
+jal $LowerBoundExit$$
+j L125
+L185:
+jal $UpperBoundExit$$
+j L125
+L187:
+jal $LowerBoundExit$$
+j L125
+L125:
+la $sp,4($fp)
+lw $fp,-12($sp)
+jr $ra
+
+.text
+$Main$$:
+sw $fp,-8($sp)
+la $fp,-4($sp)
+la $sp,-32($fp)
+L197:
+sw $a0,0($fp)
+sw $s0,-28($fp)
+sw $ra,-32($fp)
+li $s0,8
+sw $s0,-8($fp)
+addi $s0,$fp,-12
+lw $a0,-8($fp)
+li $a1,0
+bltz $a0,L114
+L115:
+jal $InitArray$$
+sw $v0,($s0)
+addi $s0,$fp,-16
+lw $a0,-8($fp)
+li $a1,0
+bltz $a0,L116
+L117:
+jal $InitArray$$
+sw $v0,($s0)
+addi $s0,$fp,-20
+li $t2,1
+lw $t1,-8($fp)
+lw $t0,-8($fp)
+add $t0,$t0,$t1
+sub $a0,$t0,$t2
+li $a1,0
+bltz $a0,L118
+L119:
+jal $InitArray$$
+sw $v0,($s0)
+addi $s0,$fp,-24
+li $t2,1
+lw $t1,-8($fp)
+lw $t0,-8($fp)
+add $t0,$t0,$t1
+sub $a0,$t0,$t2
+li $a1,0
+bltz $a0,L120
+L121:
+jal $InitArray$$
+sw $v0,($s0)
+li $a1,0
+move $a0,$fp
+jal L124
+lw $s0,-28($fp)
+lw $ra,-32($fp)
+j L113
+L114:
+jal $SizeError$$
+j L113
+L116:
+jal $SizeError$$
+j L113
+L118:
+jal $SizeError$$
+j L113
+L120:
+jal $SizeError$$
+j L113
+L113:
+la $sp,4($fp)
+lw $fp,-8($sp)
+jr $ra
+

@@ -1,0 +1,28 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+[
+LABEL L13,
+MOVE(
+ TEMP t123,
+ BINOP(MINUS,
+  BINOP(PLUS,
+   CONST 1,
+   BINOP(MUL,
+    CONST 2,
+    CONST 3)),
+  BINOP(DIV,
+   CONST 6,
+   CONST 2))),
+JUMP(
+ NAME L12),
+LABEL L12 
+]
+
+

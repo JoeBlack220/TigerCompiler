@@ -1,0 +1,8 @@
+LetExp([
+ TypeDec[
+  (length,
+   NameTy(int))],
+ VarDec(x,false,SOME(length),
+  IntExp(6))],
+ VarExp(
+  SimpleVar(x)))

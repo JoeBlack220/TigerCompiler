@@ -1,0 +1,24 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L470
+L472:
+move $v0,t708
+j L471
+L471:
+
+LABEL L473
+L475:
+move $v0,t709
+j L474
+L474:
+
+LABEL $Main$$
+L476:
+li $v0,0
+j L469
+L469:
+

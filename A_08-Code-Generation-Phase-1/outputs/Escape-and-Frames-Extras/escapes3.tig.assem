@@ -1,0 +1,77 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L74
+L76:
+li t217,6
+li t218,7
+li t219,8
+add t224,t219,t214
+add t223,t224,t215
+add t222,t223,t216
+move t219,t222
+mul t227,t217,t218
+lw t230,-12($fp)
+lw t229,-16(t230)
+lw t234,-12($fp)
+lw t233,-4(t234)
+lw t232,-12(t233)
+lw t238,-12($fp)
+lw t237,-4(t238)
+lw t236,-8(t237)
+lw t240,-12($fp)
+lw t239,-12(t240)
+add t235,t239,t236
+add t231,t235,t232
+add t228,t231,t229
+add t226,t228,t227
+add t225,t226,t219
+move $v0,t225
+j L75
+L75:
+
+LABEL L72
+L77:
+li t241,4
+sw t241,-12($fp)
+li t242,5
+sw t242,-16($fp)
+lw t243,-12($fp)
+lw t244,-16($fp)
+move $a0,$fp
+move $a1,t243
+move $a2,t213
+move $a3,t244
+jal L74
+move t220,$v0
+lw t248,-4($fp)
+lw t247,-8(t248)
+mul t246,t247,t213
+lw t250,-12($fp)
+add t249,t220,t250
+add t245,t249,t246
+move $v0,t245
+j L73
+L73:
+
+LABEL $Main$$
+L78:
+li t212,1
+li t251,2
+sw t251,-8($fp)
+li t252,3
+sw t252,-12($fp)
+lw t253,-8($fp)
+move $a0,$fp
+move $a1,t253
+jal L72
+move t221,$v0
+lw t255,-12($fp)
+add t254,t221,t255
+move $v0,t254
+j L71
+L71:
+

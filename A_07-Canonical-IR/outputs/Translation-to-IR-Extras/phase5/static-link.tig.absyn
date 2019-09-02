@@ -1,0 +1,14 @@
+LetExp([
+ FunctionDec[
+  (foo,[],
+   NONE,
+   LetExp([
+    FunctionDec[
+     (bar,[],
+      NONE,
+      CallExp(bar,[])),
+     (foobar,[],
+      NONE,
+      CallExp(bar,[]))]],
+    SeqExp[]))]],
+ CallExp(foo,[]))

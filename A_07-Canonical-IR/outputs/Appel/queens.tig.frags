@@ -1,0 +1,919 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L132
+ O"
+
+LABEL L133
+ ."
+
+LABEL L139
+
+"
+
+LABEL L142
+
+"
+
+LABEL L122
+[
+LABEL L143,
+MOVE(
+ TEMP t226,
+ CONST 0),
+MOVE(
+ TEMP t232,
+ BINOP(MINUS,
+  MEM(
+   BINOP(PLUS,
+    CONST -8,
+    MEM(
+     BINOP(PLUS,
+      CONST 0,
+      TEMP t125)))),
+  CONST 1)),
+CJUMP(LE,
+ TEMP t226,
+ TEMP t232,
+ L140,L126),
+LABEL L126,
+MOVE(
+ TEMP t123,
+ CALL(
+  NAME $Print$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST 0,
+       TEMP t125)))),
+   NAME L142)),
+JUMP(
+ NAME L123),
+LABEL L140,
+MOVE(
+ TEMP t227,
+ CONST 0),
+MOVE(
+ TEMP t231,
+ BINOP(MINUS,
+  MEM(
+   BINOP(PLUS,
+    CONST -8,
+    MEM(
+     BINOP(PLUS,
+      CONST 0,
+      TEMP t125)))),
+  CONST 1)),
+CJUMP(LE,
+ TEMP t227,
+ TEMP t231,
+ L137,L127),
+LABEL L127,
+EXP(
+ CALL(
+  NAME $Print$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST 0,
+       TEMP t125)))),
+   NAME L139)),
+CJUMP(GE,
+ TEMP t226,
+ TEMP t232,
+ L126,L141),
+LABEL L141,
+MOVE(
+ TEMP t226,
+ BINOP(PLUS,
+  TEMP t226,
+  CONST 1)),
+JUMP(
+ NAME L140),
+LABEL L137,
+MOVE(
+ TEMP t233,
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP t125))))),
+MOVE(
+ TEMP t228,
+ MEM(
+  BINOP(PLUS,
+   CONST -16,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP t125))))),
+MOVE(
+ TEMP t229,
+ TEMP t226),
+CJUMP(LE,
+ MEM(
+  TEMP t228),
+ TEMP t229,
+ L128,L129),
+LABEL L129,
+CJUMP(LT,
+ TEMP t229,
+ CONST 0,
+ L130,L131),
+LABEL L131,
+CJUMP(EQ,
+ MEM(
+  BINOP(PLUS,
+   TEMP t228,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t229)))),
+ TEMP t227,
+ L134,L135),
+LABEL L135,
+MOVE(
+ TEMP t230,
+ NAME L133),
+LABEL L136,
+EXP(
+ CALL(
+  NAME $Print$$,
+   TEMP t233,
+   TEMP t230)),
+CJUMP(GE,
+ TEMP t227,
+ TEMP t231,
+ L127,L138),
+LABEL L138,
+MOVE(
+ TEMP t227,
+ BINOP(PLUS,
+  TEMP t227,
+  CONST 1)),
+JUMP(
+ NAME L137),
+LABEL L128,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L123),
+LABEL L130,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L123),
+LABEL L134,
+MOVE(
+ TEMP t230,
+ NAME L132),
+JUMP(
+ NAME L136),
+LABEL L123 
+]
+
+
+LABEL L124
+[
+LABEL L196,
+CJUMP(EQ,
+ TEMP t225,
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125)))),
+ L193,L194),
+LABEL L194,
+MOVE(
+ TEMP t234,
+ CONST 0),
+MOVE(
+ TEMP t255,
+ BINOP(MINUS,
+  MEM(
+   BINOP(PLUS,
+    CONST -8,
+    MEM(
+     BINOP(PLUS,
+      CONST -4,
+      TEMP t125)))),
+  CONST 1)),
+CJUMP(LE,
+ TEMP t234,
+ TEMP t255,
+ L191,L144),
+LABEL L144,
+LABEL L195,
+MOVE(
+ TEMP t123,
+ CONST 0),
+JUMP(
+ NAME L125),
+LABEL L193,
+EXP(
+ CALL(
+  NAME L122,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125)))),
+JUMP(
+ NAME L195),
+LABEL L191,
+MOVE(
+ TEMP t235,
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t236,
+ TEMP t234),
+CJUMP(LE,
+ MEM(
+  TEMP t235),
+ TEMP t236,
+ L145,L146),
+LABEL L146,
+CJUMP(LT,
+ TEMP t236,
+ CONST 0,
+ L147,L148),
+LABEL L148,
+CJUMP(EQ,
+ MEM(
+  BINOP(PLUS,
+   TEMP t235,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t236)))),
+ CONST 0,
+ L153,L154),
+LABEL L154,
+LABEL L160,
+LABEL L190,
+CJUMP(GE,
+ TEMP t234,
+ TEMP t255,
+ L144,L192),
+LABEL L192,
+MOVE(
+ TEMP t234,
+ BINOP(PLUS,
+  TEMP t234,
+  CONST 1)),
+JUMP(
+ NAME L191),
+LABEL L145,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L147,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L153,
+MOVE(
+ TEMP t237,
+ MEM(
+  BINOP(PLUS,
+   CONST -20,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t238,
+ BINOP(PLUS,
+  TEMP t234,
+  TEMP t225)),
+CJUMP(LE,
+ MEM(
+  TEMP t237),
+ TEMP t238,
+ L149,L150),
+LABEL L150,
+CJUMP(LT,
+ TEMP t238,
+ CONST 0,
+ L151,L152),
+LABEL L152,
+CJUMP(NE,
+ MEM(
+  BINOP(PLUS,
+   TEMP t237,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t238)))),
+ CONST 0,
+ L160,L159),
+LABEL L159,
+MOVE(
+ TEMP t239,
+ MEM(
+  BINOP(PLUS,
+   CONST -24,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t240,
+ BINOP(MINUS,
+  BINOP(PLUS,
+   TEMP t234,
+   CONST 7),
+  TEMP t225)),
+CJUMP(LE,
+ MEM(
+  TEMP t239),
+ TEMP t240,
+ L155,L156),
+LABEL L156,
+CJUMP(LT,
+ TEMP t240,
+ CONST 0,
+ L157,L158),
+LABEL L158,
+CJUMP(NE,
+ MEM(
+  BINOP(PLUS,
+   TEMP t239,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t240)))),
+ CONST 0,
+ L190,L189),
+LABEL L189,
+MOVE(
+ TEMP t241,
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t242,
+ TEMP t234),
+CJUMP(LE,
+ MEM(
+  TEMP t241),
+ TEMP t242,
+ L161,L162),
+LABEL L162,
+CJUMP(LT,
+ TEMP t242,
+ CONST 0,
+ L163,L164),
+LABEL L164,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t241,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t242)))),
+ CONST 1),
+MOVE(
+ TEMP t243,
+ MEM(
+  BINOP(PLUS,
+   CONST -20,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t244,
+ BINOP(PLUS,
+  TEMP t234,
+  TEMP t225)),
+CJUMP(LE,
+ MEM(
+  TEMP t243),
+ TEMP t244,
+ L165,L166),
+LABEL L166,
+CJUMP(LT,
+ TEMP t244,
+ CONST 0,
+ L167,L168),
+LABEL L168,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t243,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t244)))),
+ CONST 1),
+MOVE(
+ TEMP t245,
+ MEM(
+  BINOP(PLUS,
+   CONST -24,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t246,
+ BINOP(MINUS,
+  BINOP(PLUS,
+   TEMP t234,
+   CONST 7),
+  TEMP t225)),
+CJUMP(LE,
+ MEM(
+  TEMP t245),
+ TEMP t246,
+ L169,L170),
+LABEL L170,
+CJUMP(LT,
+ TEMP t246,
+ CONST 0,
+ L171,L172),
+LABEL L172,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t245,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t246)))),
+ CONST 1),
+MOVE(
+ TEMP t247,
+ MEM(
+  BINOP(PLUS,
+   CONST -16,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t248,
+ TEMP t225),
+CJUMP(LE,
+ MEM(
+  TEMP t247),
+ TEMP t248,
+ L173,L174),
+LABEL L174,
+CJUMP(LT,
+ TEMP t248,
+ CONST 0,
+ L175,L176),
+LABEL L176,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t247,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t248)))),
+ TEMP t234),
+EXP(
+ CALL(
+  NAME L124,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125)),
+   BINOP(PLUS,
+    TEMP t225,
+    CONST 1))),
+MOVE(
+ TEMP t249,
+ MEM(
+  BINOP(PLUS,
+   CONST -12,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t250,
+ TEMP t234),
+CJUMP(LE,
+ MEM(
+  TEMP t249),
+ TEMP t250,
+ L177,L178),
+LABEL L178,
+CJUMP(LT,
+ TEMP t250,
+ CONST 0,
+ L179,L180),
+LABEL L180,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t249,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t250)))),
+ CONST 0),
+MOVE(
+ TEMP t251,
+ MEM(
+  BINOP(PLUS,
+   CONST -20,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t252,
+ BINOP(PLUS,
+  TEMP t234,
+  TEMP t225)),
+CJUMP(LE,
+ MEM(
+  TEMP t251),
+ TEMP t252,
+ L181,L182),
+LABEL L182,
+CJUMP(LT,
+ TEMP t252,
+ CONST 0,
+ L183,L184),
+LABEL L184,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t251,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t252)))),
+ CONST 0),
+MOVE(
+ TEMP t253,
+ MEM(
+  BINOP(PLUS,
+   CONST -24,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP t125))))),
+MOVE(
+ TEMP t254,
+ BINOP(MINUS,
+  BINOP(PLUS,
+   TEMP t234,
+   CONST 7),
+  TEMP t225)),
+CJUMP(LE,
+ MEM(
+  TEMP t253),
+ TEMP t254,
+ L185,L186),
+LABEL L186,
+CJUMP(LT,
+ TEMP t254,
+ CONST 0,
+ L187,L188),
+LABEL L188,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t253,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP t254)))),
+ CONST 0),
+JUMP(
+ NAME L190),
+LABEL L149,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L151,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L155,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L157,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L161,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L163,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L165,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L167,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L169,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L171,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L173,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L175,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L177,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L179,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L181,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L183,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L185,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L187,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME L125),
+LABEL L125 
+]
+
+
+LABEL $Main$$
+[
+LABEL L197,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP t125)),
+ CONST 8),
+MOVE(
+ TEMP t263,
+ BINOP(PLUS,
+  CONST -12,
+  TEMP t125)),
+MOVE(
+ TEMP t217,
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP t125))),
+MOVE(
+ TEMP t218,
+ CONST 0),
+CJUMP(LT,
+ TEMP t217,
+ CONST 0,
+ L114,L115),
+LABEL L115,
+MOVE(
+ TEMP t262,
+ CALL(
+  NAME $InitArray$$,
+   TEMP t217,
+   TEMP t218)),
+MOVE(
+ MEM(
+  TEMP t263),
+ TEMP t262),
+MOVE(
+ TEMP t261,
+ BINOP(PLUS,
+  CONST -16,
+  TEMP t125)),
+MOVE(
+ TEMP t219,
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP t125))),
+MOVE(
+ TEMP t220,
+ CONST 0),
+CJUMP(LT,
+ TEMP t219,
+ CONST 0,
+ L116,L117),
+LABEL L117,
+MOVE(
+ TEMP t260,
+ CALL(
+  NAME $InitArray$$,
+   TEMP t219,
+   TEMP t220)),
+MOVE(
+ MEM(
+  TEMP t261),
+ TEMP t260),
+MOVE(
+ TEMP t259,
+ BINOP(PLUS,
+  CONST -20,
+  TEMP t125)),
+MOVE(
+ TEMP t221,
+ BINOP(MINUS,
+  BINOP(PLUS,
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     TEMP t125)),
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     TEMP t125))),
+  CONST 1)),
+MOVE(
+ TEMP t222,
+ CONST 0),
+CJUMP(LT,
+ TEMP t221,
+ CONST 0,
+ L118,L119),
+LABEL L119,
+MOVE(
+ TEMP t258,
+ CALL(
+  NAME $InitArray$$,
+   TEMP t221,
+   TEMP t222)),
+MOVE(
+ MEM(
+  TEMP t259),
+ TEMP t258),
+MOVE(
+ TEMP t257,
+ BINOP(PLUS,
+  CONST -24,
+  TEMP t125)),
+MOVE(
+ TEMP t223,
+ BINOP(MINUS,
+  BINOP(PLUS,
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     TEMP t125)),
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     TEMP t125))),
+  CONST 1)),
+MOVE(
+ TEMP t224,
+ CONST 0),
+CJUMP(LT,
+ TEMP t223,
+ CONST 0,
+ L120,L121),
+LABEL L121,
+MOVE(
+ TEMP t256,
+ CALL(
+  NAME $InitArray$$,
+   TEMP t223,
+   TEMP t224)),
+MOVE(
+ MEM(
+  TEMP t257),
+ TEMP t256),
+MOVE(
+ TEMP t123,
+ CALL(
+  NAME L124,
+   TEMP t125,
+   CONST 0)),
+JUMP(
+ NAME L113),
+LABEL L114,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME L113),
+LABEL L116,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME L113),
+LABEL L118,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME L113),
+LABEL L120,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME L113),
+LABEL L113 
+]
+
+

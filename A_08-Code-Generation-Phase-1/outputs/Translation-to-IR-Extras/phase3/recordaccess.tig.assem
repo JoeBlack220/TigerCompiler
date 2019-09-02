@@ -1,0 +1,50 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L43:
+la t169,L0
+move t170,t169
+la t175,L0
+beq t170,t175,L32
+L33:
+la t176,L0
+lw t177,4(t170)
+bne t177,t176,L40
+L41:
+move t173,t169
+la t178,L0
+beq t173,t178,L38
+L39:
+lw t174,0(t173)
+L42:
+move $v0,t174
+j L31
+L32:
+jal $NullExit$$
+j L31
+L40:
+move t171,t169
+la t179,L0
+beq t171,t179,L34
+L35:
+lw t172,4(t171)
+la t180,L0
+beq t172,t180,L36
+L37:
+lw t174,0(t172)
+j L42
+L34:
+jal $NullExit$$
+j L31
+L36:
+jal $NullExit$$
+j L31
+L38:
+jal $NullExit$$
+j L31
+L31:
+

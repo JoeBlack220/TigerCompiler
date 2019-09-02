@@ -1,0 +1,185 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL $Main$$
+[
+LABEL N2,
+MOVE(
+ TEMP tr0,
+ CONST 10),
+MOVE(
+ TEMP tr1,
+ CONST 0),
+CJUMP(LT,
+ TEMP tr0,
+ CONST 0,
+ N3,N4),
+LABEL N4,
+MOVE(
+ TEMP tr2,
+ CALL(
+  NAME $InitArray$$,
+   TEMP tr0,
+   TEMP tr1)),
+MOVE(
+ TEMP tr3,
+ CONST 5),
+MOVE(
+ TEMP tr4,
+ CONST 6),
+CJUMP(LT,
+ TEMP tr3,
+ CONST 0,
+ N5,N6),
+LABEL N6,
+MOVE(
+ TEMP tr5,
+ CALL(
+  NAME $InitArray$$,
+   TEMP tr3,
+   TEMP tr4)),
+MOVE(
+ TEMP tr6,
+ CONST 2),
+EXP(
+ TEMP tr2),
+MOVE(
+ TEMP tr7,
+ TEMP tr2),
+MOVE(
+ TEMP tr8,
+ CONST 3),
+CJUMP(LE,
+ MEM(
+  TEMP tr7),
+ TEMP tr8,
+ N7,N8),
+LABEL N8,
+CJUMP(LT,
+ TEMP tr8,
+ CONST 0,
+ N9,N10),
+LABEL N10,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP tr7,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP tr8)))),
+ CONST 5),
+MOVE(
+ TEMP tr9,
+ TEMP tr2),
+MOVE(
+ TEMP tr10,
+ TEMP tr5),
+MOVE(
+ TEMP tr11,
+ CONST 3),
+CJUMP(LE,
+ MEM(
+  TEMP tr10),
+ TEMP tr11,
+ N11,N12),
+LABEL N12,
+CJUMP(LT,
+ TEMP tr11,
+ CONST 0,
+ N13,N14),
+LABEL N14,
+MOVE(
+ TEMP tr12,
+ MEM(
+  BINOP(PLUS,
+   TEMP tr10,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP tr11))))),
+CJUMP(LE,
+ MEM(
+  TEMP tr9),
+ TEMP tr12,
+ N15,N16),
+LABEL N16,
+CJUMP(LT,
+ TEMP tr12,
+ CONST 0,
+ N17,N18),
+LABEL N18,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP tr9,
+   BINOP(MUL,
+    CONST 4,
+    BINOP(PLUS,
+     CONST 1,
+     TEMP tr12)))),
+ CONST 7),
+MOVE(
+ TEMP tr13,
+ CONST 0),
+JUMP(
+ NAME N19),
+LABEL N3,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME N19),
+LABEL N5,
+EXP(
+ CALL(
+  NAME $SizeError$$)),
+JUMP(
+ NAME N19),
+LABEL N7,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N9,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N11,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N13,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N15,
+EXP(
+ CALL(
+  NAME $UpperBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N17,
+EXP(
+ CALL(
+  NAME $LowerBoundExit$$)),
+JUMP(
+ NAME N19),
+LABEL N19 
+]
+
+

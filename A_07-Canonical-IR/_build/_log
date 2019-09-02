@@ -1,0 +1,92 @@
+### Starting build.
+# Target: driver.ml.depends, tags: { extension:ml, file:driver.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules driver.ml > driver.ml.depends # cached
+# Target: analysis.ml.depends, tags: { extension:ml, file:analysis.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules analysis.ml > analysis.ml.depends # cached
+# Target: absyn.ml.depends, tags: { extension:ml, file:absyn.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules absyn.ml > absyn.ml.depends # cached
+# Target: symbol.ml.depends, tags: { extension:ml, file:symbol.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules symbol.ml > symbol.ml.depends # cached
+# Target: symbol.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:symbol.cmo, file:symbol.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o symbol.cmo symbol.ml # cached
+# Target: absyn.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:absyn.cmo, file:absyn.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o absyn.cmo absyn.ml # cached
+# Target: canon.ml.depends, tags: { extension:ml, file:canon.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules canon.ml > canon.ml.depends # cached
+# Target: temp.ml.depends, tags: { extension:ml, file:temp.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules temp.ml > temp.ml.depends # cached
+# Target: temp.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:temp.cmo, file:temp.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o temp.cmo temp.ml # cached
+# Target: tree.ml.depends, tags: { extension:ml, file:tree.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules tree.ml > tree.ml.depends # cached
+# Target: tree.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tree.cmo, file:tree.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o tree.cmo tree.ml # cached
+# Target: canon.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:canon.cmo, file:canon.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o canon.cmo canon.ml # cached
+# Target: env.ml.depends, tags: { extension:ml, file:env.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules env.ml > env.ml.depends # cached
+# Target: translate.ml.depends, tags: { extension:ml, file:translate.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules translate.ml > translate.ml.depends # cached
+# Target: frame.ml.depends, tags: { extension:ml, file:frame.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules frame.ml > frame.ml.depends # cached
+# Target: frame.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:frame.cmo, file:frame.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o frame.cmo frame.ml # cached
+# Target: translate.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:translate.cmo, file:translate.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o translate.cmo translate.ml # cached
+# Target: env.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:env.cmo, file:env.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o env.cmo env.ml # cached
+# Target: errormsg.ml.depends, tags: { extension:ml, file:errormsg.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules errormsg.ml > errormsg.ml.depends # cached
+# Target: errormsg.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:errormsg.cmo, file:errormsg.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o errormsg.cmo errormsg.ml # cached
+# Target: escape.ml.depends, tags: { extension:ml, file:escape.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules escape.ml > escape.ml.depends # cached
+# Target: escape.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:escape.cmo, file:escape.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o escape.cmo escape.ml # cached
+# Target: mipsframe.ml.depends, tags: { extension:ml, file:mipsframe.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules mipsframe.ml > mipsframe.ml.depends # cached
+# Target: mipsregs.ml.depends, tags: { extension:ml, file:mipsregs.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules mipsregs.ml > mipsregs.ml.depends # cached
+# Target: mipsregs.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:mipsregs.cmo, file:mipsregs.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o mipsregs.cmo mipsregs.ml # cached
+# Target: mipsframe.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:mipsframe.cmo, file:mipsframe.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o mipsframe.cmo mipsframe.ml # cached
+# Target: printabsyn.ml.depends, tags: { extension:ml, file:printabsyn.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules printabsyn.ml > printabsyn.ml.depends # cached
+# Target: printabsyn.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:printabsyn.cmo, file:printabsyn.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o printabsyn.cmo printabsyn.ml # cached
+# Target: printtree.ml.depends, tags: { extension:ml, file:printtree.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules printtree.ml > printtree.ml.depends # cached
+# Target: printtree.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:printtree.cmo, file:printtree.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o printtree.cmo printtree.ml # cached
+# Target: printtype.ml.depends, tags: { extension:ml, file:printtype.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules printtype.ml > printtype.ml.depends # cached
+# Target: printtype.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:printtype.cmo, file:printtype.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o printtype.cmo printtype.ml # cached
+# Target: semant.ml.depends, tags: { extension:ml, file:semant.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules semant.ml > semant.ml.depends # cached
+# Target: semant.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:semant.cmo, file:semant.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o semant.cmo semant.ml # cached
+# Target: analysis.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:analysis.cmo, file:analysis.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o analysis.cmo analysis.ml # cached
+# Target: parser.mly, tags: { extension:mly, file:parser.mly, infer, ocaml, ocamlyacc, parser, quiet }
+ocamlyacc parser.mly # cached
+# Target: parser.mli.depends, tags: { extension:mli, file:parser.mli, ocaml, ocamldep, quiet }
+ocamldep.opt -modules parser.mli > parser.mli.depends # cached
+# Target: parser.cmi, tags: { byte, compile, extension:mli, file:parser.mli, interf, ocaml, quiet }
+ocamlc.opt -c -o parser.cmi parser.mli # cached
+# Target: scanner.mll, tags: { extension:mll, file:scanner.mll, lexer, ocaml, ocamllex, quiet }
+ocamllex.opt -q scanner.mll # cached
+# Target: scanner.ml.depends, tags: { extension:ml, file:scanner.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules scanner.ml > scanner.ml.depends # cached
+# Target: scanner.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:scanner.cmo, file:scanner.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o scanner.cmo scanner.ml # cached
+# Target: driver.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:driver.cmo, file:driver.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o driver.cmo driver.ml # cached
+# Target: parser.ml.depends, tags: { extension:ml, file:parser.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules parser.ml > parser.ml.depends # cached
+# Target: parser.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:parser.cmo, file:parser.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o parser.cmo parser.ml # cached
+# Target: driver.byte, tags: { byte, dont_link_with, extension:byte, file:driver.byte, link, ocaml, program, quiet }
+ocamlc.opt symbol.cmo absyn.cmo temp.cmo tree.cmo canon.cmo frame.cmo translate.cmo env.cmo errormsg.cmo escape.cmo mipsregs.cmo mipsframe.cmo printabsyn.cmo printtree.cmo printtype.cmo semant.cmo analysis.cmo parser.cmo scanner.cmo driver.cmo -o driver.byte # cached
+# Compilation successful.

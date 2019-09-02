@@ -1,0 +1,9 @@
+LetExp([
+ TypeDec[
+  (arrayty,
+   ArrayTy(int))],
+ VarDec(a,true,NONE,
+  ArrayExp(arrayty,
+   IntExp(10),
+   StringExp(" ")))],
+ IntExp(0))

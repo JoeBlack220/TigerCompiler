@@ -1,0 +1,520 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L19
+0"
+
+LABEL L20
+9"
+
+LABEL L15
+L25:
+li t142,1
+lw t219,-4($fp)
+lw t218,-4(t219)
+lw t217,0(t218)
+move $a0,t217
+move $a1,t141
+jal $Ord$$
+move t146,$v0
+move t148,t146
+lw t222,-4($fp)
+lw t221,-4(t222)
+lw t220,0(t221)
+la t223,L19
+move $a0,t220
+move $a1,t223
+jal $Ord$$
+move t147,$v0
+bge t148,t147,L21
+L22:
+L24:
+li t142,0
+L23:
+move $v0,t142
+j L16
+L21:
+lw t226,-4($fp)
+lw t225,-4(t226)
+lw t224,0(t225)
+move $a0,t224
+move $a1,t141
+jal $Ord$$
+move t143,$v0
+move t145,t143
+lw t229,-4($fp)
+lw t228,-4(t229)
+lw t227,0(t228)
+la t230,L20
+move $a0,t227
+move $a1,t230
+jal $Ord$$
+move t144,$v0
+ble t145,t144,L23
+L26:
+j L24
+L16:
+
+LABEL L28
+ "
+
+LABEL L29
+
+"
+
+LABEL L17
+L34:
+L32:
+lw t233,0($fp)
+lw t232,-4(t233)
+lw t231,-8(t232)
+la t234,L28
+move $a0,t231
+move $a1,t234
+jal $StringEqual$$
+move t150,$v0
+beqz t150,L31
+L30:
+L33:
+lw t237,0($fp)
+lw t236,-4(t237)
+addi t235,t236,-8
+move t152,t235
+lw t240,0($fp)
+lw t239,-4(t240)
+lw t238,0(t239)
+move $a0,t238
+jal $GetChar$$
+move t151,$v0
+sw t151,(t152)
+j L32
+L31:
+lw t243,0($fp)
+lw t242,-4(t243)
+lw t241,-8(t242)
+la t244,L29
+move $a0,t241
+move $a1,t244
+jal $StringEqual$$
+move t149,$v0
+bnez t149,L33
+L27:
+li $v0,0
+j L18
+L18:
+
+LABEL L38
+0"
+
+LABEL L13
+L41:
+li t140,0
+move $a0,$fp
+jal L17
+move t153,t139
+la t245,L0
+beq t153,t245,L35
+L36:
+move t246, t153
+move t162,t246
+lw t248,-4($fp)
+lw t247,-8(t248)
+move $a0,$fp
+move $a1,t247
+jal L15
+move t161,$v0
+sw t161,(t162)
+L39:
+lw t250,-4($fp)
+lw t249,-8(t250)
+move $a0,$fp
+move $a1,t249
+jal L15
+move t154,$v0
+li t251,0
+beq t251,t154,L37
+L40:
+li t253,10
+mul t252,t140,t253
+move t156,t252
+lw t255,-4($fp)
+lw t254,0(t255)
+lw t257,-4($fp)
+lw t256,-8(t257)
+move $a0,t254
+move $a1,t256
+jal $Ord$$
+move t155,$v0
+add t258,t156,t155
+move t158,t258
+lw t260,-4($fp)
+lw t259,0(t260)
+la t261,L38
+move $a0,t259
+move $a1,t261
+jal $Ord$$
+move t157,$v0
+sub t262,t158,t157
+move t140,t262
+lw t264,-4($fp)
+addi t263,t264,-8
+move t160,t263
+lw t266,-4($fp)
+lw t265,0(t266)
+move $a0,t265
+jal $GetChar$$
+move t159,$v0
+sw t159,(t160)
+j L39
+L35:
+jal $NullExit$$
+j L14
+L37:
+move $v0,t140
+j L14
+L14:
+
+LABEL L42
+L55:
+li t267,4
+move $a0,t267
+jal $Malloc$$
+move t167,$v0
+li t268,0
+sw t268,0(t167)
+move t168,t167
+lw t269,0($fp)
+move $a0,t269
+move $a1,t168
+jal L13
+move t169,$v0
+move t170,t168
+la t270,L0
+beq t170,t270,L50
+L51:
+lw t271,0(t170)
+li t272,0
+beq t272,t271,L53
+L52:
+li t273,8
+move $a0,t273
+jal $Malloc$$
+move t171,$v0
+sw t169,0(t171)
+addi t274,t171,4
+move t174,t274
+lw t275,0($fp)
+move $a0,t275
+jal L42
+move t173,$v0
+sw t173,(t174)
+move t172,t171
+L54:
+move $v0,t172
+j L43
+L50:
+jal $NullExit$$
+j L43
+L53:
+la t172,L0
+j L54
+L43:
+
+LABEL L44
+L77:
+la t276,L0
+beq t163,t276,L74
+L75:
+la t277,L0
+beq t164,t277,L71
+L72:
+move t175,t163
+la t278,L0
+beq t175,t278,L56
+L57:
+lw t195,0(t175)
+move t176,t164
+la t279,L0
+beq t176,t279,L58
+L59:
+lw t280,0(t176)
+blt t195,t280,L68
+L69:
+li t281,8
+move $a0,t281
+jal $Malloc$$
+move t182,$v0
+move t282, t182
+move t190,t282
+move t180,t164
+la t283,L0
+beq t180,t283,L64
+L65:
+lw t284,0(t180)
+sw t284,(t190)
+addi t285,t182,4
+move t189,t285
+lw t188,-8($fp)
+move t187,t163
+move t181,t164
+la t286,L0
+beq t181,t286,L66
+L67:
+lw t287,4(t181)
+move $a0,t188
+move $a1,t187
+move $a2,t287
+jal L44
+move t186,$v0
+sw t186,(t189)
+move t183,t182
+L70:
+move t184,t183
+L73:
+move t185,t184
+L76:
+move $v0,t185
+j L45
+L74:
+move t185,t164
+j L76
+L71:
+move t184,t163
+j L73
+L56:
+jal $NullExit$$
+j L45
+L58:
+jal $NullExit$$
+j L45
+L68:
+li t288,8
+move $a0,t288
+jal $Malloc$$
+move t179,$v0
+move t289, t179
+move t194,t289
+move t177,t163
+la t290,L0
+beq t177,t290,L60
+L61:
+lw t291,0(t177)
+sw t291,(t194)
+addi t292,t179,4
+move t193,t292
+lw t192,-8($fp)
+move t178,t163
+la t293,L0
+beq t178,t293,L62
+L63:
+lw t294,4(t178)
+move $a0,t192
+move $a1,t294
+move $a2,t164
+jal L44
+move t191,$v0
+sw t191,(t193)
+move t183,t179
+j L70
+L60:
+jal $NullExit$$
+j L45
+L62:
+jal $NullExit$$
+j L45
+L64:
+jal $NullExit$$
+j L45
+L66:
+jal $NullExit$$
+j L45
+L45:
+
+LABEL L80
+0"
+
+LABEL L78
+L83:
+bgtz t196,L81
+L82:
+li $v0,0
+j L79
+L81:
+lw t295,-4($fp)
+li t297,10
+div t296,t196,t297
+move $a0,t295
+move $a1,t296
+jal L78
+lw t299,-4($fp)
+lw t298,-4(t299)
+lw t201,0(t298)
+lw t301,-4($fp)
+lw t300,-4(t301)
+lw t200,0(t300)
+li t304,10
+li t306,10
+div t305,t196,t306
+mul t303,t305,t304
+sub t302,t196,t303
+move t199,t302
+lw t309,-4($fp)
+lw t308,-4(t309)
+lw t307,0(t308)
+la t310,L80
+move $a0,t307
+move $a1,t310
+jal $Ord$$
+move t198,$v0
+add t311,t199,t198
+move $a0,t200
+move $a1,t311
+jal $Chr$$
+move t197,$v0
+move $a0,t201
+move $a1,t197
+jal $Print$$
+j L82
+L79:
+
+LABEL L84
+-"
+
+LABEL L85
+0"
+
+LABEL L46
+L92:
+bltz t165,L89
+L90:
+bgtz t165,L86
+L87:
+lw t313,-4($fp)
+lw t312,0(t313)
+la t314,L85
+move $a0,t312
+move $a1,t314
+jal $Print$$
+move t202,$v0
+L88:
+move t203,t202
+L91:
+move $v0,t203
+j L47
+L89:
+lw t316,-4($fp)
+lw t315,0(t316)
+la t317,L84
+move $a0,t315
+move $a1,t317
+jal $Print$$
+li t319,0
+sub t318,t319,t165
+move $a0,$fp
+move $a1,t318
+jal L78
+move t203,$v0
+j L91
+L86:
+move $a0,$fp
+move $a1,t165
+jal L78
+move t202,$v0
+j L88
+L47:
+
+LABEL L93
+
+"
+
+LABEL L96
+ "
+
+LABEL L48
+L102:
+la t320,L0
+beq t166,t320,L99
+L100:
+lw t208,-4($fp)
+move t204,t166
+la t321,L0
+beq t204,t321,L94
+L95:
+lw t322,0(t204)
+move $a0,t208
+move $a1,t322
+jal L46
+lw t324,-4($fp)
+lw t323,0(t324)
+la t325,L96
+move $a0,t323
+move $a1,t325
+jal $Print$$
+lw t207,-4($fp)
+move t205,t166
+la t326,L0
+beq t205,t326,L97
+L98:
+lw t327,4(t205)
+move $a0,t207
+move $a1,t327
+jal L48
+move t206,$v0
+L101:
+move $v0,t206
+j L49
+L99:
+lw t329,-4($fp)
+lw t328,0(t329)
+la t330,L93
+move $a0,t328
+move $a1,t330
+jal $Print$$
+move t206,$v0
+j L101
+L94:
+jal $NullExit$$
+j L49
+L97:
+jal $NullExit$$
+j L49
+L49:
+
+LABEL $Main$$
+L103:
+addi t331,$fp,-8
+move t216,t331
+lw t332,0($fp)
+move $a0,t332
+jal $GetChar$$
+move t215,$v0
+sw t215,(t216)
+move $a0,$fp
+jal L42
+move t209,$v0
+addi t333,$fp,-8
+move t214,t333
+lw t334,0($fp)
+move $a0,t334
+jal $GetChar$$
+move t213,$v0
+sw t213,(t214)
+move $a0,$fp
+jal L42
+move t210,$v0
+move t212,$fp
+move $a0,$fp
+move $a1,t209
+move $a2,t210
+jal L44
+move t211,$v0
+move $a0,t212
+move $a1,t211
+jal L48
+move $v0,$v0
+j L12
+L12:
+

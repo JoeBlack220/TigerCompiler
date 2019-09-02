@@ -1,0 +1,1019 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L22
+0"
+
+LABEL L23
+9"
+
+LABEL L16
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    MOVE(
+     TEMP t144,
+     CONST 1),
+    SEQ(
+     SEQ(
+      CJUMP(GE,
+       CALL(
+        NAME $Ord$$,
+         MEM(
+          BINOP(PLUS,
+           CONST 0,
+           MEM(
+            BINOP(PLUS,
+             CONST -4,
+             MEM(
+              BINOP(PLUS,
+               CONST -4,
+               TEMP t125)))))),
+         TEMP t143),
+       CALL(
+        NAME $Ord$$,
+         MEM(
+          BINOP(PLUS,
+           CONST 0,
+           MEM(
+            BINOP(PLUS,
+             CONST -4,
+             MEM(
+              BINOP(PLUS,
+               CONST -4,
+               TEMP t125)))))),
+         NAME L22),
+       L24,L25),
+      SEQ(
+       LABEL L24,
+       SEQ(
+        CJUMP(LE,
+         CALL(
+          NAME $Ord$$,
+           MEM(
+            BINOP(PLUS,
+             CONST 0,
+             MEM(
+              BINOP(PLUS,
+               CONST -4,
+               MEM(
+                BINOP(PLUS,
+                 CONST -4,
+                 TEMP t125)))))),
+           TEMP t143),
+         CALL(
+          NAME $Ord$$,
+           MEM(
+            BINOP(PLUS,
+             CONST 0,
+             MEM(
+              BINOP(PLUS,
+               CONST -4,
+               MEM(
+                BINOP(PLUS,
+                 CONST -4,
+                 TEMP t125)))))),
+           NAME L23),
+         L27,L28),
+        SEQ(
+         LABEL L25,
+         JUMP(
+          NAME L28))))),
+     SEQ(
+      LABEL L28,
+      SEQ(
+       MOVE(
+        TEMP t144,
+        CONST 0),
+       LABEL L27)))),
+   TEMP t144)),
+ LABEL L18)
+
+LABEL L30
+ "
+
+LABEL L31
+
+"
+
+LABEL L19
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    JUMP(
+     NAME L35),
+    SEQ(
+     LABEL L36,
+     SEQ(
+      MOVE(
+       MEM(
+        BINOP(PLUS,
+         CONST -8,
+         MEM(
+          BINOP(PLUS,
+           CONST -4,
+           MEM(
+            BINOP(PLUS,
+             CONST 0,
+             TEMP t125)))))),
+       CALL(
+        NAME $GetChar$$,
+         MEM(
+          BINOP(PLUS,
+           CONST 0,
+           MEM(
+            BINOP(PLUS,
+             CONST -4,
+             MEM(
+              BINOP(PLUS,
+               CONST 0,
+               TEMP t125)))))))),
+      SEQ(
+       LABEL L35,
+       SEQ(
+        SEQ(
+         CJUMP(EQ,
+          CALL(
+           NAME $StringEqual$$,
+            MEM(
+             BINOP(PLUS,
+              CONST -8,
+              MEM(
+               BINOP(PLUS,
+                CONST -4,
+                MEM(
+                 BINOP(PLUS,
+                  CONST 0,
+                  TEMP t125)))))),
+            NAME L30),
+          CONST 0,
+          L33,L32),
+         SEQ(
+          LABEL L32,
+          SEQ(
+           JUMP(
+            NAME L36),
+           SEQ(
+            LABEL L33,
+            CJUMP(EQ,
+             CALL(
+              NAME $StringEqual$$,
+               MEM(
+                BINOP(PLUS,
+                 CONST -8,
+                 MEM(
+                  BINOP(PLUS,
+                   CONST -4,
+                   MEM(
+                    BINOP(PLUS,
+                     CONST 0,
+                     TEMP t125)))))),
+               NAME L31),
+             CONST 0,
+             L29,L36))))),
+        LABEL L29))))),
+   CONST 0)),
+ LABEL L21)
+
+LABEL L40
+0"
+
+LABEL L13
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    TEMP t141,
+    CONST 0),
+   ESEQ(
+    SEQ(
+     EXP(
+      CALL(
+       NAME L19,
+        TEMP t125)),
+     SEQ(
+      MOVE(
+       MEM(
+        ESEQ(
+         SEQ(
+          MOVE(
+           TEMP t145,
+           TEMP t140),
+          SEQ(
+           CJUMP(EQ,
+            TEMP t145,
+            NAME L0,
+            L37,L38),
+           SEQ(
+            LABEL L37,
+            SEQ(
+             EXP(
+              CALL(
+               NAME $NullExit$$)),
+             SEQ(
+              JUMP(
+               NAME L15),
+              LABEL L38))))),
+         BINOP(PLUS,
+          TEMP t145,
+          CONST 0))),
+       CALL(
+        NAME L16,
+         TEMP t125,
+         MEM(
+          BINOP(PLUS,
+           CONST -8,
+           MEM(
+            BINOP(PLUS,
+             CONST -4,
+             TEMP t125)))))),
+      SEQ(
+       JUMP(
+        NAME L41),
+       SEQ(
+        LABEL L42,
+        SEQ(
+         EXP(
+          ESEQ(
+           MOVE(
+            TEMP t141,
+            BINOP(MINUS,
+             BINOP(PLUS,
+              BINOP(MUL,
+               TEMP t141,
+               CONST 10),
+              CALL(
+               NAME $Ord$$,
+                MEM(
+                 BINOP(PLUS,
+                  CONST 0,
+                  MEM(
+                   BINOP(PLUS,
+                    CONST -4,
+                    TEMP t125)))),
+                MEM(
+                 BINOP(PLUS,
+                  CONST -8,
+                  MEM(
+                   BINOP(PLUS,
+                    CONST -4,
+                    TEMP t125)))))),
+             CALL(
+              NAME $Ord$$,
+               MEM(
+                BINOP(PLUS,
+                 CONST 0,
+                 MEM(
+                  BINOP(PLUS,
+                   CONST -4,
+                   TEMP t125)))),
+               NAME L40))),
+           ESEQ(
+            MOVE(
+             MEM(
+              BINOP(PLUS,
+               CONST -8,
+               MEM(
+                BINOP(PLUS,
+                 CONST -4,
+                 TEMP t125)))),
+             CALL(
+              NAME $GetChar$$,
+               MEM(
+                BINOP(PLUS,
+                 CONST 0,
+                 MEM(
+                  BINOP(PLUS,
+                   CONST -4,
+                   TEMP t125)))))),
+            CONST 0))),
+         SEQ(
+          LABEL L41,
+          SEQ(
+           CJUMP(EQ,
+            CONST 0,
+            CALL(
+             NAME L16,
+              TEMP t125,
+              MEM(
+               BINOP(PLUS,
+                CONST -8,
+                MEM(
+                 BINOP(PLUS,
+                  CONST -4,
+                  TEMP t125))))),
+            L39,L42),
+           LABEL L39))))))),
+    TEMP t141))),
+ LABEL L15)
+
+LABEL L43
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    MOVE(
+     TEMP t155,
+     ESEQ(
+      SEQ(
+       MOVE(
+        TEMP t154,
+        CALL(
+         NAME $Malloc$$,
+          CONST 4)),
+       MOVE(
+        MEM(
+         BINOP(PLUS,
+          TEMP t154,
+          CONST 0)),
+        CONST 0)),
+      TEMP t154)),
+    MOVE(
+     TEMP t156,
+     CALL(
+      NAME L13,
+       MEM(
+        BINOP(PLUS,
+         CONST 0,
+         TEMP t125)),
+       TEMP t155))),
+   ESEQ(
+    SEQ(
+     CJUMP(EQ,
+      CONST 0,
+      MEM(
+       ESEQ(
+        SEQ(
+         MOVE(
+          TEMP t157,
+          TEMP t155),
+         SEQ(
+          CJUMP(EQ,
+           TEMP t157,
+           NAME L0,
+           L55,L56),
+          SEQ(
+           LABEL L55,
+           SEQ(
+            EXP(
+             CALL(
+              NAME $NullExit$$)),
+            SEQ(
+             JUMP(
+              NAME L45),
+             LABEL L56))))),
+        BINOP(PLUS,
+         TEMP t157,
+         CONST 0))),
+      L58,L57),
+     SEQ(
+      LABEL L57,
+      SEQ(
+       MOVE(
+        TEMP t159,
+        ESEQ(
+         SEQ(
+          MOVE(
+           TEMP t158,
+           CALL(
+            NAME $Malloc$$,
+             CONST 8)),
+          SEQ(
+           MOVE(
+            MEM(
+             BINOP(PLUS,
+              TEMP t158,
+              CONST 0)),
+            TEMP t156),
+           MOVE(
+            MEM(
+             BINOP(PLUS,
+              TEMP t158,
+              CONST 4)),
+            CALL(
+             NAME L43,
+              MEM(
+               BINOP(PLUS,
+                CONST 0,
+                TEMP t125)))))),
+         TEMP t158)),
+       SEQ(
+        JUMP(
+         NAME L59),
+        SEQ(
+         LABEL L58,
+         SEQ(
+          MOVE(
+           TEMP t159,
+           NAME L0),
+          LABEL L59)))))),
+    TEMP t159))),
+ LABEL L45)
+
+LABEL L46
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    CJUMP(EQ,
+     TEMP t148,
+     NAME L0,
+     L78,L79),
+    SEQ(
+     LABEL L78,
+     SEQ(
+      MOVE(
+       TEMP t170,
+       TEMP t149),
+      SEQ(
+       JUMP(
+        NAME L80),
+       SEQ(
+        LABEL L79,
+        SEQ(
+         MOVE(
+          TEMP t170,
+          ESEQ(
+           SEQ(
+            CJUMP(EQ,
+             TEMP t149,
+             NAME L0,
+             L75,L76),
+            SEQ(
+             LABEL L75,
+             SEQ(
+              MOVE(
+               TEMP t169,
+               TEMP t148),
+              SEQ(
+               JUMP(
+                NAME L77),
+               SEQ(
+                LABEL L76,
+                SEQ(
+                 MOVE(
+                  TEMP t169,
+                  ESEQ(
+                   SEQ(
+                    CJUMP(LT,
+                     MEM(
+                      ESEQ(
+                       SEQ(
+                        MOVE(
+                         TEMP t160,
+                         TEMP t148),
+                        SEQ(
+                         CJUMP(EQ,
+                          TEMP t160,
+                          NAME L0,
+                          L60,L61),
+                         SEQ(
+                          LABEL L60,
+                          SEQ(
+                           EXP(
+                            CALL(
+                             NAME $NullExit$$)),
+                           SEQ(
+                            JUMP(
+                             NAME L48),
+                            LABEL L61))))),
+                       BINOP(PLUS,
+                        TEMP t160,
+                        CONST 0))),
+                     MEM(
+                      ESEQ(
+                       SEQ(
+                        MOVE(
+                         TEMP t161,
+                         TEMP t149),
+                        SEQ(
+                         CJUMP(EQ,
+                          TEMP t161,
+                          NAME L0,
+                          L62,L63),
+                         SEQ(
+                          LABEL L62,
+                          SEQ(
+                           EXP(
+                            CALL(
+                             NAME $NullExit$$)),
+                           SEQ(
+                            JUMP(
+                             NAME L48),
+                            LABEL L63))))),
+                       BINOP(PLUS,
+                        TEMP t161,
+                        CONST 0))),
+                     L72,L73),
+                    SEQ(
+                     LABEL L72,
+                     SEQ(
+                      MOVE(
+                       TEMP t168,
+                       ESEQ(
+                        SEQ(
+                         MOVE(
+                          TEMP t164,
+                          CALL(
+                           NAME $Malloc$$,
+                            CONST 8)),
+                         SEQ(
+                          MOVE(
+                           MEM(
+                            BINOP(PLUS,
+                             TEMP t164,
+                             CONST 0)),
+                           MEM(
+                            ESEQ(
+                             SEQ(
+                              MOVE(
+                               TEMP t162,
+                               TEMP t148),
+                              SEQ(
+                               CJUMP(EQ,
+                                TEMP t162,
+                                NAME L0,
+                                L64,L65),
+                               SEQ(
+                                LABEL L64,
+                                SEQ(
+                                 EXP(
+                                  CALL(
+                                   NAME $NullExit$$)),
+                                 SEQ(
+                                  JUMP(
+                                   NAME L48),
+                                  LABEL L65))))),
+                             BINOP(PLUS,
+                              TEMP t162,
+                              CONST 0)))),
+                          MOVE(
+                           MEM(
+                            BINOP(PLUS,
+                             TEMP t164,
+                             CONST 4)),
+                           CALL(
+                            NAME L46,
+                             MEM(
+                              BINOP(PLUS,
+                               CONST -8,
+                               TEMP t125)),
+                             MEM(
+                              ESEQ(
+                               SEQ(
+                                MOVE(
+                                 TEMP t163,
+                                 TEMP t148),
+                                SEQ(
+                                 CJUMP(EQ,
+                                  TEMP t163,
+                                  NAME L0,
+                                  L66,L67),
+                                 SEQ(
+                                  LABEL L66,
+                                  SEQ(
+                                   EXP(
+                                    CALL(
+                                     NAME $NullExit$$)),
+                                   SEQ(
+                                    JUMP(
+                                     NAME L48),
+                                    LABEL L67))))),
+                               BINOP(PLUS,
+                                TEMP t163,
+                                CONST 4))),
+                             TEMP t149)))),
+                        TEMP t164)),
+                      SEQ(
+                       JUMP(
+                        NAME L74),
+                       SEQ(
+                        LABEL L73,
+                        SEQ(
+                         MOVE(
+                          TEMP t168,
+                          ESEQ(
+                           SEQ(
+                            MOVE(
+                             TEMP t167,
+                             CALL(
+                              NAME $Malloc$$,
+                               CONST 8)),
+                            SEQ(
+                             MOVE(
+                              MEM(
+                               BINOP(PLUS,
+                                TEMP t167,
+                                CONST 0)),
+                              MEM(
+                               ESEQ(
+                                SEQ(
+                                 MOVE(
+                                  TEMP t165,
+                                  TEMP t149),
+                                 SEQ(
+                                  CJUMP(EQ,
+                                   TEMP t165,
+                                   NAME L0,
+                                   L68,L69),
+                                  SEQ(
+                                   LABEL L68,
+                                   SEQ(
+                                    EXP(
+                                     CALL(
+                                      NAME $NullExit$$)),
+                                    SEQ(
+                                     JUMP(
+                                      NAME L48),
+                                     LABEL L69))))),
+                                BINOP(PLUS,
+                                 TEMP t165,
+                                 CONST 0)))),
+                             MOVE(
+                              MEM(
+                               BINOP(PLUS,
+                                TEMP t167,
+                                CONST 4)),
+                              CALL(
+                               NAME L46,
+                                MEM(
+                                 BINOP(PLUS,
+                                  CONST -8,
+                                  TEMP t125)),
+                                TEMP t148,
+                                MEM(
+                                 ESEQ(
+                                  SEQ(
+                                   MOVE(
+                                    TEMP t166,
+                                    TEMP t149),
+                                   SEQ(
+                                    CJUMP(EQ,
+                                     TEMP t166,
+                                     NAME L0,
+                                     L70,L71),
+                                    SEQ(
+                                     LABEL L70,
+                                     SEQ(
+                                      EXP(
+                                       CALL(
+                                        NAME $NullExit$$)),
+                                      SEQ(
+                                       JUMP(
+                                        NAME L48),
+                                       LABEL L71))))),
+                                  BINOP(PLUS,
+                                   TEMP t166,
+                                   CONST 4))))))),
+                           TEMP t167)),
+                         LABEL L74)))))),
+                   TEMP t168)),
+                 LABEL L77)))))),
+           TEMP t169)),
+         LABEL L80)))))),
+   TEMP t170)),
+ LABEL L48)
+
+LABEL L84
+0"
+
+LABEL L81
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    CJUMP(GT,
+     TEMP t172,
+     CONST 0,
+     L85,L86),
+    SEQ(
+     LABEL L85,
+     SEQ(
+      EXP(
+       ESEQ(
+        EXP(
+         CALL(
+          NAME L81,
+           MEM(
+            BINOP(PLUS,
+             CONST -4,
+             TEMP t125)),
+           BINOP(DIV,
+            TEMP t172,
+            CONST 10))),
+        CALL(
+         NAME $Print$$,
+          MEM(
+           BINOP(PLUS,
+            CONST 0,
+            MEM(
+             BINOP(PLUS,
+              CONST -4,
+              MEM(
+               BINOP(PLUS,
+                CONST -4,
+                TEMP t125)))))),
+          CALL(
+           NAME $Chr$$,
+            MEM(
+             BINOP(PLUS,
+              CONST 0,
+              MEM(
+               BINOP(PLUS,
+                CONST -4,
+                MEM(
+                 BINOP(PLUS,
+                  CONST -4,
+                  TEMP t125)))))),
+            BINOP(PLUS,
+             BINOP(MINUS,
+              TEMP t172,
+              BINOP(MUL,
+               BINOP(DIV,
+                TEMP t172,
+                CONST 10),
+               CONST 10)),
+             CALL(
+              NAME $Ord$$,
+               MEM(
+                BINOP(PLUS,
+                 CONST 0,
+                 MEM(
+                  BINOP(PLUS,
+                   CONST -4,
+                   MEM(
+                    BINOP(PLUS,
+                     CONST -4,
+                     TEMP t125)))))),
+               NAME L84)))))),
+      LABEL L86))),
+   CONST 0)),
+ LABEL L83)
+
+LABEL L87
+-"
+
+LABEL L88
+0"
+
+LABEL L49
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    CJUMP(LT,
+     TEMP t151,
+     CONST 0,
+     L92,L93),
+    SEQ(
+     LABEL L92,
+     SEQ(
+      MOVE(
+       TEMP t174,
+       ESEQ(
+        EXP(
+         CALL(
+          NAME $Print$$,
+           MEM(
+            BINOP(PLUS,
+             CONST 0,
+             MEM(
+              BINOP(PLUS,
+               CONST -4,
+               TEMP t125)))),
+           NAME L87)),
+        CALL(
+         NAME L81,
+          TEMP t125,
+          BINOP(MINUS,
+           CONST 0,
+           TEMP t151)))),
+      SEQ(
+       JUMP(
+        NAME L94),
+       SEQ(
+        LABEL L93,
+        SEQ(
+         MOVE(
+          TEMP t174,
+          ESEQ(
+           SEQ(
+            CJUMP(GT,
+             TEMP t151,
+             CONST 0,
+             L89,L90),
+            SEQ(
+             LABEL L89,
+             SEQ(
+              MOVE(
+               TEMP t173,
+               CALL(
+                NAME L81,
+                 TEMP t125,
+                 TEMP t151)),
+              SEQ(
+               JUMP(
+                NAME L91),
+               SEQ(
+                LABEL L90,
+                SEQ(
+                 MOVE(
+                  TEMP t173,
+                  CALL(
+                   NAME $Print$$,
+                    MEM(
+                     BINOP(PLUS,
+                      CONST 0,
+                      MEM(
+                       BINOP(PLUS,
+                        CONST -4,
+                        TEMP t125)))),
+                    NAME L88)),
+                 LABEL L91)))))),
+           TEMP t173)),
+         LABEL L94)))))),
+   TEMP t174)),
+ LABEL L51)
+
+LABEL L95
+
+"
+
+LABEL L98
+ "
+
+LABEL L52
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    CJUMP(EQ,
+     TEMP t153,
+     NAME L0,
+     L101,L102),
+    SEQ(
+     LABEL L101,
+     SEQ(
+      MOVE(
+       TEMP t177,
+       CALL(
+        NAME $Print$$,
+         MEM(
+          BINOP(PLUS,
+           CONST 0,
+           MEM(
+            BINOP(PLUS,
+             CONST -4,
+             TEMP t125)))),
+         NAME L95)),
+      SEQ(
+       JUMP(
+        NAME L103),
+       SEQ(
+        LABEL L102,
+        SEQ(
+         MOVE(
+          TEMP t177,
+          ESEQ(
+           SEQ(
+            EXP(
+             CALL(
+              NAME L49,
+               MEM(
+                BINOP(PLUS,
+                 CONST -4,
+                 TEMP t125)),
+               MEM(
+                ESEQ(
+                 SEQ(
+                  MOVE(
+                   TEMP t175,
+                   TEMP t153),
+                  SEQ(
+                   CJUMP(EQ,
+                    TEMP t175,
+                    NAME L0,
+                    L96,L97),
+                   SEQ(
+                    LABEL L96,
+                    SEQ(
+                     EXP(
+                      CALL(
+                       NAME $NullExit$$)),
+                     SEQ(
+                      JUMP(
+                       NAME L54),
+                      LABEL L97))))),
+                 BINOP(PLUS,
+                  TEMP t175,
+                  CONST 0))))),
+            EXP(
+             CALL(
+              NAME $Print$$,
+               MEM(
+                BINOP(PLUS,
+                 CONST 0,
+                 MEM(
+                  BINOP(PLUS,
+                   CONST -4,
+                   TEMP t125)))),
+               NAME L98))),
+           CALL(
+            NAME L52,
+             MEM(
+              BINOP(PLUS,
+               CONST -4,
+               TEMP t125)),
+             MEM(
+              ESEQ(
+               SEQ(
+                MOVE(
+                 TEMP t176,
+                 TEMP t153),
+                SEQ(
+                 CJUMP(EQ,
+                  TEMP t176,
+                  NAME L0,
+                  L99,L100),
+                 SEQ(
+                  LABEL L99,
+                  SEQ(
+                   EXP(
+                    CALL(
+                     NAME $NullExit$$)),
+                   SEQ(
+                    JUMP(
+                     NAME L54),
+                    LABEL L100))))),
+               BINOP(PLUS,
+                TEMP t176,
+                CONST 4)))))),
+         LABEL L103)))))),
+   TEMP t177)),
+ LABEL L54)
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    MOVE(
+     MEM(
+      BINOP(PLUS,
+       CONST -8,
+       TEMP t125)),
+     CALL(
+      NAME $GetChar$$,
+       MEM(
+        BINOP(PLUS,
+         CONST 0,
+         TEMP t125)))),
+    SEQ(
+     MOVE(
+      TEMP t178,
+      CALL(
+       NAME L43,
+        TEMP t125)),
+     MOVE(
+      TEMP t179,
+      ESEQ(
+       MOVE(
+        MEM(
+         BINOP(PLUS,
+          CONST -8,
+          TEMP t125)),
+        CALL(
+         NAME $GetChar$$,
+          MEM(
+           BINOP(PLUS,
+            CONST 0,
+            TEMP t125)))),
+       CALL(
+        NAME L43,
+         TEMP t125))))),
+   CALL(
+    NAME L52,
+     TEMP t125,
+     CALL(
+      NAME L46,
+       TEMP t125,
+       TEMP t178,
+       TEMP t179)))),
+ LABEL L12)
+

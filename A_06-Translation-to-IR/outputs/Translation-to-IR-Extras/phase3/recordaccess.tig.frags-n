@@ -1,0 +1,133 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP tr0,
+  ESEQ(
+   MOVE(
+    TEMP tr1,
+    NAME N1),
+   ESEQ(
+    SEQ(
+     CJUMP(NE,
+      MEM(
+       ESEQ(
+        SEQ(
+         MOVE(
+          TEMP tr2,
+          TEMP tr1),
+         SEQ(
+          CJUMP(EQ,
+           TEMP tr2,
+           NAME N1,
+           N2,N3),
+          SEQ(
+           LABEL N2,
+           SEQ(
+            EXP(
+             CALL(
+              NAME $NullExit$$)),
+            SEQ(
+             JUMP(
+              NAME N4),
+             LABEL N3))))),
+        BINOP(PLUS,
+         TEMP tr2,
+         CONST 4))),
+      NAME N1,
+      N5,N6),
+     SEQ(
+      LABEL N5,
+      SEQ(
+       MOVE(
+        TEMP tr3,
+        MEM(
+         ESEQ(
+          SEQ(
+           MOVE(
+            TEMP tr4,
+            MEM(
+             ESEQ(
+              SEQ(
+               MOVE(
+                TEMP tr5,
+                TEMP tr1),
+               SEQ(
+                CJUMP(EQ,
+                 TEMP tr5,
+                 NAME N1,
+                 N7,N8),
+                SEQ(
+                 LABEL N7,
+                 SEQ(
+                  EXP(
+                   CALL(
+                    NAME $NullExit$$)),
+                  SEQ(
+                   JUMP(
+                    NAME N4),
+                   LABEL N8))))),
+              BINOP(PLUS,
+               TEMP tr5,
+               CONST 4)))),
+           SEQ(
+            CJUMP(EQ,
+             TEMP tr4,
+             NAME N1,
+             N9,N10),
+            SEQ(
+             LABEL N9,
+             SEQ(
+              EXP(
+               CALL(
+                NAME $NullExit$$)),
+              SEQ(
+               JUMP(
+                NAME N4),
+               LABEL N10))))),
+          BINOP(PLUS,
+           TEMP tr4,
+           CONST 0)))),
+       SEQ(
+        JUMP(
+         NAME N11),
+        SEQ(
+         LABEL N6,
+         SEQ(
+          MOVE(
+           TEMP tr3,
+           MEM(
+            ESEQ(
+             SEQ(
+              MOVE(
+               TEMP tr6,
+               TEMP tr1),
+              SEQ(
+               CJUMP(EQ,
+                TEMP tr6,
+                NAME N1,
+                N12,N13),
+               SEQ(
+                LABEL N12,
+                SEQ(
+                 EXP(
+                  CALL(
+                   NAME $NullExit$$)),
+                 SEQ(
+                  JUMP(
+                   NAME N4),
+                  LABEL N13))))),
+             BINOP(PLUS,
+              TEMP tr6,
+              CONST 0)))),
+          LABEL N11)))))),
+    TEMP tr3))),
+ LABEL N4)
+

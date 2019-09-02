@@ -1,0 +1,21 @@
+LetExp([
+ FunctionDec[
+  (nfactor,[
+   (n,true,int)],
+NONE,
+   IfExp(
+    OpExp(EqOp,
+     VarExp(
+      SimpleVar(n)),
+     IntExp(0)),
+    IntExp(1),
+    OpExp(TimesOp,
+     VarExp(
+      SimpleVar(n)),
+     CallExp(nfactor,[
+      OpExp(MinusOp,
+       VarExp(
+        SimpleVar(n)),
+       IntExp(1))]))))]],
+ CallExp(nfactor,[
+  IntExp(10)]))

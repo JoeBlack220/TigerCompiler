@@ -1,0 +1,8 @@
+7.12: Unexpected type: Inconsistent types occur in var declaration.
+Expected: record1{
+              name: STRING
+              id: INT}
+Found:    record1{
+              name: STRING
+              id: INT}
+

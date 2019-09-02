@@ -1,0 +1,90 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L29:
+li t139,10
+li t140,0
+bltz t139,L13
+L14:
+move $a0,t139
+move $a1,t140
+jal $InitArray$$
+move t141,$v0
+li t142,5
+li t143,6
+bltz t142,L15
+L16:
+move $a0,t142
+move $a1,t143
+jal $InitArray$$
+move t144,$v0
+li t145,2
+move t146,t141
+li t147,3
+lw t152,(t146)
+ble t152,t147,L17
+L18:
+bltz t147,L19
+L20:
+li t153,5
+addi t156,t147,1
+li t157,4
+mul t155,t157,t156
+add t154,t146,t155
+sw t153,(t154)
+move t150,t141
+move t148,t144
+li t149,3
+lw t158,(t148)
+ble t158,t149,L21
+L22:
+bltz t149,L23
+L24:
+addi t161,t149,1
+li t162,4
+mul t160,t162,t161
+add t159,t148,t160
+lw t151,(t159)
+lw t163,(t150)
+ble t163,t151,L25
+L26:
+bltz t151,L27
+L28:
+li t164,7
+addi t167,t151,1
+li t168,4
+mul t166,t168,t167
+add t165,t150,t166
+sw t164,(t165)
+li $v0,0
+j L12
+L13:
+jal $SizeError$$
+j L12
+L15:
+jal $SizeError$$
+j L12
+L17:
+jal $UpperBoundExit$$
+j L12
+L19:
+jal $LowerBoundExit$$
+j L12
+L21:
+jal $UpperBoundExit$$
+j L12
+L23:
+jal $LowerBoundExit$$
+j L12
+L25:
+jal $UpperBoundExit$$
+j L12
+L27:
+jal $LowerBoundExit$$
+j L12
+L12:
+

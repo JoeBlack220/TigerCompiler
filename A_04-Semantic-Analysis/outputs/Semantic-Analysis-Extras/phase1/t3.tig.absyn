@@ -1,0 +1,9 @@
+OpExp(MinusOp,
+ OpExp(PlusOp,
+  IntExp(1),
+  OpExp(TimesOp,
+   IntExp(2),
+   IntExp(3))),
+ OpExp(DivideOp,
+  IntExp(4),
+  IntExp(2)))

@@ -1,0 +1,40 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   SEQ(
+    JUMP(
+     NAME L26),
+    SEQ(
+     LABEL L27,
+     SEQ(
+      EXP(
+       ESEQ(
+        EXP(
+         BINOP(PLUS,
+          CONST 1,
+          CONST 2)),
+        ESEQ(
+         EXP(
+          NAME L1),
+         CONST 0))),
+      SEQ(
+       LABEL L26,
+       SEQ(
+        CJUMP(LT,
+         CONST 1,
+         CONST 4,
+         L27,L25),
+        LABEL L25))))),
+   CONST 0)),
+ LABEL L24)
+

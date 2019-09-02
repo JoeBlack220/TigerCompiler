@@ -1,0 +1,66 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L319
+Nobody"
+
+LABEL L322
+Somebody"
+
+LABEL $Main$$
+[
+LABEL L323,
+MOVE(
+ TEMP t309,
+ CALL(
+  NAME $Malloc$$,
+   CONST 8)),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t309,
+   CONST 0)),
+ NAME L319),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t309,
+   CONST 4)),
+ CONST 1000),
+MOVE(
+ TEMP t310,
+ TEMP t309),
+MOVE(
+ TEMP t311,
+ TEMP t310),
+CJUMP(EQ,
+ TEMP t311,
+ NAME L0,
+ L320,L321),
+LABEL L321,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP t311,
+   CONST 0)),
+ NAME L322),
+MOVE(
+ TEMP t123,
+ TEMP t310),
+JUMP(
+ NAME L318),
+LABEL L320,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME L318),
+LABEL L318 
+]
+
+

@@ -1,0 +1,6 @@
+2.49: Unexpected type: The left expression of operate expression need to be int.
+Expected: STRING
+Found:    INT
+
+2.3: The name "a" is used multiple times, Already have a formal in this symbol.
+

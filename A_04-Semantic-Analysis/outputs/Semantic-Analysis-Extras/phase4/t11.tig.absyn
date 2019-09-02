@@ -1,0 +1,26 @@
+LetExp([
+ TypeDec[
+  (point,
+   RecordTy[
+    (x,true,int),
+    (y,true,int)])],
+ VarDec(p,true,SOME(point),
+  RecordExp(point,[
+
+   (x,
+    IntExp(3)),
+   (y,
+    IntExp(4))]))],
+ AssignExp(
+  FieldVar(
+   SimpleVar(p),
+   x),
+  OpExp(PlusOp,
+   VarExp(
+    FieldVar(
+     SimpleVar(p),
+     x)),
+   VarExp(
+    FieldVar(
+     SimpleVar(p),
+     y)))))

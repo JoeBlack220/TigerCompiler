@@ -1,0 +1,22 @@
+LetExp([
+ FunctionDec[
+  (f,[
+   (x1,false,int),
+   (x2,false,int),
+   (x3,false,int),
+   (x4,false,int),
+   (x5,false,int),
+   (x6,false,int)],
+   SOME(int),
+   OpExp(PlusOp,
+    VarExp(
+     SimpleVar(x1)),
+    VarExp(
+     SimpleVar(x3))))]],
+ CallExp(f,[
+  IntExp(1),
+  IntExp(2),
+  IntExp(3),
+  IntExp(4),
+  IntExp(5),
+  IntExp(6)]))

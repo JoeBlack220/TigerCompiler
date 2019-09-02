@@ -1,0 +1,4 @@
+3.8: Unexpected type: Inconsistent types occur in var declaration.
+Expected: INT
+Found:    STRING
+

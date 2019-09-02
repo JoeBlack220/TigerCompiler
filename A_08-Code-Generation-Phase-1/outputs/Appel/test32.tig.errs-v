@@ -1,0 +1,4 @@
+6.11: Unexpected type: Found different type from expected type.
+Expected: INT
+Found:    STRING
+

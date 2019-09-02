@@ -1,0 +1,21 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L481:
+li t712,8
+move $a0,t712
+jal $Malloc$$
+move t710,$v0
+li t713,0
+sw t713,0(t710)
+la t714,L0
+sw t714,4(t710)
+move t711,t710
+move $v0,t711
+j L480
+L480:
+

@@ -1,0 +1,72 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L298
+Nobody"
+
+LABEL L301
+Somebody"
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    TEMP t271,
+    ESEQ(
+     SEQ(
+      MOVE(
+       TEMP t270,
+       CALL(
+        NAME $Malloc$$,
+         CONST 8)),
+      SEQ(
+       MOVE(
+        MEM(
+         BINOP(PLUS,
+          TEMP t270,
+          CONST 0)),
+        NAME L298),
+       MOVE(
+        MEM(
+         BINOP(PLUS,
+          TEMP t270,
+          CONST 4)),
+        CONST 1000))),
+     TEMP t270)),
+   ESEQ(
+    MOVE(
+     MEM(
+      ESEQ(
+       SEQ(
+        MOVE(
+         TEMP t272,
+         TEMP t271),
+        SEQ(
+         CJUMP(EQ,
+          TEMP t272,
+          NAME L0,
+          L299,L300),
+         SEQ(
+          LABEL L299,
+          SEQ(
+           EXP(
+            CALL(
+             NAME $NullExit$$)),
+           SEQ(
+            JUMP(
+             NAME L297),
+            LABEL L300))))),
+       BINOP(PLUS,
+        TEMP t272,
+        CONST 0))),
+     NAME L301),
+    TEMP t271))),
+ LABEL L297)
+

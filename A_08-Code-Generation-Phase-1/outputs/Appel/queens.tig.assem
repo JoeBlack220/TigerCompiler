@@ -1,0 +1,425 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L132
+ O"
+
+LABEL L133
+ ."
+
+LABEL L139
+
+"
+
+LABEL L142
+
+"
+
+LABEL L122
+L143:
+li t344,0
+li t383,1
+lw t385,0($fp)
+lw t384,-8(t385)
+sub t382,t384,t383
+move t350,t382
+ble t344,t350,L140
+L126:
+lw t387,0($fp)
+lw t386,0(t387)
+la t388,L142
+move $a0,t386
+move $a1,t388
+jal $Print$$
+move $v0,$v0
+j L123
+L140:
+li t345,0
+li t390,1
+lw t392,0($fp)
+lw t391,-8(t392)
+sub t389,t391,t390
+move t349,t389
+ble t345,t349,L137
+L127:
+lw t394,0($fp)
+lw t393,0(t394)
+la t395,L139
+move $a0,t393
+move $a1,t395
+jal $Print$$
+bge t344,t350,L126
+L141:
+addi t396,t344,1
+move t344,t396
+j L140
+L137:
+lw t397,0($fp)
+lw t351,0(t397)
+lw t398,0($fp)
+lw t346,-16(t398)
+move t347,t344
+lw t399,(t346)
+ble t399,t347,L128
+L129:
+bltz t347,L130
+L131:
+addi t403,t347,1
+li t404,4
+mul t402,t404,t403
+add t401,t346,t402
+lw t400,(t401)
+beq t400,t345,L134
+L135:
+la t348,L133
+L136:
+move $a0,t351
+move $a1,t348
+jal $Print$$
+bge t345,t349,L127
+L138:
+addi t405,t345,1
+move t345,t405
+j L137
+L128:
+jal $UpperBoundExit$$
+j L123
+L130:
+jal $LowerBoundExit$$
+j L123
+L134:
+la t348,L132
+j L136
+L123:
+
+LABEL L124
+L196:
+lw t407,-4($fp)
+lw t406,-8(t407)
+beq t343,t406,L193
+L194:
+li t352,0
+li t409,1
+lw t411,-4($fp)
+lw t410,-8(t411)
+sub t408,t410,t409
+move t373,t408
+ble t352,t373,L191
+L144:
+L195:
+li $v0,0
+j L125
+L193:
+lw t412,-4($fp)
+move $a0,t412
+jal L122
+j L195
+L191:
+lw t413,-4($fp)
+lw t353,-12(t413)
+move t354,t352
+lw t414,(t353)
+ble t414,t354,L145
+L146:
+bltz t354,L147
+L148:
+addi t418,t354,1
+li t419,4
+mul t417,t419,t418
+add t416,t353,t417
+lw t415,(t416)
+beqz t415,L153
+L154:
+L160:
+L190:
+bge t352,t373,L144
+L192:
+addi t420,t352,1
+move t352,t420
+j L191
+L145:
+jal $UpperBoundExit$$
+j L125
+L147:
+jal $LowerBoundExit$$
+j L125
+L153:
+lw t421,-4($fp)
+lw t355,-20(t421)
+add t422,t352,t343
+move t356,t422
+lw t423,(t355)
+ble t423,t356,L149
+L150:
+bltz t356,L151
+L152:
+addi t427,t356,1
+li t428,4
+mul t426,t428,t427
+add t425,t355,t426
+lw t424,(t425)
+bnez t424,L160
+L159:
+lw t429,-4($fp)
+lw t357,-24(t429)
+addi t431,t352,7
+sub t430,t431,t343
+move t358,t430
+lw t432,(t357)
+ble t432,t358,L155
+L156:
+bltz t358,L157
+L158:
+addi t436,t358,1
+li t437,4
+mul t435,t437,t436
+add t434,t357,t435
+lw t433,(t434)
+bnez t433,L190
+L189:
+lw t438,-4($fp)
+lw t359,-12(t438)
+move t360,t352
+lw t439,(t359)
+ble t439,t360,L161
+L162:
+bltz t360,L163
+L164:
+li t440,1
+addi t443,t360,1
+li t444,4
+mul t442,t444,t443
+add t441,t359,t442
+sw t440,(t441)
+lw t445,-4($fp)
+lw t361,-20(t445)
+add t446,t352,t343
+move t362,t446
+lw t447,(t361)
+ble t447,t362,L165
+L166:
+bltz t362,L167
+L168:
+li t448,1
+addi t451,t362,1
+li t452,4
+mul t450,t452,t451
+add t449,t361,t450
+sw t448,(t449)
+lw t453,-4($fp)
+lw t363,-24(t453)
+addi t455,t352,7
+sub t454,t455,t343
+move t364,t454
+lw t456,(t363)
+ble t456,t364,L169
+L170:
+bltz t364,L171
+L172:
+li t457,1
+addi t460,t364,1
+li t461,4
+mul t459,t461,t460
+add t458,t363,t459
+sw t457,(t458)
+lw t462,-4($fp)
+lw t365,-16(t462)
+move t366,t343
+lw t463,(t365)
+ble t463,t366,L173
+L174:
+bltz t366,L175
+L176:
+addi t466,t366,1
+li t467,4
+mul t465,t467,t466
+add t464,t365,t465
+sw t352,(t464)
+lw t468,-4($fp)
+addi t469,t343,1
+move $a0,t468
+move $a1,t469
+jal L124
+lw t470,-4($fp)
+lw t367,-12(t470)
+move t368,t352
+lw t471,(t367)
+ble t471,t368,L177
+L178:
+bltz t368,L179
+L180:
+li t472,0
+addi t475,t368,1
+li t476,4
+mul t474,t476,t475
+add t473,t367,t474
+sw t472,(t473)
+lw t477,-4($fp)
+lw t369,-20(t477)
+add t478,t352,t343
+move t370,t478
+lw t479,(t369)
+ble t479,t370,L181
+L182:
+bltz t370,L183
+L184:
+li t480,0
+addi t483,t370,1
+li t484,4
+mul t482,t484,t483
+add t481,t369,t482
+sw t480,(t481)
+lw t485,-4($fp)
+lw t371,-24(t485)
+addi t487,t352,7
+sub t486,t487,t343
+move t372,t486
+lw t488,(t371)
+ble t488,t372,L185
+L186:
+bltz t372,L187
+L188:
+li t489,0
+addi t492,t372,1
+li t493,4
+mul t491,t493,t492
+add t490,t371,t491
+sw t489,(t490)
+j L190
+L149:
+jal $UpperBoundExit$$
+j L125
+L151:
+jal $LowerBoundExit$$
+j L125
+L155:
+jal $UpperBoundExit$$
+j L125
+L157:
+jal $LowerBoundExit$$
+j L125
+L161:
+jal $UpperBoundExit$$
+j L125
+L163:
+jal $LowerBoundExit$$
+j L125
+L165:
+jal $UpperBoundExit$$
+j L125
+L167:
+jal $LowerBoundExit$$
+j L125
+L169:
+jal $UpperBoundExit$$
+j L125
+L171:
+jal $LowerBoundExit$$
+j L125
+L173:
+jal $UpperBoundExit$$
+j L125
+L175:
+jal $LowerBoundExit$$
+j L125
+L177:
+jal $UpperBoundExit$$
+j L125
+L179:
+jal $LowerBoundExit$$
+j L125
+L181:
+jal $UpperBoundExit$$
+j L125
+L183:
+jal $LowerBoundExit$$
+j L125
+L185:
+jal $UpperBoundExit$$
+j L125
+L187:
+jal $LowerBoundExit$$
+j L125
+L125:
+
+LABEL $Main$$
+L197:
+li t494,8
+sw t494,-8($fp)
+addi t495,$fp,-12
+move t381,t495
+lw t335,-8($fp)
+li t336,0
+bltz t335,L114
+L115:
+move $a0,t335
+move $a1,t336
+jal $InitArray$$
+move t380,$v0
+sw t380,(t381)
+addi t496,$fp,-16
+move t379,t496
+lw t337,-8($fp)
+li t338,0
+bltz t337,L116
+L117:
+move $a0,t337
+move $a1,t338
+jal $InitArray$$
+move t378,$v0
+sw t378,(t379)
+addi t497,$fp,-20
+move t377,t497
+li t499,1
+lw t501,-8($fp)
+lw t502,-8($fp)
+add t500,t502,t501
+sub t498,t500,t499
+move t339,t498
+li t340,0
+bltz t339,L118
+L119:
+move $a0,t339
+move $a1,t340
+jal $InitArray$$
+move t376,$v0
+sw t376,(t377)
+addi t503,$fp,-24
+move t375,t503
+li t505,1
+lw t507,-8($fp)
+lw t508,-8($fp)
+add t506,t508,t507
+sub t504,t506,t505
+move t341,t504
+li t342,0
+bltz t341,L120
+L121:
+move $a0,t341
+move $a1,t342
+jal $InitArray$$
+move t374,$v0
+sw t374,(t375)
+li t509,0
+move $a0,$fp
+move $a1,t509
+jal L124
+move $v0,$v0
+j L113
+L114:
+jal $SizeError$$
+j L113
+L116:
+jal $SizeError$$
+j L113
+L118:
+jal $SizeError$$
+j L113
+L120:
+jal $SizeError$$
+j L113
+L113:
+

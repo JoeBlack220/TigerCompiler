@@ -1,0 +1,27 @@
+LetExp([
+ VarDec(n,false,NONE,
+  IntExp(10)),
+ VarDec(sum,false,NONE,
+  IntExp(0))],
+ SeqExp[
+  ForExp(
+   i,false,
+   IntExp(1),
+   VarExp(
+    SimpleVar(n)),
+   AssignExp(
+    SimpleVar(sum),
+    OpExp(PlusOp,
+     VarExp(
+      SimpleVar(sum)),
+     VarExp(
+      SimpleVar(i))))),
+  IfExp(
+   OpExp(EqOp,
+    VarExp(
+     SimpleVar(sum)),
+    IntExp(55)),
+   IntExp(1),
+   OpExp(DivideOp,
+    IntExp(1),
+    IntExp(0)))])

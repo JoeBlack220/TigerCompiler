@@ -1,0 +1,4 @@
+7.12: Unexpected type: Found different type from expected type.
+Expected: array[INT] of INT
+Found:    array[INT] of INT
+

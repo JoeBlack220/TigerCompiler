@@ -1,0 +1,11 @@
+IF   43
+LPAREN   46
+INT(5)   47
+GT   48
+INT(4)   49
+RPAREN   50
+THEN   52
+INT(13)   57
+ELSE   60
+STRING( )   66
+EOF   70

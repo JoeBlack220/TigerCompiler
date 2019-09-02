@@ -1,0 +1,8 @@
+1.1: Unexpected type: The body expression of while expression need to be unit.
+Expected: UNIT
+Found:    NIL
+
+1.1: Unexpected type: The test field of while expression need to be int.
+Expected: INT
+Found:    STRING
+

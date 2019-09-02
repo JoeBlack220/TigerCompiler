@@ -1,0 +1,4 @@
+1.1: Unexpected type: The type of both branches should be the same.
+Expected: INT
+Found:    STRING
+

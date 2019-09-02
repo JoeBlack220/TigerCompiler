@@ -1,0 +1,10 @@
+IfExp(
+ OpExp(GtOp,
+  IntExp(3),
+  IntExp(4)),
+ SeqExp[],
+ SeqExp[
+  OpExp(PlusOp,
+   IntExp(1),
+   IntExp(2)),
+  SeqExp[]])

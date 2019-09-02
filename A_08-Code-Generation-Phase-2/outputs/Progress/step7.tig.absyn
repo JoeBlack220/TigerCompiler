@@ -1,0 +1,32 @@
+LetExp([
+ TypeDec[
+  (pair,
+   RecordTy[
+    (fst,false,int),
+    (snd,false,int)])],
+ VarDec(p,false,NONE,
+  RecordExp(pair,[
+
+   (fst,
+    IntExp(4)),
+   (snd,
+    IntExp(8))])),
+ VarDec(res,false,NONE,
+  OpExp(PlusOp,
+   VarExp(
+    FieldVar(
+     SimpleVar(p),
+     fst)),
+   VarExp(
+    FieldVar(
+     SimpleVar(p),
+     snd))))],
+ IfExp(
+  OpExp(EqOp,
+   VarExp(
+    SimpleVar(res)),
+   IntExp(12)),
+  IntExp(1),
+  OpExp(DivideOp,
+   IntExp(1),
+   IntExp(0))))

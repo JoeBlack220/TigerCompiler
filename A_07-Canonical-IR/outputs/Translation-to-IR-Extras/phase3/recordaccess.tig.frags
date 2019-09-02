@@ -1,0 +1,106 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+[
+LABEL L43,
+MOVE(
+ TEMP t152,
+ NAME L0),
+MOVE(
+ TEMP t153,
+ TEMP t152),
+CJUMP(EQ,
+ TEMP t153,
+ NAME L0,
+ L32,L33),
+LABEL L33,
+CJUMP(NE,
+ MEM(
+  BINOP(PLUS,
+   TEMP t153,
+   CONST 4)),
+ NAME L0,
+ L40,L41),
+LABEL L41,
+MOVE(
+ TEMP t156,
+ TEMP t152),
+CJUMP(EQ,
+ TEMP t156,
+ NAME L0,
+ L38,L39),
+LABEL L39,
+MOVE(
+ TEMP t157,
+ MEM(
+  BINOP(PLUS,
+   TEMP t156,
+   CONST 0))),
+LABEL L42,
+MOVE(
+ TEMP t123,
+ TEMP t157),
+JUMP(
+ NAME L31),
+LABEL L32,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME L31),
+LABEL L40,
+MOVE(
+ TEMP t154,
+ TEMP t152),
+CJUMP(EQ,
+ TEMP t154,
+ NAME L0,
+ L34,L35),
+LABEL L35,
+MOVE(
+ TEMP t155,
+ MEM(
+  BINOP(PLUS,
+   TEMP t154,
+   CONST 4))),
+CJUMP(EQ,
+ TEMP t155,
+ NAME L0,
+ L36,L37),
+LABEL L37,
+MOVE(
+ TEMP t157,
+ MEM(
+  BINOP(PLUS,
+   TEMP t155,
+   CONST 0))),
+JUMP(
+ NAME L42),
+LABEL L34,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME L31),
+LABEL L36,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME L31),
+LABEL L38,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME L31),
+LABEL L31 
+]
+
+

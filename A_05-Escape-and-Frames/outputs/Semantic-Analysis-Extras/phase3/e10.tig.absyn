@@ -1,0 +1,7 @@
+LetExp([
+ TypeDec[
+  (length,
+   NameTy(int)),
+  (length,
+   NameTy(int))]],
+ SeqExp[])

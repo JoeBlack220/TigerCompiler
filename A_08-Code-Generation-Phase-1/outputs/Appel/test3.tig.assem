@@ -1,0 +1,36 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L319
+Nobody"
+
+LABEL L322
+Somebody"
+
+LABEL $Main$$
+L323:
+li t562,8
+move $a0,t562
+jal $Malloc$$
+move t559,$v0
+la t563,L319
+sw t563,0(t559)
+li t564,1000
+sw t564,4(t559)
+move t560,t559
+move t561,t560
+la t565,L0
+beq t561,t565,L320
+L321:
+la t566,L322
+sw t566,0(t561)
+move $v0,t560
+j L318
+L320:
+jal $NullExit$$
+j L318
+L318:
+

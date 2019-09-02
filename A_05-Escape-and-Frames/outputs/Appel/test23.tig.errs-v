@@ -1,0 +1,8 @@
+8.10: Unexpected type: The types of var and expression in an assignexpression need to be the same.
+Expected: INT
+Found:    STRING
+
+7.12: Unexpected type: The types of var and expression in an assignexpression need to be the same.
+Expected: STRING
+Found:    INT
+

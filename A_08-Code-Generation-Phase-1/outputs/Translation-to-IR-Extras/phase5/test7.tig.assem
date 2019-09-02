@@ -1,0 +1,50 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L243
+L247:
+lw t516,-8($fp)
+addi t517,t513,1
+move $a0,t516
+move $a1,t517
+jal L245
+li $v0,0
+j L244
+L244:
+
+LABEL L248
+str"
+
+LABEL L249
+ "
+
+LABEL L245
+L250:
+lw t518,-4($fp)
+la t519,L248
+move $a0,t518
+move $a1,t515
+move $a2,t519
+jal L243
+la $v0,L249
+j L246
+L246:
+
+LABEL L251
+str2"
+
+LABEL $Main$$
+L252:
+li t520,0
+la t521,L251
+move $a0,$fp
+move $a1,t520
+move $a2,t521
+jal L243
+move $v0,$v0
+j L242
+L242:
+

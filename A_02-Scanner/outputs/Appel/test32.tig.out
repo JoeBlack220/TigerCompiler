@@ -1,0 +1,20 @@
+LET   54
+TYPE   59
+ID(arrayty)   64
+EQ   72
+ARRAY   74
+OF   80
+ID(int)   83
+VAR   89
+ID(a)   93
+ASSIGN   95
+ID(arrayty)   98
+LBRACK   106
+INT(10)   107
+RBRACK   109
+OF   111
+STRING( )   114
+IN   118
+INT(0)   122
+END   124
+EOF   128

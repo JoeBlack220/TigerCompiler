@@ -1,0 +1,35 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL $Main$$
+[
+LABEL N2,
+LABEL N3,
+CJUMP(LT,
+ CONST 1,
+ CONST 4,
+ N4,N5),
+LABEL N5,
+MOVE(
+ TEMP tr0,
+ CONST 0),
+JUMP(
+ NAME N6),
+LABEL N4,
+EXP(
+ BINOP(PLUS,
+  CONST 1,
+  CONST 2)),
+EXP(
+ NAME N0),
+JUMP(
+ NAME N3),
+LABEL N6 
+]
+
+

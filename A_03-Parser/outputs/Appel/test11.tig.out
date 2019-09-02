@@ -1,0 +1,10 @@
+ForExp(
+i,true,
+ IntExp(10),
+ StringExp(" "),
+ AssignExp(
+  SimpleVar(i),
+  OpExp(MinusOp,
+   VarExp(
+    SimpleVar(i)),
+   IntExp(1))))

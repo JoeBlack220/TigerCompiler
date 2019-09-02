@@ -1,0 +1,16 @@
+LET   30
+TYPE   35
+ID(a)   40
+EQ   42
+ID(int)   44
+IN   48
+LET   52
+TYPE   58
+ID(a)   63
+EQ   65
+ID(string)   67
+IN   75
+INT(0)   80
+END   83
+END   87
+EOF   91

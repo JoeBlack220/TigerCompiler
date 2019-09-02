@@ -1,0 +1,4 @@
+3.3: Unexpected type: The right expression of operate expression need to be int.
+Expected: INT
+Found:    STRING
+

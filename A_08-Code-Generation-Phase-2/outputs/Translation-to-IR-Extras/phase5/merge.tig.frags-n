@@ -1,0 +1,1592 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL N2
+0"
+
+LABEL N3
+9"
+
+LABEL N4
+[
+LABEL N5,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr2,
+ TEMP tr3),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+MOVE(
+ TEMP tr22,
+ CONST 1),
+MOVE(
+ TEMP tr23,
+ CALL(
+  NAME $Ord$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST -4,
+         TEMP tr0)))))),
+   TEMP tr2)),
+MOVE(
+ TEMP tr24,
+ TEMP tr23),
+MOVE(
+ TEMP tr25,
+ CALL(
+  NAME $Ord$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST -4,
+         TEMP tr0)))))),
+   NAME N2)),
+CJUMP(GE,
+ TEMP tr24,
+ TEMP tr25,
+ N6,N7),
+LABEL N7,
+LABEL N8,
+MOVE(
+ TEMP tr22,
+ CONST 0),
+LABEL N9,
+MOVE(
+ TEMP tr26,
+ TEMP tr22),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N10),
+LABEL N6,
+MOVE(
+ TEMP tr27,
+ CALL(
+  NAME $Ord$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST -4,
+         TEMP tr0)))))),
+   TEMP tr2)),
+MOVE(
+ TEMP tr28,
+ TEMP tr27),
+MOVE(
+ TEMP tr29,
+ CALL(
+  NAME $Ord$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST -4,
+         TEMP tr0)))))),
+   NAME N3)),
+CJUMP(LE,
+ TEMP tr28,
+ TEMP tr29,
+ N9,N11),
+LABEL N11,
+JUMP(
+ NAME N8),
+LABEL N10 
+]
+
+
+LABEL N12
+ "
+
+LABEL N13
+
+"
+
+LABEL N14
+[
+LABEL N15,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+LABEL N16,
+MOVE(
+ TEMP tr30,
+ CALL(
+  NAME $StringEqual$$,
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST 0,
+         TEMP tr0)))))),
+   NAME N12)),
+CJUMP(EQ,
+ TEMP tr30,
+ CONST 0,
+ N17,N18),
+LABEL N18,
+LABEL N19,
+MOVE(
+ TEMP tr31,
+ BINOP(PLUS,
+  CONST -8,
+  MEM(
+   BINOP(PLUS,
+    CONST -4,
+    MEM(
+     BINOP(PLUS,
+      CONST 0,
+      TEMP tr0)))))),
+MOVE(
+ TEMP tr32,
+ CALL(
+  NAME $GetChar$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST 0,
+         TEMP tr0)))))))),
+MOVE(
+ MEM(
+  TEMP tr31),
+ TEMP tr32),
+JUMP(
+ NAME N16),
+LABEL N17,
+MOVE(
+ TEMP tr33,
+ CALL(
+  NAME $StringEqual$$,
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST 0,
+         TEMP tr0)))))),
+   NAME N13)),
+CJUMP(NE,
+ TEMP tr33,
+ CONST 0,
+ N19,N20),
+LABEL N20,
+MOVE(
+ TEMP tr26,
+ CONST 0),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N21),
+LABEL N21 
+]
+
+
+LABEL N22
+0"
+
+LABEL N23
+[
+LABEL N24,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr34,
+ TEMP tr3),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+MOVE(
+ TEMP tr35,
+ CONST 0),
+EXP(
+ CALL(
+  NAME N14,
+   TEMP tr0)),
+MOVE(
+ TEMP tr36,
+ TEMP tr34),
+CJUMP(EQ,
+ TEMP tr36,
+ NAME N1,
+ N25,N26),
+LABEL N26,
+MOVE(
+ TEMP tr37,
+ BINOP(PLUS,
+  TEMP tr36,
+  CONST 0)),
+MOVE(
+ TEMP tr38,
+ CALL(
+  NAME N4,
+   TEMP tr0,
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))))),
+MOVE(
+ MEM(
+  TEMP tr37),
+ TEMP tr38),
+LABEL N27,
+MOVE(
+ TEMP tr39,
+ CALL(
+  NAME N4,
+   TEMP tr0,
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))))),
+CJUMP(EQ,
+ CONST 0,
+ TEMP tr39,
+ N28,N29),
+LABEL N29,
+MOVE(
+ TEMP tr40,
+ BINOP(MUL,
+  TEMP tr35,
+  CONST 10)),
+MOVE(
+ TEMP tr41,
+ CALL(
+  NAME $Ord$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))),
+   MEM(
+    BINOP(PLUS,
+     CONST -8,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))))),
+MOVE(
+ TEMP tr42,
+ BINOP(PLUS,
+  TEMP tr40,
+  TEMP tr41)),
+MOVE(
+ TEMP tr43,
+ CALL(
+  NAME $Ord$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))),
+   NAME N22)),
+MOVE(
+ TEMP tr35,
+ BINOP(MINUS,
+  TEMP tr42,
+  TEMP tr43)),
+MOVE(
+ TEMP tr44,
+ BINOP(PLUS,
+  CONST -8,
+  MEM(
+   BINOP(PLUS,
+    CONST -4,
+    TEMP tr0)))),
+MOVE(
+ TEMP tr45,
+ CALL(
+  NAME $GetChar$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))))),
+MOVE(
+ MEM(
+  TEMP tr44),
+ TEMP tr45),
+JUMP(
+ NAME N27),
+LABEL N25,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N30),
+LABEL N28,
+MOVE(
+ TEMP tr26,
+ TEMP tr35),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N30),
+LABEL N30 
+]
+
+
+LABEL N31
+[
+LABEL N32,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+MOVE(
+ TEMP tr46,
+ CALL(
+  NAME $Malloc$$,
+   CONST 4)),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP tr46,
+   CONST 0)),
+ CONST 0),
+MOVE(
+ TEMP tr47,
+ TEMP tr46),
+MOVE(
+ TEMP tr48,
+ CALL(
+  NAME N23,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP tr0)),
+   TEMP tr47)),
+MOVE(
+ TEMP tr49,
+ TEMP tr47),
+CJUMP(EQ,
+ TEMP tr49,
+ NAME N1,
+ N33,N34),
+LABEL N34,
+CJUMP(EQ,
+ CONST 0,
+ MEM(
+  BINOP(PLUS,
+   TEMP tr49,
+   CONST 0)),
+ N35,N36),
+LABEL N36,
+MOVE(
+ TEMP tr50,
+ CALL(
+  NAME $Malloc$$,
+   CONST 8)),
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   TEMP tr50,
+   CONST 0)),
+ TEMP tr48),
+MOVE(
+ TEMP tr51,
+ BINOP(PLUS,
+  TEMP tr50,
+  CONST 4)),
+MOVE(
+ TEMP tr52,
+ CALL(
+  NAME N31,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP tr0)))),
+MOVE(
+ MEM(
+  TEMP tr51),
+ TEMP tr52),
+MOVE(
+ TEMP tr53,
+ TEMP tr50),
+LABEL N37,
+MOVE(
+ TEMP tr26,
+ TEMP tr53),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N38),
+LABEL N33,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N38),
+LABEL N35,
+MOVE(
+ TEMP tr53,
+ NAME N1),
+JUMP(
+ NAME N37),
+LABEL N38 
+]
+
+
+LABEL N39
+[
+LABEL N40,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr54,
+ TEMP tr3),
+MOVE(
+ TEMP tr55,
+ TEMP tr56),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+CJUMP(EQ,
+ TEMP tr54,
+ NAME N1,
+ N41,N42),
+LABEL N42,
+CJUMP(EQ,
+ TEMP tr55,
+ NAME N1,
+ N43,N44),
+LABEL N44,
+MOVE(
+ TEMP tr57,
+ TEMP tr54),
+CJUMP(EQ,
+ TEMP tr57,
+ NAME N1,
+ N45,N46),
+LABEL N46,
+MOVE(
+ TEMP tr58,
+ MEM(
+  BINOP(PLUS,
+   TEMP tr57,
+   CONST 0))),
+MOVE(
+ TEMP tr59,
+ TEMP tr55),
+CJUMP(EQ,
+ TEMP tr59,
+ NAME N1,
+ N47,N48),
+LABEL N48,
+CJUMP(LT,
+ TEMP tr58,
+ MEM(
+  BINOP(PLUS,
+   TEMP tr59,
+   CONST 0)),
+ N49,N50),
+LABEL N50,
+MOVE(
+ TEMP tr60,
+ CALL(
+  NAME $Malloc$$,
+   CONST 8)),
+MOVE(
+ TEMP tr61,
+ BINOP(PLUS,
+  TEMP tr60,
+  CONST 0)),
+MOVE(
+ TEMP tr62,
+ TEMP tr55),
+CJUMP(EQ,
+ TEMP tr62,
+ NAME N1,
+ N51,N52),
+LABEL N52,
+MOVE(
+ MEM(
+  TEMP tr61),
+ MEM(
+  BINOP(PLUS,
+   TEMP tr62,
+   CONST 0))),
+MOVE(
+ TEMP tr63,
+ BINOP(PLUS,
+  TEMP tr60,
+  CONST 4)),
+MOVE(
+ TEMP tr64,
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP tr0))),
+MOVE(
+ TEMP tr65,
+ TEMP tr54),
+MOVE(
+ TEMP tr66,
+ TEMP tr55),
+CJUMP(EQ,
+ TEMP tr66,
+ NAME N1,
+ N53,N54),
+LABEL N54,
+MOVE(
+ TEMP tr67,
+ CALL(
+  NAME N39,
+   TEMP tr64,
+   TEMP tr65,
+   MEM(
+    BINOP(PLUS,
+     TEMP tr66,
+     CONST 4)))),
+MOVE(
+ MEM(
+  TEMP tr63),
+ TEMP tr67),
+MOVE(
+ TEMP tr68,
+ TEMP tr60),
+LABEL N55,
+MOVE(
+ TEMP tr69,
+ TEMP tr68),
+LABEL N56,
+MOVE(
+ TEMP tr70,
+ TEMP tr69),
+LABEL N57,
+MOVE(
+ TEMP tr26,
+ TEMP tr70),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N58),
+LABEL N41,
+MOVE(
+ TEMP tr70,
+ TEMP tr55),
+JUMP(
+ NAME N57),
+LABEL N43,
+MOVE(
+ TEMP tr69,
+ TEMP tr54),
+JUMP(
+ NAME N56),
+LABEL N45,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N58),
+LABEL N47,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N58),
+LABEL N49,
+MOVE(
+ TEMP tr71,
+ CALL(
+  NAME $Malloc$$,
+   CONST 8)),
+MOVE(
+ TEMP tr72,
+ BINOP(PLUS,
+  TEMP tr71,
+  CONST 0)),
+MOVE(
+ TEMP tr73,
+ TEMP tr54),
+CJUMP(EQ,
+ TEMP tr73,
+ NAME N1,
+ N59,N60),
+LABEL N60,
+MOVE(
+ MEM(
+  TEMP tr72),
+ MEM(
+  BINOP(PLUS,
+   TEMP tr73,
+   CONST 0))),
+MOVE(
+ TEMP tr74,
+ BINOP(PLUS,
+  TEMP tr71,
+  CONST 4)),
+MOVE(
+ TEMP tr75,
+ MEM(
+  BINOP(PLUS,
+   CONST -8,
+   TEMP tr0))),
+MOVE(
+ TEMP tr76,
+ TEMP tr54),
+CJUMP(EQ,
+ TEMP tr76,
+ NAME N1,
+ N61,N62),
+LABEL N62,
+MOVE(
+ TEMP tr77,
+ CALL(
+  NAME N39,
+   TEMP tr75,
+   MEM(
+    BINOP(PLUS,
+     TEMP tr76,
+     CONST 4)),
+   TEMP tr55)),
+MOVE(
+ MEM(
+  TEMP tr74),
+ TEMP tr77),
+MOVE(
+ TEMP tr68,
+ TEMP tr71),
+JUMP(
+ NAME N55),
+LABEL N59,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N58),
+LABEL N61,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N58),
+LABEL N51,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N58),
+LABEL N53,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N58),
+LABEL N58 
+]
+
+
+LABEL N63
+0"
+
+LABEL N64
+[
+LABEL N65,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr78,
+ TEMP tr3),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+CJUMP(GT,
+ TEMP tr78,
+ CONST 0,
+ N66,N67),
+LABEL N67,
+MOVE(
+ TEMP tr26,
+ CONST 0),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N68),
+LABEL N66,
+EXP(
+ CALL(
+  NAME N64,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     TEMP tr0)),
+   BINOP(DIV,
+    TEMP tr78,
+    CONST 10))),
+MOVE(
+ TEMP tr79,
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0))))))),
+MOVE(
+ TEMP tr80,
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   MEM(
+    BINOP(PLUS,
+     CONST -4,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0))))))),
+MOVE(
+ TEMP tr81,
+ BINOP(MINUS,
+  TEMP tr78,
+  BINOP(MUL,
+   BINOP(DIV,
+    TEMP tr78,
+    CONST 10),
+   CONST 10))),
+MOVE(
+ TEMP tr82,
+ CALL(
+  NAME $Ord$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       MEM(
+        BINOP(PLUS,
+         CONST -4,
+         TEMP tr0)))))),
+   NAME N63)),
+MOVE(
+ TEMP tr83,
+ CALL(
+  NAME $Chr$$,
+   TEMP tr80,
+   BINOP(PLUS,
+    TEMP tr81,
+    TEMP tr82))),
+EXP(
+ CALL(
+  NAME $Print$$,
+   TEMP tr79,
+   TEMP tr83)),
+JUMP(
+ NAME N67),
+LABEL N68 
+]
+
+
+LABEL N69
+-"
+
+LABEL N70
+0"
+
+LABEL N71
+[
+LABEL N72,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr84,
+ TEMP tr3),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+CJUMP(LT,
+ TEMP tr84,
+ CONST 0,
+ N73,N74),
+LABEL N74,
+CJUMP(GT,
+ TEMP tr84,
+ CONST 0,
+ N75,N76),
+LABEL N76,
+MOVE(
+ TEMP tr85,
+ CALL(
+  NAME $Print$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))),
+   NAME N70)),
+LABEL N77,
+MOVE(
+ TEMP tr86,
+ TEMP tr85),
+LABEL N78,
+MOVE(
+ TEMP tr26,
+ TEMP tr86),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N79),
+LABEL N73,
+EXP(
+ CALL(
+  NAME $Print$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))),
+   NAME N69)),
+MOVE(
+ TEMP tr86,
+ CALL(
+  NAME N64,
+   TEMP tr0,
+   BINOP(MINUS,
+    CONST 0,
+    TEMP tr84))),
+JUMP(
+ NAME N78),
+LABEL N75,
+MOVE(
+ TEMP tr85,
+ CALL(
+  NAME N64,
+   TEMP tr0,
+   TEMP tr84)),
+JUMP(
+ NAME N77),
+LABEL N79 
+]
+
+
+LABEL N80
+
+"
+
+LABEL N81
+ "
+
+LABEL N82
+[
+LABEL N83,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr87,
+ TEMP tr3),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+CJUMP(EQ,
+ TEMP tr87,
+ NAME N1,
+ N84,N85),
+LABEL N85,
+MOVE(
+ TEMP tr88,
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0))),
+MOVE(
+ TEMP tr89,
+ TEMP tr87),
+CJUMP(EQ,
+ TEMP tr89,
+ NAME N1,
+ N86,N87),
+LABEL N87,
+EXP(
+ CALL(
+  NAME N71,
+   TEMP tr88,
+   MEM(
+    BINOP(PLUS,
+     TEMP tr89,
+     CONST 0)))),
+EXP(
+ CALL(
+  NAME $Print$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))),
+   NAME N81)),
+MOVE(
+ TEMP tr90,
+ MEM(
+  BINOP(PLUS,
+   CONST -4,
+   TEMP tr0))),
+MOVE(
+ TEMP tr91,
+ TEMP tr87),
+CJUMP(EQ,
+ TEMP tr91,
+ NAME N1,
+ N88,N89),
+LABEL N89,
+MOVE(
+ TEMP tr92,
+ CALL(
+  NAME N82,
+   TEMP tr90,
+   MEM(
+    BINOP(PLUS,
+     TEMP tr91,
+     CONST 4)))),
+LABEL N90,
+MOVE(
+ TEMP tr26,
+ TEMP tr92),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N91),
+LABEL N84,
+MOVE(
+ TEMP tr92,
+ CALL(
+  NAME $Print$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     MEM(
+      BINOP(PLUS,
+       CONST -4,
+       TEMP tr0)))),
+   NAME N80)),
+JUMP(
+ NAME N90),
+LABEL N86,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N91),
+LABEL N88,
+EXP(
+ CALL(
+  NAME $NullExit$$)),
+JUMP(
+ NAME N91),
+LABEL N91 
+]
+
+
+LABEL $Main$$
+[
+LABEL N92,
+MOVE(
+ MEM(
+  BINOP(PLUS,
+   CONST 0,
+   TEMP tr0)),
+ TEMP tr1),
+MOVE(
+ TEMP tr4,
+ TEMP tr5),
+MOVE(
+ TEMP tr6,
+ TEMP tr7),
+MOVE(
+ TEMP tr8,
+ TEMP tr9),
+MOVE(
+ TEMP tr10,
+ TEMP tr11),
+MOVE(
+ TEMP tr12,
+ TEMP tr13),
+MOVE(
+ TEMP tr14,
+ TEMP tr15),
+MOVE(
+ TEMP tr16,
+ TEMP tr17),
+MOVE(
+ TEMP tr18,
+ TEMP tr19),
+MOVE(
+ TEMP tr20,
+ TEMP tr21),
+MOVE(
+ TEMP tr93,
+ BINOP(PLUS,
+  CONST -8,
+  TEMP tr0)),
+MOVE(
+ TEMP tr94,
+ CALL(
+  NAME $GetChar$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP tr0)))),
+MOVE(
+ MEM(
+  TEMP tr93),
+ TEMP tr94),
+MOVE(
+ TEMP tr95,
+ CALL(
+  NAME N31,
+   TEMP tr0)),
+MOVE(
+ TEMP tr96,
+ BINOP(PLUS,
+  CONST -8,
+  TEMP tr0)),
+MOVE(
+ TEMP tr97,
+ CALL(
+  NAME $GetChar$$,
+   MEM(
+    BINOP(PLUS,
+     CONST 0,
+     TEMP tr0)))),
+MOVE(
+ MEM(
+  TEMP tr96),
+ TEMP tr97),
+MOVE(
+ TEMP tr98,
+ CALL(
+  NAME N31,
+   TEMP tr0)),
+MOVE(
+ TEMP tr99,
+ TEMP tr0),
+MOVE(
+ TEMP tr100,
+ CALL(
+  NAME N39,
+   TEMP tr0,
+   TEMP tr95,
+   TEMP tr98)),
+MOVE(
+ TEMP tr26,
+ CALL(
+  NAME N82,
+   TEMP tr99,
+   TEMP tr100)),
+MOVE(
+ TEMP tr5,
+ TEMP tr4),
+MOVE(
+ TEMP tr7,
+ TEMP tr6),
+MOVE(
+ TEMP tr9,
+ TEMP tr8),
+MOVE(
+ TEMP tr11,
+ TEMP tr10),
+MOVE(
+ TEMP tr13,
+ TEMP tr12),
+MOVE(
+ TEMP tr15,
+ TEMP tr14),
+MOVE(
+ TEMP tr17,
+ TEMP tr16),
+MOVE(
+ TEMP tr19,
+ TEMP tr18),
+MOVE(
+ TEMP tr21,
+ TEMP tr20),
+JUMP(
+ NAME N93),
+LABEL N93 
+]
+
+

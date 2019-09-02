@@ -1,0 +1,22 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL $Main$$
+L464:
+la t703,L0
+la t705,L0
+beq t703,t705,L463
+L463:
+li t704,1
+la t706,L0
+bne t703,t706,L461
+L462:
+li t704,0
+L461:
+move $v0,t704
+j L460
+L460:
+

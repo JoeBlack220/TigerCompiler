@@ -1,0 +1,66 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L59
+L61:
+lw t202,0($fp)
+lw t201,0(t202)
+lw t200,0(t201)
+lw t199,0(t200)
+lw $v0,-8(t199)
+j L60
+L60:
+
+LABEL L57
+L62:
+li t193,4
+lw t203,0($fp)
+lw t195,-8(t203)
+move $a0,$fp
+jal L59
+move t194,$v0
+add t204,t195,t194
+move $v0,t204
+j L58
+L58:
+
+LABEL L55
+L63:
+li t205,3
+sw t205,-8($fp)
+lw t206,0($fp)
+lw t197,-8(t206)
+move $a0,$fp
+jal L57
+move t196,$v0
+add t207,t197,t196
+move $v0,t207
+j L56
+L56:
+
+LABEL L53
+L64:
+li t208,100
+sw t208,-8($fp)
+move $a0,$fp
+jal L55
+move $v0,$v0
+j L54
+L54:
+
+LABEL $Main$$
+L65:
+li t209,1
+sw t209,-8($fp)
+move $a0,$fp
+jal L53
+move t198,$v0
+lw t211,-8($fp)
+add t210,t198,t211
+move $v0,t210
+j L52
+L52:
+

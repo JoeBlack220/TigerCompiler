@@ -1,0 +1,8 @@
+8.2: Unexpected type: Found different type from expected type.
+Expected: INT
+Found:    STRING
+
+7.2: Unexpected type: Found different type from expected type.
+Expected: STRING
+Found:    INT
+

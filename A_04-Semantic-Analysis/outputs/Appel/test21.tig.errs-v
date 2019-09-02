@@ -1,0 +1,8 @@
+5.1: Unexpected type: Function has different body type and return type.
+Expected: INT
+Found:    UNIT
+
+8.11: Unexpected type: The right expression of operate expression need to be int.
+Expected: INT
+Found:    UNIT
+

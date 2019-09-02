@@ -1,0 +1,104 @@
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L16
+L21:
+li t148,0
+beq t148,t139,L19
+L18:
+lw t150,-4($fp)
+lw t149,0(t150)
+lw t152,-4($fp)
+lw t151,-4(t152)
+lw t140,-8(t151)
+L20:
+move $v0,t140
+j L17
+L19:
+lw t153,-4($fp)
+lw t140,-12(t153)
+j L20
+L17:
+
+LABEL L13
+L33:
+li t154,1
+sw t154,-12($fp)
+li t147,10
+lw t155,-12($fp)
+ble t155,t147,L31
+L15:
+li $v0,0
+j L14
+L31:
+li t141,3
+li t142,10
+li t143,0
+bltz t142,L22
+L23:
+move $a0,t142
+move $a1,t143
+jal $InitArray$$
+move t144,$v0
+lw t156,0($fp)
+beqz t156,L28
+L29:
+move t145,t144
+lw t146,-12($fp)
+lw t157,(t145)
+ble t157,t146,L24
+L25:
+bltz t146,L26
+L27:
+lw t160,-4($fp)
+lw t159,-12(t160)
+lw t161,-12($fp)
+add t158,t161,t159
+addi t164,t146,1
+li t165,4
+mul t163,t165,t164
+add t162,t145,t163
+sw t158,(t162)
+L30:
+lw t166,-12($fp)
+bge t166,t147,L15
+L32:
+lw t168,-12($fp)
+addi t167,t168,1
+sw t167,-12($fp)
+j L31
+L22:
+jal $SizeError$$
+j L14
+L28:
+lw t169,0($fp)
+move $a0,$fp
+move $a1,t169
+jal L16
+move t141,$v0
+j L30
+L24:
+jal $UpperBoundExit$$
+j L14
+L26:
+jal $LowerBoundExit$$
+j L14
+L14:
+
+LABEL $Main$$
+L34:
+li t170,4
+sw t170,-8($fp)
+li t171,3
+sw t171,-12($fp)
+li t172,10
+move $a0,$fp
+move $a1,t172
+jal L13
+move $v0,$v0
+j L12
+L12:
+

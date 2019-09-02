@@ -1,0 +1,25 @@
+LetExp([
+ TypeDec[
+  (intlist,
+   RecordTy[
+    (hd,false,int),
+    (tl,false,intlist)])],
+ VarDec(lis,false,SOME(intlist),
+  NilExp)],
+ IfExp(
+  OpExp(NeqOp,
+   VarExp(
+    FieldVar(
+     SimpleVar(lis),
+     tl)),
+   NilExp),
+  VarExp(
+   FieldVar(
+    FieldVar(
+     SimpleVar(lis),
+     tl),
+    hd)),
+  VarExp(
+   FieldVar(
+    SimpleVar(lis),
+    hd))))

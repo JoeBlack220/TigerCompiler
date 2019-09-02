@@ -1,0 +1,236 @@
+The fragments generated from the program: 
+
+LABEL N0
+ "
+
+LABEL N1
+ "
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP tr0,
+  ESEQ(
+   SEQ(
+    MOVE(
+     TEMP tr1,
+     ESEQ(
+      SEQ(
+       MOVE(
+        TEMP tr2,
+        CONST 10),
+       SEQ(
+        MOVE(
+         TEMP tr3,
+         CONST 0),
+        SEQ(
+         CJUMP(LT,
+          TEMP tr2,
+          CONST 0,
+          N2,N3),
+         SEQ(
+          LABEL N2,
+          SEQ(
+           EXP(
+            CALL(
+             NAME $SizeError$$)),
+           SEQ(
+            JUMP(
+             NAME N4),
+            LABEL N3)))))),
+      CALL(
+       NAME $InitArray$$,
+        TEMP tr2,
+        TEMP tr3))),
+    SEQ(
+     MOVE(
+      TEMP tr4,
+      ESEQ(
+       SEQ(
+        MOVE(
+         TEMP tr5,
+         CONST 5),
+        SEQ(
+         MOVE(
+          TEMP tr6,
+          CONST 6),
+         SEQ(
+          CJUMP(LT,
+           TEMP tr5,
+           CONST 0,
+           N5,N6),
+          SEQ(
+           LABEL N5,
+           SEQ(
+            EXP(
+             CALL(
+              NAME $SizeError$$)),
+            SEQ(
+             JUMP(
+              NAME N4),
+             LABEL N6)))))),
+       CALL(
+        NAME $InitArray$$,
+         TEMP tr5,
+         TEMP tr6))),
+     MOVE(
+      TEMP tr7,
+      CONST 2))),
+   ESEQ(
+    SEQ(
+     EXP(
+      TEMP tr1),
+     MOVE(
+      MEM(
+       ESEQ(
+        SEQ(
+         MOVE(
+          TEMP tr8,
+          TEMP tr1),
+         SEQ(
+          MOVE(
+           TEMP tr9,
+           CONST 3),
+          SEQ(
+           CJUMP(LE,
+            MEM(
+             TEMP tr8),
+            TEMP tr9,
+            N7,N8),
+           SEQ(
+            LABEL N7,
+            SEQ(
+             EXP(
+              CALL(
+               NAME $UpperBoundExit$$)),
+             SEQ(
+              JUMP(
+               NAME N4),
+              SEQ(
+               LABEL N8,
+               SEQ(
+                CJUMP(LT,
+                 TEMP tr9,
+                 CONST 0,
+                 N9,N10),
+                SEQ(
+                 LABEL N9,
+                 SEQ(
+                  EXP(
+                   CALL(
+                    NAME $LowerBoundExit$$)),
+                  SEQ(
+                   JUMP(
+                    NAME N4),
+                   LABEL N10))))))))))),
+        BINOP(PLUS,
+         TEMP tr8,
+         BINOP(MUL,
+          CONST 4,
+          BINOP(PLUS,
+           CONST 1,
+           TEMP tr9))))),
+      CONST 5)),
+    ESEQ(
+     MOVE(
+      MEM(
+       ESEQ(
+        SEQ(
+         MOVE(
+          TEMP tr10,
+          TEMP tr1),
+         SEQ(
+          MOVE(
+           TEMP tr11,
+           MEM(
+            ESEQ(
+             SEQ(
+              MOVE(
+               TEMP tr12,
+               TEMP tr4),
+              SEQ(
+               MOVE(
+                TEMP tr13,
+                CONST 3),
+               SEQ(
+                CJUMP(LE,
+                 MEM(
+                  TEMP tr12),
+                 TEMP tr13,
+                 N11,N12),
+                SEQ(
+                 LABEL N11,
+                 SEQ(
+                  EXP(
+                   CALL(
+                    NAME $UpperBoundExit$$)),
+                  SEQ(
+                   JUMP(
+                    NAME N4),
+                   SEQ(
+                    LABEL N12,
+                    SEQ(
+                     CJUMP(LT,
+                      TEMP tr13,
+                      CONST 0,
+                      N13,N14),
+                     SEQ(
+                      LABEL N13,
+                      SEQ(
+                       EXP(
+                        CALL(
+                         NAME $LowerBoundExit$$)),
+                       SEQ(
+                        JUMP(
+                         NAME N4),
+                        LABEL N14))))))))))),
+             BINOP(PLUS,
+              TEMP tr12,
+              BINOP(MUL,
+               CONST 4,
+               BINOP(PLUS,
+                CONST 1,
+                TEMP tr13)))))),
+          SEQ(
+           CJUMP(LE,
+            MEM(
+             TEMP tr10),
+            TEMP tr11,
+            N15,N16),
+           SEQ(
+            LABEL N15,
+            SEQ(
+             EXP(
+              CALL(
+               NAME $UpperBoundExit$$)),
+             SEQ(
+              JUMP(
+               NAME N4),
+              SEQ(
+               LABEL N16,
+               SEQ(
+                CJUMP(LT,
+                 TEMP tr11,
+                 CONST 0,
+                 N17,N18),
+                SEQ(
+                 LABEL N17,
+                 SEQ(
+                  EXP(
+                   CALL(
+                    NAME $LowerBoundExit$$)),
+                  SEQ(
+                   JUMP(
+                    NAME N4),
+                   LABEL N18))))))))))),
+        BINOP(PLUS,
+         TEMP tr10,
+         BINOP(MUL,
+          CONST 4,
+          BINOP(PLUS,
+           CONST 1,
+           TEMP tr11))))),
+      CONST 7),
+     CONST 0)))),
+ LABEL N4)
+

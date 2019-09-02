@@ -1,0 +1,7 @@
+LetExp([
+ VarDec(a,false,NONE,
+  IntExp(3))],
+ OpExp(GtOp,
+  VarExp(
+   SimpleVar(a)),
+  StringExp("Hello")))

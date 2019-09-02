@@ -1,0 +1,112 @@
+The fragments generated from the program: 
+
+LABEL L1
+ "
+
+LABEL L0
+ "
+
+LABEL L60
+SEQ(
+ MOVE(
+  TEMP t123,
+  MEM(
+   BINOP(PLUS,
+    CONST -8,
+    MEM(
+     BINOP(PLUS,
+      CONST 0,
+      MEM(
+       BINOP(PLUS,
+        CONST 0,
+        MEM(
+         BINOP(PLUS,
+          CONST 0,
+          MEM(
+           BINOP(PLUS,
+            CONST 0,
+            TEMP t125))))))))))),
+ LABEL L62)
+
+LABEL L57
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    TEMP t150,
+    CONST 4),
+   BINOP(PLUS,
+    MEM(
+     BINOP(PLUS,
+      CONST -8,
+      MEM(
+       BINOP(PLUS,
+        CONST 0,
+        TEMP t125)))),
+    CALL(
+     NAME L60,
+      TEMP t125)))),
+ LABEL L59)
+
+LABEL L54
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    MEM(
+     BINOP(PLUS,
+      CONST -8,
+      TEMP t125)),
+    CONST 3),
+   BINOP(PLUS,
+    MEM(
+     BINOP(PLUS,
+      CONST -8,
+      MEM(
+       BINOP(PLUS,
+        CONST 0,
+        TEMP t125)))),
+    CALL(
+     NAME L57,
+      TEMP t125)))),
+ LABEL L56)
+
+LABEL L51
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    MEM(
+     BINOP(PLUS,
+      CONST -8,
+      TEMP t125)),
+    CONST 100),
+   CALL(
+    NAME L54,
+     TEMP t125))),
+ LABEL L53)
+
+LABEL $Main$$
+SEQ(
+ MOVE(
+  TEMP t123,
+  ESEQ(
+   MOVE(
+    MEM(
+     BINOP(PLUS,
+      CONST -8,
+      TEMP t125)),
+    CONST 1),
+   BINOP(PLUS,
+    CALL(
+     NAME L51,
+      TEMP t125),
+    MEM(
+     BINOP(PLUS,
+      CONST -8,
+      TEMP t125))))),
+ LABEL L50)
+
